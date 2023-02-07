@@ -1,0 +1,52 @@
+#hoverPlayer.hover-player-outer {
+  height: 100%;
+  width: 100%;
+}
+#hoverPlayer .hoverplayer {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+#hoverPlayer .poster-outer {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+}
+#hoverPlayer .poster-outer .hove-poster {
+  height: 100%;
+  width: 100%;
+}
+#hoverPlayer .poster-outer .hove-poster img {
+  height: 100%;
+  width: 100%;
+}
+#hoverPlayer .hoverplayer video {
+  height: 100%;
+  width: 100%;
+}
+#hoverPlayer .play-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+#hoverPlayer .play-icon svg {
+  fill: #ffcc00;
+  height: 80px;
+  width: 80px;
+}
+#hoverPlayer .poster-outer:hover {
+  cursor: pointer;
+}
+#hoverPlayer:hover .poster-outer {
+  z-index: -11111;
+  visibility: hidden;
+}
+.crousel-overly-inner #hoverPlayer .play-icon svg,
+.language-movie-card #hoverPlayer .play-icon svg {
+  height: 60px;
+  width: 60px;
+}

@@ -1,0 +1,28 @@
+.notifiction-toggle .dropdown-menu[data-bs-popper] {
+  right: 0 !important;
+  margin-top: 3px !important;
+  margin-right: 15px !important;
+  left: unset !important;
+}
+.notifiction-toggle .dropdown-menu {
+  min-width: 19rem !important;
+}
+.movie-time-notification h5 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0px;
+}
+.movie-time-notification strong {
+  font-size: 12px;
+  color: #787878;
+  padding-right: 10px;
+}
+.movie-time-notification small {
+  font-size: 12px;
+  color: #787878;
+  padding-right: 10px;
+}
+.movie-date-notification small {
+  font-size: 12px;
+  color: #787878;
+}

@@ -1,0 +1,16 @@
+.main-content {
+  padding-top: 94px;
+  padding-bottom: 4rem;
+}
+.submit-movie-note {
+  color: #000;
+  font-weight: 600;
+}
+.submit-movie-note span {
+  font-weight: 400 !important;
+  margin-left: 10px;
+}
+
+.submit-movie-wrapper {
+  margin-top: 4rem;
+}

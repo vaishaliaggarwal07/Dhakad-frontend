@@ -1,0 +1,201 @@
+/* final this code */
+.nav-menu {
+  flex-direction: column;
+  --bg-opacity: 1;
+  z-index: 9999;
+  top: 0;
+  transition: right 0.3s ease-in-out;
+  background-color: #fff !important;
+  height: 100vh;
+  width: 256px;
+  position: fixed;
+  right: -350px;
+  padding: 0px;
+}
+.nav-menu.active {
+  --bg-opacity: 1;
+  background-color: #22282d;
+  background-color: #fff !important;
+  z-index: 9999;
+  top: 0;
+  transition: right 0.3s ease-in-out;
+  position: fixed;
+  height: 100vh;
+  padding: 0px;
+  right: 0;
+  width: 20%;
+}
+
+.custom-profile {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 64px;
+  padding: 0px 15px;
+  background: #ffcc00;
+  color: #ffff;
+}
+.custom-profile h1 {
+  font-size: 22px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+.custom-profile svg.person-outline {
+  width: 42px;
+  height: 42px;
+  margin: 11px 10px;
+}
+.profile-list svg.profile-icons {
+  margin-right: 20px;
+  font-size: 22px;
+}
+.movies-sidebar-wrapper .profile-list li.nav-item {
+  line-height: 60px;
+  color: rgb(102, 102, 102);
+  border-bottom: 2px solid rgb(241, 241, 241);
+  padding: 0;
+  list-style: none;
+}
+.movies-sidebar-wrapper .profile-list a.nav-link {
+  position: relative;
+  font-weight: 500;
+  color: #363636;
+  font-size: 14px;
+  padding: 0px 15px;
+}
+
+.movies-sidebar-wrapper .offcanvas-header {
+  display: flex;
+  align-items: normal !important;
+  justify-content: space-between;
+  padding: 0px !important;
+}
+
+.custom-profile svg.person-outline {
+  color: #ffff;
+}
+
+svg.MuiSvgIcon-root.sideicons:hover {
+  color: #ffcc00 !important;
+}
+a.nav-link:hover {
+  color: #ffcc00 !important;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .movies-sidebar-wrapper .profile-list a.nav-link {
+    position: relative;
+    font-weight: 500;
+    color: #363636;
+    font-size: 13px;
+    line-height: 38px !important;
+    padding: 0px 15px;
+  }
+  .custom-profile h1 {
+    font-size: 16px !important;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+  .nav-menu.active {
+    right: 0%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 2px;
+    width: 50%;
+    height: 650px;
+    border-radius: 2px;
+    background-color: #fff !important;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .movies-sidebar-wrapper .profile-list a.nav-link {
+    position: relative;
+    font-weight: 500;
+    color: #363636;
+    font-size: 14px;
+    padding: 0px 16px;
+  }
+  .movies-sidebar-wrapper .profile-list li.nav-item {
+    line-height: 44px !important;
+  }
+  .custom-profile h1 {
+    font-size: 18px !important;
+  }
+  .custom-profile svg.person-outline {
+    width: 30px;
+    height: 30px;
+    margin: 13px 14px;
+  }
+  .nav-menu.active {
+    right: 0%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 2px;
+    width: 35%;
+    height: 650px;
+    border-radius: 2px;
+    background-color: #fff !important;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1025px) {
+  .movies-sidebar-wrapper .profile-list a.nav-link {
+    position: relative;
+    font-weight: 500;
+    color: #363636;
+    font-size: 13px;
+    padding: 0px 15px;
+  }
+  .nav-menu.active {
+    right: 0%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 2px;
+    width: 30%;
+    height: 650px;
+    border-radius: 2px;
+    background-color: #fff !important;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+  }
+  .custom-profile h1 {
+    font-size: 20px;
+  }
+  .custom-profile svg.person-outline {
+    width: 35px;
+    height: 35px;
+    margin: 14px 10px;
+  }
+  .movies-sidebar-wrapper .profile-list li.nav-item {
+    line-height: 42px;
+  }
+  .movies-sidebar-wrapper .profile-list a.nav-link {
+    padding: 0px 20px !important;
+  }
+}

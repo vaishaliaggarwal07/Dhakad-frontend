@@ -1,0 +1,44 @@
+/* modal css */
+.custom-modal.modal {
+  z-index: 9999999;
+}
+.custom-modal .modal-content .modal-header {
+  border-bottom: none;
+  background-color: #ffcc00;
+  color: #0d6efd;
+}
+.custom-modal button.btn-close {
+  margin: 0px;
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  font-size: 14px;
+}
+.modal-backdrop {
+  z-index: unset !important;
+}
+.modal-body.modal-body-outer-sec {
+  padding: 2rem;
+}
+.modal-body.modal-body-outer-sec .form-control:focus {
+  box-shadow: none;
+  border-color: #ffcc00;
+}
+.modal-links {
+  color: #3968b6;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0px 5px;
+  text-decoration: none;
+}
+/* modal btn css*/
+.modal-submit-btn button.btn {
+  background-color: #3968b6;
+  border-radius: 22px;
+  color: #fff !important;
+  font-weight: 600;
+}
+/* modal close btn css*/
+.btn-close:focus {
+  box-shadow: none !important;
+}

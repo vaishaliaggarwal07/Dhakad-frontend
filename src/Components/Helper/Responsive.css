@@ -1,0 +1,4519 @@
+@media screen and (max-width: 320px) {
+  /* home-slider  Start*/
+  .home-slider .mySwiper .swiper-button-prev {
+    display: none;
+  }
+  #movie-container-header {
+    padding: 0px !important;
+  }
+  .home-slider .mySwiper .swiper-button-next {
+    display: none;
+  }
+  /* masthead-overlay-swiper */
+  #masthead-overlay-swiper .slider-banner {
+    height: 650px;
+  }
+  #masthead-container-slider .slider-banner {
+    height: 625px;
+  }
+  .movie-iconbtn p {
+    display: none;
+  }
+  #sliderpoints-wrapper {
+    width: 100%;
+    left: 0px;
+    top: 17%;
+  }
+  .share-movie-btn button {
+    padding: 4px 10px !important;
+    font-size: 14px !important;
+  }
+  #masthead-registration-swiper .registration-content {
+    padding: 30px 10px !important;
+  }
+  .share-movie-btn button .MuiSvgIcon-root {
+    font-size: 14px !important;
+  }
+
+  #sliderpoints-wrapper .share-movie-btn {
+    right: 0px !important;
+    top: 0px !important;
+  }
+
+  .home-slider .movie-card-wrapper .movie-card {
+    height: 170px !important;
+  }
+
+  .home-slider .movie-detail-wrapper .movie-detail {
+    margin-top: 14px;
+  }
+
+  .movie-detail-content .movie-detail {
+    margin-left: 1rem !important;
+  }
+
+  .movie-card-wrapper .movie-card .MuiSvgIcon-root {
+    font-size: 2rem !important;
+  }
+
+  .navbar-nav {
+    display: none !important;
+  }
+
+  .home-slider .movie-detail h1 {
+    font-size: 20px !important;
+    margin: 0px !important;
+  }
+
+  .movie-EventAttributes h6 {
+    font-size: 13px !important;
+  }
+
+  .movie-detail-wrapper .movie-detail {
+    margin-top: 16px;
+  }
+
+  .dhakad-rating-sec .dhakad-rating-title-sec h6 {
+    font-size: 14px !important;
+    line-height: 20px !important;
+  }
+
+  .home-slider .movie-detail span.movie-time {
+    font-size: 13px;
+    line-height: 0px;
+  }
+
+  .home-slider li.border-rounded {
+    width: 45px !important;
+    height: 22px !important;
+    padding: 4px 0px;
+  }
+
+  .home-slider .movie-EventAttributes li {
+    padding: 4px 6px !important;
+    font-size: 12px !important;
+  }
+
+  .home-slider .movie-detail .movie-EventAttributes {
+    margin-bottom: 3px !important;
+    margin-top: 3px !important;
+    line-height: 14px !important;
+  }
+
+  .home-slider .movie-information button {
+    padding: 3px 10px !important;
+    font-size: 12px !important;
+  }
+
+  .rent-option-button button {
+    margin-left: 10px !important;
+  }
+
+  .swiper-container-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: 40px !important;
+  }
+
+  .movie-languages-button .movie-lang-btn button {
+    font-size: 14px !important;
+    padding: 4px 20px !important;
+  }
+
+  .main-movie-languages.main-movie-languages .movie-languages-button {
+    padding: 0px 0px 14px 0px;
+  }
+
+  /* home-slider  end */
+
+  /* old css*/
+  /*old*/
+  .movie-card iframe {
+    display: none;
+  }
+
+  .main-swiper-slider .slider-banner {
+    width: 100%;
+    height: 100%;
+  }
+
+  .main-movie-languages {
+    padding-top: 20px;
+    /* background-color: #2449ad; */
+  }
+
+  .movie-lang-btn {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-bottom: 6px;
+  }
+
+  .movie-languages-button h3 {
+    font-size: 18px;
+  }
+
+  .registration-content h1 {
+    font-size: 18px;
+    text-align: center;
+    padding: 12px 0px;
+  }
+
+  .registration-banner .col-md-3 {
+    text-align: center;
+  }
+
+  .footer-text {
+    max-width: 100%;
+    padding: 10px 10px;
+  }
+
+  /*  movie-detail  */
+  .slider-content {
+    top: 88px;
+  }
+
+  .movie-icon-button .MuiSvgIcon-root {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+
+  .movie-icon-button button {
+    padding: 5px 7px;
+    font-size: 12px;
+  }
+
+  .movie-detail span.movie-time {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 30px;
+  }
+
+  .movie-detail h1 {
+    font-size: 1.5rem !important;
+    padding: 0px 0px;
+    margin: 0;
+    line-height: 50px;
+  }
+
+  .movie-EventAttributes li {
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .movie-EventAttributes a.active {
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  .movie-detail p {
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0px 0px;
+  }
+
+  .movie-information button {
+    padding: 7px 7px;
+    font-size: 12px;
+  }
+
+  .movie-iconbtn p {
+    padding-left: 22px;
+    color: #ffcb05;
+  }
+
+  /* .movie-subtitle {
+    flex-wrap: nowrap;
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  } */
+
+  .main-movie-detail .slider-image img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .movie-EventAttributes li svg.MuiSvgIcon-root {
+    color: #ffb800;
+    width: 0.925rem;
+    height: 0.925rem;
+  }
+
+  .slider-cards .movie-card .video-player {
+    width: 100% !important;
+  }
+
+  .movie-subcast img {
+    width: 100px !important;
+    height: 100px !important;
+    object-fit: cover !important;
+    align-items: center !important;
+  }
+
+  .review-form-header svg {
+    font-size: 20px !important;
+    margin: 8px 12px !important;
+  }
+
+  .review-form-header h4 {
+    font-size: 16px !important;
+  }
+
+  .review-user-profile img {
+    font-size: 14px !important;
+  }
+
+  .review-user-title h5 {
+    font-size: 16px !important;
+    margin: 0px 0px 0px 16px !important;
+  }
+
+  .rating-lable-text {
+    font-size: 14px !important;
+  }
+
+  .rating-comment-area {
+    padding: 3px 8px !important;
+  }
+
+  .review-submit-sec button {
+    font-size: 14px !important;
+    padding: 3px 20px !important;
+  }
+
+  .rating-title-area {
+    padding: 3px 8px !important;
+  }
+
+  .movie-subcast h5.card-title {
+    text-align: center;
+    font-size: 13px;
+    padding-top: 6px;
+    line-height: 18px;
+  }
+
+  .movie-subcast h5.card-text {
+    font-size: 12px;
+    margin-left: 11px;
+    line-height: 15px;
+  }
+
+  .movie-EventAttributes {
+    padding: 0px 0px;
+  }
+
+  .slider-image {
+    height: 100%;
+  }
+
+  .movie-about h3 {
+    font-size: 16px;
+    padding-bottom: 0px;
+  }
+
+  .movie-about p {
+    font-size: 12px;
+    line-height: 24px;
+  }
+
+  .movie-cast-detail h3 {
+    font-size: 16px;
+    padding-bottom: 5px;
+  }
+
+  .movies-slide h3 {
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 0px;
+  }
+
+  .reviews-content h5 {
+    font-size: 16px;
+  }
+
+  .movie-reviews-detail h1 {
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 0px;
+  }
+
+  .reviews-banner {
+    display: grid !important;
+  }
+
+  .reviews-ratenow {
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+
+  .registration-content h3 {
+    font-size: 15px !important;
+  }
+
+  .reges-banner p {
+    font-size: 14px !important;
+  }
+
+  .registration-content button {
+    font-size: 14px !important;
+    padding: 4px 20px !important;
+  }
+
+  /* reward pages*/
+  .bottom-navbar-profile-sec {
+    display: block !important;
+  }
+
+  .bottom-navbar .profile-outer {
+    text-align: center !important;
+  }
+
+  .bottom-navbar .profile-img-sec {
+    margin: auto;
+  }
+
+  .bottom-navbar .profile_title h2 {
+    line-height: 1.5rem !important;
+    text-align: center !important;
+    font-size: 20px !important;
+  }
+
+  .bottom-navbar-menu-outer ul.navbar-nav {
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow: scroll;
+    width: 100%;
+  }
+
+  .bottom-navbar-menu-outer {
+    overflow: hidden;
+  }
+
+  .bottom-navbar-menu-outer .navbar {
+    width: 400px;
+  }
+
+  .col-md-8.expire-date-title {
+    width: 70%;
+  }
+
+  .col-md-4.reward-logo {
+    width: 30%;
+  }
+
+  .modal-form-sign-in-option {
+    padding: 0px 6px !important;
+  }
+
+  .reward-logo img {
+    height: 40px !important;
+  }
+
+  .card-subtitle {
+    padding: 8px 0px !important;
+  }
+
+  .reward-cards-wrapper .card-title {
+    font-size: 18px !important;
+  }
+
+  .card-subtitle.h6 {
+    font-size: 15px !important;
+  }
+
+  .reward-card-description,
+  p.text-center.card-text {
+    font-size: 12px !important;
+  }
+
+  .nav-item {
+    border-bottom: unset !important;
+  }
+
+  /* user form */
+  .user-detail-sec-inner {
+    padding: 2rem 8px !important;
+  }
+
+  .form-header h2 {
+    font-size: 18px !important;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .input-label {
+    font-size: 13px !important;
+  }
+
+  .regiseration-valdated-fields {
+    line-height: 20px !important;
+  }
+
+  .reward-amount {
+    font-size: 12px !important;
+    padding: 3px 8px !important;
+  }
+
+  .term-and-conditon {
+    font-size: 14px !important;
+  }
+
+  .reward-content table {
+    width: 100% !important;
+  }
+
+  .rewards-table h4 {
+    font-size: 11px !important;
+  }
+
+  .rewards-table .rewards-as {
+    width: 22px !important;
+    height: 22px !important;
+    font-size: 10px !important;
+    padding: 3px !important;
+  }
+
+  .rewards-table .rewards-pk {
+    width: 22px !important;
+    height: 22px !important;
+    font-size: 10px !important;
+    padding: 3px !important;
+  }
+
+  .rewards-table .rewards-rk {
+    width: 22px !important;
+    height: 22px !important;
+    font-size: 10px !important;
+    padding: 3px !important;
+  }
+
+  .table > :not(caption) > * > * {
+    font-size: 14px !important;
+    padding: 4px 8px !important;
+  }
+
+  .support-container h1 {
+    font-size: 20px !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .support-form-section label {
+    font-size: 14px !important;
+  }
+
+  .support-form-section input.form-control {
+    font-size: 14px !important;
+    padding: 4px 10px !important;
+  }
+
+  .support-form-section textarea.form-control {
+    font-size: 14px !important;
+    padding: 4px 10px !important;
+  }
+
+  .custom-support-btn .support-btn {
+    font-size: 14px !important;
+    padding: 5px 0px !important;
+  }
+
+  .rewards-title h2 {
+    font-size: 20px !important;
+    line-height: 1rem !important;
+  }
+
+  .coupon-card-heading h4 {
+    font-size: 14px !important;
+  }
+
+  .password-strong {
+    top: 33px !important;
+  }
+
+  .submit-movie-note {
+    font-size: 14px !important;
+  }
+
+  .model-submit-btn span {
+    font-size: 13px !important;
+    padding: 5px 0px !important;
+  }
+
+  .main-content {
+    padding-top: 90px !important;
+  }
+
+  .profile-img-sec {
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+  .regiseration-valdated-fields p {
+    margin: 5px 0px 0px 5px !important;
+  }
+
+  .user-detail-sec-inner input {
+    font-size: 13px !important;
+    padding: 4px 10px !important;
+  }
+
+  .user-detail-sec .mb-5 {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .user-detail-sec-inner .btn-lg {
+    font-size: 14px !important;
+  }
+
+  /* payment option */
+  .payment-contect-content {
+    display: block !important;
+  }
+
+  .payment-card-outer {
+    padding: 0px !important;
+  }
+
+  .payment-card-outer img {
+    height: 150px !important;
+    object-fit: cover;
+    object-position: 100% 0%;
+  }
+
+  .payment-card-content-outer .card-title {
+    margin-top: 0.5rem !important;
+  }
+
+  .payment-movie-details .navbar-nav li {
+    padding: 2px 4px !important;
+    font-size: 12px !important;
+  }
+
+  .payment-option-button button {
+    padding: 5px 30px !important;
+    margin-top: 8px !important;
+    font-size: 14px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .payment-option-description {
+    font-size: 14px !important;
+  }
+
+  .payment-option-title.card-title h2,
+  .amout-payable,
+  .payment-detail-title h3 {
+    font-size: 20px !important;
+    font-weight: 500 !important;
+  }
+
+  .payment-card-content-outer .text-end {
+    text-align: center !important;
+  }
+
+  .payment-detail-card {
+    padding: 0px !important;
+  }
+
+  .payment-contect-content .MuiInputBase-root.MuiInput-root.MuiInput-underline {
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+  }
+
+  .change-payment-btn.payment-option-button {
+    text-align: center;
+  }
+
+  .payment-detail-title.text-center.card-title {
+    margin: 0px !important;
+  }
+
+  .payment-option .payment-detail-card .card-body {
+    padding: 2rem 1rem !important;
+  }
+
+  .payment-contect-content-redio img {
+    width: 80%;
+  }
+
+  .payment-contect-content-redio input {
+    margin-top: 16px !important;
+  }
+
+  /* movie detail */
+  .main-movie-detail .slider-image img {
+    object-position: 46% 100% !important;
+  }
+
+  .home-slider .slider-content.movie-banner {
+    top: 3rem;
+  }
+
+  /* .slider-content {
+    top: 6.5rem !important;
+  } */
+  #sliderpoints-wrapper .movie-card {
+    height: 170px;
+  }
+
+  .movie-icon-button button {
+    padding: 3px 10px !important;
+    font-size: 12px !important;
+  }
+  /* 
+  .movie-iconbtn {
+    margin: 50px 0px 0px 0px !important;
+  } */
+
+  .movie-detail .movie-EventAttributes {
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+    line-height: 14px !important;
+  }
+
+  .movie-detail p {
+    font-size: 14px !important;
+    line-height: 20px !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  .movie-detail p {
+    margin-bottom: 8px !important;
+  }
+
+  .slider-image {
+    height: 570px !important;
+  }
+
+  #sliderpoints-wrapper .movie-iconbtn p {
+    font-size: 14px !important;
+    margin-top: 5px !important;
+    width: 100% !important;
+    padding: 0px;
+  }
+  #sliderpoints-wrapper .movie-detail.movie-content-section {
+    margin-left: 0px;
+  }
+
+  .movie-about {
+    padding: 32px 0px 10px 0px !important;
+  }
+
+  .section-heading h3,
+  .movie-cast-detail h3,
+  .movie-reviews-detail h3 {
+    font-size: 24px !important;
+  }
+
+  .section-heading h3 {
+    line-height: 14px !important;
+    padding: 8px 0px 0px !important;
+  }
+
+  .movie-about p {
+    line-height: 20px !important;
+    font-size: 14px !important;
+    font-weight: 300 !important;
+  }
+
+  .movie-cast-detail {
+    padding-bottom: 28px !important;
+  }
+
+  .reviews-content {
+    padding: 0px !important;
+  }
+
+  .reviews-banner {
+    padding: 12px 30px !important;
+  }
+
+  .reviews-content h6 {
+    margin-bottom: 16px !important;
+  }
+  .movie-subcast h5.card-title {
+    font-size: 14px !important;
+  }
+
+  .movie-subcast h5.card-title {
+    margin-bottom: 2px !important;
+  }
+
+  .movie-search-bar .modal-body {
+    padding: 0px !important;
+  }
+
+  /* notification*/
+  .notification .col-sm-3 {
+    width: 25% !important;
+  }
+
+  .notification .col-sm-6 {
+    width: 50% !important;
+  }
+
+  .notificaton-modal .modal-body {
+    width: 100% !important;
+  }
+
+  /* about-us */
+  .main-content.about-container {
+    padding-top: 6rem !important;
+  }
+
+  /* end about-us */
+  /* notification */
+  .notification .col-sm-6 {
+    width: 60% !important;
+  }
+
+  .notification .col-sm-3 {
+    width: 25% !important;
+  }
+
+  .movie-date-notification {
+    line-height: 17px !important;
+  }
+
+  #masthead-container-slider .slider-image {
+    height: 885px !important;
+  }
+
+  /**/
+  .main-movie-languages {
+    padding: 0px 0px 12px !important;
+  }
+
+  /* Dhaakad Support Centre */
+
+  .support-form-section {
+    width: 100% !important;
+    padding: 0px 35px !important;
+  }
+
+  .top-navbar .logo-dhaakad-cinema img.Cinema {
+    display: none;
+  }
+
+  .top-navbar .logo-dhaakad-cinema img.Dhakad {
+    display: none;
+  }
+
+  .logo-dhaakad-cinema {
+    margin-left: 0px !important;
+  }
+
+  .footer-text p {
+    font-size: 14px !important;
+  }
+
+  .footer-icons svg.MuiSvgIcon-root {
+    font-size: 22px !important;
+    margin: 0px 4px !important;
+  }
+
+  /* Dhaakad Support Centre */
+}
+
+@media screen and (min-device-width: 321px) and (max-device-width: 424px) {
+  /* home-slider  Start*/
+  .home-slider .mySwiper .swiper-button-prev {
+    display: none;
+  }
+  #movie-container-header {
+    padding: 0px !important;
+  }
+  #masthead-registration-swiper .registration-content {
+    padding: 15px 15px;
+  }
+  .home-slider .mySwiper .swiper-button-next {
+    display: none;
+  }
+  #masthead-overlay-swiper #hoverPlayer .hoverplayer {
+    height: unset;
+  }
+  #masthead-overlay-swiper .movie-detail-wrapper.movie-detail-content {
+    padding-top: 4rem;
+  }
+  #masthead-overlay-swiper .slider-banner {
+    height: 754px;
+  }
+  #sliderpoints-wrapper {
+    width: 100%;
+    left: 0px;
+    top: 15%;
+  }
+  #sliderpoints-wrapper .movie-detail.movie-content-section {
+    margin-left: 0px;
+    padding-top: 5rem;
+  }
+  .home-slider .movie-card-wrapper .movie-card {
+    height: 170px !important;
+  }
+  #masthead-container-slider .slider-banner {
+    height: 705px;
+  }
+  .movie-iconbtn p {
+    display: none;
+  }
+
+  .movie-card-wrapper .movie-card .MuiSvgIcon-root {
+    font-size: 2rem !important;
+  }
+
+  .slider-cards .movie-card .video-player {
+    width: 100% !important;
+  }
+
+  .crousel-card-banner {
+    height: 125px !important;
+  }
+
+  .movie-languages-button .movie-lang-btn button {
+    font-size: 14px !important;
+    padding: 4px 20px !important;
+  }
+
+  .registration-content button {
+    font-size: 14px !important;
+    padding: 6px 20px !important;
+  }
+
+  .footer-icons svg.MuiSvgIcon-root {
+    font-size: 24px !important;
+    margin: 0px 3px !important;
+  }
+
+  .footer-text p {
+    font-size: 14px !important;
+  }
+
+  .share-movie-btn button {
+    padding: 4px 10px !important;
+    font-size: 14px !important;
+  }
+
+  .share-movie-btn button .MuiSvgIcon-root {
+    font-size: 14px !important;
+  }
+
+  #sliderpoints-wrapper .share-movie-btn {
+    right: 0px;
+    top: 0px;
+  }
+
+  .home-slider .movie-icon-button {
+    margin: 16px 0px 0px 0px !important;
+  }
+
+  .home-slider .slider-content.movie-banner {
+    padding-top: 32px;
+  }
+
+  .home-slider .movie-detail h1 {
+    font-size: 22px !important;
+    margin: 0px 0px;
+  }
+
+  .home-slider .movie-detail p {
+    font-size: 14px !important;
+    line-height: 22px !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  .home-slider .movie-detail span.movie-time {
+    font-size: 14px;
+    line-height: 0px;
+  }
+
+  .home-slider li.border-rounded {
+    width: 50px !important;
+    height: 30px !important;
+    padding: 4px 0px;
+  }
+
+  .home-slider .movie-EventAttributes li {
+    padding: 2px 6px !important;
+    font-size: 14px !important;
+  }
+
+  .home-slider .movie-EventAttributes li svg.MuiSvgIcon-root {
+    color: #ffb800;
+    width: 0.8em;
+    height: 0.8em;
+  }
+
+  .home-slider .movie-detail .movie-EventAttributes {
+    margin-bottom: 6px !important;
+    margin-top: 6px !important;
+    line-height: 25px !important;
+  }
+
+  .home-slider .movie-information button {
+    padding: 5px 10px !important;
+    font-size: 12px !important;
+  }
+
+  .swiper-container-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-custom,
+  .swiper-pagination-fractionP {
+    bottom: 35px !important;
+  }
+
+  .review-form-header h4 {
+    font-size: 16px !important;
+  }
+
+  .review-form-header svg {
+    font-size: 18px !important;
+    margin: 8px 15px !important;
+  }
+
+  .review-user-profile img {
+    font-size: 14px !important;
+  }
+
+  .review-user-title h5 {
+    font-size: 16px !important;
+  }
+
+  .rating-lable-text {
+    font-size: 14px !important;
+  }
+
+  .rating-title-area {
+    font-size: 14px !important;
+    padding: 2px 10px !important;
+  }
+
+  .review-submit-sec button {
+    font-size: 14px !important;
+    padding: 3px 20px !important;
+  }
+
+  .main-movie-languages.main-movie-languages .movie-languages-button {
+    padding: 0px 0px 14px 0px;
+  }
+
+  /* home-slider  end */
+
+  /* home-page*/
+  .movie-lang-btn {
+    padding-bottom: 6px;
+  }
+
+  .movie-information-outer {
+    align-items: baseline;
+  }
+
+  /* end */
+  .rent-option-button button {
+    margin-left: 10px !important;
+  }
+
+  .registration-content h3 {
+    font-size: 22px !important;
+    margin-bottom: 18px;
+  }
+
+  /* reward pages*/
+  .bottom-navbar-profile-sec {
+    display: block !important;
+  }
+
+  .bottom-navbar .profile-outer {
+    text-align: center !important;
+  }
+
+  .bottom-navbar .profile-img-sec {
+    margin: auto;
+  }
+
+  .bottom-navbar .profile_title h2 {
+    line-height: 1.5rem !important;
+    text-align: center !important;
+    font-size: 20px !important;
+  }
+
+  .bottom-navbar-menu-outer ul.navbar-nav {
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow: scroll;
+    width: 100%;
+  }
+
+  .bottom-navbar-menu-outer {
+    overflow: auto;
+  }
+
+  .bottom-navbar-menu-outer .navbar {
+    width: 335px !important;
+  }
+
+  .bottom-navbar-menu-outer .navbar .navbar-nav .nav-link {
+    font-size: 14px !important;
+  }
+
+  .col-md-8.expire-date-title {
+    width: 80%;
+  }
+
+  .coupon-card-heading h4 {
+    font-size: 16px !important;
+  }
+
+  .reward-card-description {
+    font-size: 14px !important;
+  }
+
+  .reward-amount {
+    font-size: 12px !important;
+    padding: 3px 8px !important;
+  }
+
+  .term-and-conditon {
+    font-size: 14px !important;
+  }
+
+  .col-md-4.reward-logo {
+    width: 20%;
+  }
+
+  .rewards-title h2 {
+    line-height: 1rem !important;
+    font-size: 18px !important;
+  }
+
+  .reward-content table {
+    width: 100% !important;
+  }
+
+  .rewards-table h4 {
+    font-size: 12px !important;
+  }
+
+  .table > :not(caption) > * > * {
+    padding: 6px 4px !important;
+  }
+
+  .history-header {
+    font-size: 14px !important;
+  }
+
+  .support-container h1 {
+    font-size: 20px !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .support-form-section label {
+    font-size: 14px !important;
+  }
+
+  .support-form-section input.form-control {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .support-form-section textarea.form-control {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .modal-form-sign-in-option {
+    padding: 0px 6px !important;
+  }
+
+  .reward-logo img {
+    height: 40px !important;
+  }
+
+  /* user form */
+  .user-detail-sec-inner {
+    padding: 2rem 14px !important;
+  }
+
+  .form-header h2 {
+    font-size: 20px !important;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .regiseration-valdated-fields {
+    line-height: 20px !important;
+  }
+
+  .regiseration-valdated-fields p {
+    margin: 5px 0px 0px 5px !important;
+  }
+
+  .user-detail-sec-inner input {
+    padding: 4px 10px !important;
+    font-size: 14px !important;
+  }
+
+  .password-strong {
+    top: 35px !important;
+  }
+
+  .submit-movie-note {
+    font-size: 14px !important;
+  }
+
+  .model-submit-btn span {
+    padding: 6px 0px !important;
+  }
+
+  .main-content {
+    padding-top: 90px !important;
+  }
+
+  .input-label {
+    font-size: 14px !important;
+  }
+
+  .profile-img-sec {
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+  .user-detail-sec .mb-5 {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .user-detail-sec-inner .btn-lg {
+    font-size: 14px !important;
+  }
+
+  /* payment option */
+  .payment-contect-content {
+    display: block !important;
+  }
+
+  .payment-card-outer {
+    padding: 0px !important;
+  }
+
+  .payment-card-outer img {
+    height: 200px !important;
+    object-position: 100% 0% !important;
+  }
+
+  .payment-card-content-outer .card-title {
+    margin-top: 0.5rem !important;
+  }
+
+  .payment-movie-details .navbar-nav li {
+    padding: 4px 6px !important;
+    font-size: 11px !important;
+  }
+
+  .payment-option-button button {
+    margin: 6px 0px 6px 0px !important;
+    font-size: 13px !important;
+    padding: 6px 20px !important;
+  }
+
+  .card-text:last-child {
+    font-size: 14px !important;
+  }
+
+  .payment-option-description {
+    font-size: 15px !important;
+  }
+
+  .payment-option-title.card-title h2,
+  .amout-payable,
+  .payment-detail-title h3 {
+    font-size: 20px !important;
+    font-weight: 500 !important;
+  }
+
+  .navbar-nav {
+    display: block !important;
+  }
+
+  .payment-card-content-outer .text-end {
+    text-align: center !important;
+  }
+
+  .payment-detail-card {
+    padding: 0px !important;
+  }
+
+  .payment-contect-content .MuiInputBase-root.MuiInput-root.MuiInput-underline {
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+  }
+
+  .change-payment-btn.payment-option-button {
+    text-align: center;
+  }
+
+  .payment-detail-title.text-center.card-title {
+    margin: 0px !important;
+  }
+
+  .payment-option .payment-detail-card .card-body {
+    padding: 2rem 1rem !important;
+  }
+
+  .payment-contect-content-redio img {
+    width: 80%;
+  }
+
+  .payment-contect-content-redio input {
+    margin-top: 16px !important;
+  }
+
+  .payment-card-content-outer {
+    margin-top: 4px;
+  }
+
+  .payment-movie-details ul:nth-child(2) {
+    display: flex !important;
+  }
+
+  /* movie detail */
+  /* movie detail */
+  .main-movie-detail .slider-image img {
+    object-position: 46% 100% !important;
+  }
+
+  #sliderpoints-wrapper .movie-card {
+    height: 170px;
+  }
+  #sliderpoints-wrapper #hoverPlayer.hover-player-outer {
+    height: unset;
+  }
+  .movie-icon-button button {
+    padding: 5px 10px !important;
+    font-size: 12px !important;
+  }
+
+  /* .movie-iconbtn {
+    margin: 45px 0px 0px 0px !important;
+    align-items: baseline;
+  } */
+
+  .movie-detail .movie-EventAttributes {
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+    line-height: 14px !important;
+  }
+
+  .movie-detail p {
+    font-size: 14px !important;
+    line-height: 22px !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  .movie-detail p {
+    margin-bottom: 8px !important;
+  }
+
+  .slider-image {
+    height: 775px !important;
+  }
+
+  .movie-iconbtn p {
+    font-size: 16px !important;
+  }
+
+  .movie-about {
+    padding: 32px 0px 10px 0px !important;
+  }
+
+  .section-heading h3,
+  .movie-cast-detail h3,
+  .movie-reviews-detail h3 {
+    font-size: 16px !important;
+  }
+
+  .crousel-card-banner-content h5 {
+    font-size: 14px !important;
+  }
+
+  .crousel-card-banner-content .card-banner-language {
+    font-size: 14px !important;
+  }
+
+  .custom-profile svg.person-outline {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .custom-profile {
+    min-height: 55px !important;
+  }
+
+  .about-content-title .about-main-heading {
+    font-size: 20px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .about-description {
+    font-size: 14px !important;
+  }
+
+  .section-heading h3 {
+    line-height: 2rem !important;
+  }
+
+  .movie-about p {
+    line-height: 24px !important;
+  }
+
+  .movie-cast-detail {
+    padding-bottom: 28px !important;
+  }
+
+  .reviews-content {
+    padding: 0px !important;
+  }
+
+  .reviews-banner {
+    padding: 12px 30px !important;
+  }
+
+  .reviews-content h6 {
+    margin-bottom: 16px !important;
+  }
+
+  .movie-subcast h5.card-title {
+    font-size: 14px !important;
+  }
+
+  .movie-subcast h5.card-title {
+    margin-bottom: 2px !important;
+  }
+
+  .nav-item {
+    border-bottom: unset !important;
+  }
+
+  /* notification*/
+  .notification .col-sm-3 {
+    width: 25% !important;
+  }
+
+  .notification .col-sm-6 {
+    width: 50% !important;
+  }
+
+  .notificaton-modal .modal-body {
+    width: 100% !important;
+  }
+
+  .main-movie-languages {
+    padding-top: 0px !important;
+  }
+
+  /* Dhaakad Support Centre */
+
+  .support-form-section {
+    width: 100% !important;
+    padding: 0px 35px !important;
+  }
+
+  .custom-support-btn .support-btn {
+    font-size: 14px !important;
+    padding: 6px 0px !important;
+  }
+
+  .top-navbar .logo-dhaakad-cinema img.Cinema {
+    display: none;
+  }
+
+  .top-navbar .logo-dhaakad-cinema img.Dhakad {
+    display: none;
+  }
+
+  .logo-dhaakad-cinema {
+    margin-left: 0px !important;
+  }
+
+  /* Dhaakad Support Centre */
+}
+
+@media screen and (min-device-width: 425px) and (max-device-width: 480px) {
+  /* home-slider  Start*/
+  .home-slider .mySwiper .swiper-button-prev {
+    display: none;
+  }
+
+  .home-slider .mySwiper .swiper-button-next {
+    display: none;
+  }
+  #masthead-overlay-swiper #hoverPlayer .hoverplayer {
+    height: unset;
+  }
+  #masthead-overlay-swiper .movie-detail-wrapper.movie-detail-content {
+    padding-top: 2.5rem;
+  }
+  #masthead-overlay-swiper .slider-banner {
+    height: 805px !important;
+  }
+  #sliderpoints-wrapper #hoverPlayer .poster-outer .hove-poster img {
+    height: unset;
+    width: 100%;
+  }
+
+  .home-slider .movie-card-wrapper .movie-card {
+    height: 235px !important;
+  }
+
+  .home-slider .movie-icon-button {
+    margin: 16px 0px 0px 0px !important;
+  }
+
+  .home-slider .slider-content.movie-banner {
+    padding-top: 32px;
+  }
+
+  .home-slider .movie-detail h1 {
+    font-size: 2.5rem !important;
+    margin: 10px 0px;
+  }
+
+  .home-slider .movie-detail p {
+    font-size: 16px !important;
+    line-height: 22px !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .home-slider .movie-detail span.movie-time {
+    font-size: 18px;
+    line-height: 0px;
+  }
+
+  .home-slider li.border-rounded {
+    width: 50px !important;
+    height: 26px !important;
+    padding: 4px 0px;
+  }
+
+  .home-slider .movie-EventAttributes li {
+    padding: 6px 6px !important;
+    font-size: 16px !important;
+  }
+
+  .home-slider .movie-EventAttributes li svg.MuiSvgIcon-root {
+    color: #ffb800;
+    width: 0.8em;
+    height: 0.8em;
+  }
+
+  .home-slider .movie-detail .movie-EventAttributes {
+    margin-bottom: 6px !important;
+    margin-top: 6px !important;
+    line-height: 14px !important;
+  }
+
+  .home-slider .movie-information button {
+    padding: 8px 20px !important;
+    font-size: 16px !important;
+  }
+
+  .main-movie-languages.main-movie-languages .movie-languages-button {
+    padding: 0px 0px 14px 0px;
+  }
+
+  /* home-slider  end */
+  /* home-page*/
+  .movie-lang-btn {
+    padding-bottom: 6px;
+  }
+
+  /* end */
+  .registration-content {
+    padding: 22px 0px !important;
+    display: block !important;
+  }
+
+  .registration-content h3 {
+    font-size: 22px !important;
+    margin-bottom: 18px;
+  }
+
+  /* reward pages*/
+  .bottom-navbar-profile-sec {
+    display: block !important;
+  }
+
+  .bottom-navbar .profile-outer {
+    text-align: center !important;
+  }
+
+  .bottom-navbar .profile-img-sec {
+    margin: auto;
+  }
+
+  .bottom-navbar .profile_title h2 {
+    line-height: 2.5rem !important;
+    text-align: center !important;
+    font-size: 24px !important;
+  }
+
+  .bottom-navbar-menu-outer ul.navbar-nav {
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow: scroll;
+    width: 100%;
+  }
+
+  .bottom-navbar-menu-outer {
+    overflow: auto;
+  }
+
+  .bottom-navbar-menu-outer .navbar {
+    width: 400px;
+  }
+
+  .col-md-8.expire-date-title {
+    width: 80%;
+  }
+
+  .col-md-4.reward-logo {
+    width: 20%;
+  }
+
+  .modal-form-sign-in-option {
+    padding: 0px 6px !important;
+  }
+
+  .reward-logo img {
+    height: 50px !important;
+  }
+
+  /* user form */
+  .user-detail-sec-inner {
+    padding: 2rem 18px !important;
+  }
+
+  .form-header h2 {
+    font-size: 24px !important;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .user-detail-sec .mb-5 {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .user-detail-sec-inner .btn-lg {
+    font-size: 14px !important;
+  }
+
+  /* payment option */
+  .payment-contect-content {
+    display: block !important;
+  }
+
+  .payment-card-outer {
+    padding: 0px !important;
+  }
+
+  .payment-card-outer img {
+    height: 270px;
+    object-fit: cover;
+    object-position: 100% 0%;
+  }
+
+  .payment-card-content-outer .card-title {
+    margin-top: 0.5rem !important;
+  }
+
+  .payment-movie-details .navbar-nav li {
+    padding: 4px 8px !important;
+    font-size: 16px !important;
+  }
+
+  .payment-option-button button {
+    margin: 12px 0px !important;
+  }
+
+  .payment-option-description {
+    font-size: 16px !important;
+  }
+
+  .payment-option-title.card-title h2,
+  .amout-payable,
+  .payment-detail-title h3 {
+    font-size: 26px !important;
+    font-weight: 500 !important;
+  }
+
+  .payment-card-content-outer .text-end {
+    text-align: center !important;
+  }
+
+  .payment-detail-card {
+    padding: 0px !important;
+  }
+
+  .payment-contect-content .MuiInputBase-root.MuiInput-root.MuiInput-underline {
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+  }
+
+  .change-payment-btn.payment-option-button {
+    text-align: center;
+  }
+
+  .payment-detail-title.text-center.card-title {
+    margin: 0px !important;
+  }
+
+  .payment-option .payment-detail-card .card-body {
+    padding: 2rem 1rem !important;
+  }
+
+  .payment-contect-content-redio img {
+    width: 80%;
+  }
+
+  .payment-contect-content-redio input {
+    margin-top: 16px !important;
+  }
+
+  .payment-card-content-outer {
+    margin-top: 4px;
+  }
+
+  /* notification*/
+  .notification .col-sm-3 {
+    width: 25% !important;
+  }
+
+  .notification .col-sm-6 {
+    width: 50% !important;
+  }
+
+  .notificaton-modal .modal-body {
+    width: 100% !important;
+  }
+
+  /* movie detail */
+  /* movie detail */
+  .main-movie-detail .slider-image img {
+    object-position: 46% 100% !important;
+  }
+
+  .slider-content {
+    top: 4.5rem !important;
+  }
+
+  .movie-card-wrapper .movie-card {
+    height: 278px;
+  }
+
+  .movie-icon-button button {
+    padding: 8px 20px !important;
+    font-size: 16px !important;
+  }
+
+  .movie-iconbtn {
+    margin: 26px 0px 0px 0px !important;
+  }
+
+  .movie-detail .movie-EventAttributes {
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+    line-height: 14px !important;
+  }
+
+  .movie-detail p {
+    font-size: 16px !important;
+    line-height: 24px !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .slider-image {
+    height: 760px !important;
+  }
+
+  .movie-iconbtn p {
+    font-size: 18px !important;
+  }
+
+  .movie-about {
+    padding: 32px 0px 10px 0px !important;
+  }
+
+  .section-heading h3,
+  .movie-cast-detail h3,
+  .movie-reviews-detail h3 {
+    font-size: 26px !important;
+  }
+
+  .section-heading h3 {
+    line-height: 28px !important;
+  }
+
+  .movie-about p {
+    line-height: 24px !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  .movie-cast-detail {
+    padding-bottom: 28px !important;
+  }
+
+  .reviews-content {
+    padding: 0px !important;
+  }
+
+  .reviews-banner {
+    padding: 20px 30px !important;
+  }
+
+  .reviews-content h6 {
+    margin-bottom: 24px !important;
+  }
+
+  .registration-banner {
+    padding-top: 2px !important;
+    padding-bottom: 52px !important;
+  }
+
+  .movie-subcast h5.card-title {
+    font-size: 14px !important;
+  }
+
+  .movie-subcast h5.card-title {
+    margin-bottom: 2px !important;
+  }
+
+  .main-movie-languages {
+    padding-top: 0px !important;
+  }
+
+  /* Dhaakad Support Centre */
+
+  .support-form-section {
+    width: 100% !important;
+    padding: 10px !important;
+  }
+
+  .top-navbar .logo-dhaakad-cinema img.Cinema {
+    display: none;
+  }
+
+  .top-navbar .logo-dhaakad-cinema img.Dhakad {
+    display: none;
+  }
+
+  .logo-dhaakad-cinema {
+    margin-left: 0px !important;
+  }
+  .slider-overlay {
+    position: absolute;
+    z-index: 9;
+    width: 100% !important;
+    left: 0% !important;
+  }
+  .share-movie-btn {
+    position: absolute;
+    right: 0px !important;
+    top: 0px !important;
+  }
+
+  /* Dhaakad Support Centre */
+}
+
+@media screen and (min-device-width: 425px) and (max-device-width: 540px) {
+  .share-movie-btn {
+    position: absolute;
+    right: 0px !important;
+    top: 0px !important;
+  }
+  #sliderpoints-wrapper .slider-cards .movie-card {
+    height: unset;
+  }
+  #masthead-overlay-swiper #hoverPlayer .hoverplayer {
+    height: unset;
+  }
+  #masthead-overlay-swiper .movie-detail-wrapper.movie-detail-content {
+    padding-top: 3.5rem;
+  }
+  #masthead-overlay-swiper .slider-banner {
+    height: 805px !important;
+  }
+  /* home-slider  Start*/
+  .home-slider .mySwiper .swiper-button-prev {
+    display: none;
+  }
+
+  .home-slider .mySwiper .swiper-button-next {
+    display: none;
+  }
+
+  .home-slider .slider-content-outer .col-sm-4 {
+    width: 100%;
+  }
+
+  .home-slider .slider-content-outer .col-sm-8 {
+    width: 100%;
+  }
+
+  .home-slider.main-swiper-slider .slider-banner {
+    height: 785px !important;
+  }
+
+  .home-slider .slider-content.movie-banner {
+    padding-top: 32px;
+  }
+
+  .home-slider .movie-card-wrapper .movie-card {
+    height: 250px;
+  }
+
+  .home-slider .movie-icon-button {
+    margin: 16px 0px 0px 0px !important;
+  }
+
+  .home-slider .movie-detail h1 {
+    font-size: 30px !important;
+  }
+
+  .home-slider .movie-detail p {
+    font-size: 14px !important;
+    line-height: 20px !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .home-slider .movie-detail span.movie-time {
+    font-size: 18px;
+    line-height: 0px;
+  }
+
+  .home-slider li.border-rounded {
+    width: 45px !important;
+    height: 20px !important;
+    padding: 4px 0px;
+  }
+
+  .home-slider .movie-EventAttributes li {
+    padding: 3px 0px !important;
+    font-size: 14px !important;
+  }
+
+  .slider-cards .movie-card .video-player {
+    width: 100% !important;
+  }
+
+  .movie-card-wrapper .movie-card .MuiSvgIcon-root {
+    font-size: 2.5rem !important;
+  }
+
+  .movie-EventAttributes h6 {
+    font-size: 14px !important;
+  }
+
+  .dhakad-rating-sec .dhakad-rating-title-sec h6 {
+    font-size: 14px !important;
+    margin-right: 8px !important;
+    line-height: 18px !important;
+  }
+
+  .dhakad-rating-sec span {
+    font-size: 12px !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin-left: 8px !important;
+    line-height: 16px !important;
+  }
+
+  .home-slider .movie-detail span.movie-time {
+    font-size: 14px !important;
+    line-height: 25px !important;
+  }
+
+  .home-slider .movie-EventAttributes li svg.MuiSvgIcon-root {
+    color: #ffb800;
+    font-size: 22px !important;
+  }
+
+  .home-slider .movie-detail .movie-EventAttributes {
+    margin-bottom: 6px !important;
+    margin-top: 6px !important;
+    line-height: 14px !important;
+  }
+
+  .movie-information-outer {
+    align-items: baseline;
+  }
+
+  .home-slider .movie-information button {
+    padding: 6px 10px !important;
+    font-size: 10px !important;
+  }
+
+  /* home-slider  end */
+  /* home-page*/
+  .movie-lang-btn {
+    padding-bottom: 6px;
+  }
+
+  .movie-icon-button .MuiSvgIcon-root {
+    font-size: 16px !important;
+  }
+
+  /* end */
+  .nav-item {
+    border-bottom: unset !important;
+    line-height: 40px !important;
+  }
+
+  .registration-content {
+    padding: 26px 0px !important;
+    display: block !important;
+  }
+
+  .registration-content h3 {
+    font-size: 16px !important;
+    margin-bottom: 20px;
+  }
+
+  .registration-content button {
+    font-size: 12px !important;
+    padding: 6px 20px !important;
+  }
+
+  /* reward pages*/
+  .bottom-navbar-profile-sec {
+    display: block !important;
+  }
+
+  .bottom-navbar .profile-outer {
+    text-align: center !important;
+  }
+
+  .bottom-navbar .profile-img-sec {
+    margin: auto;
+  }
+
+  .bottom-navbar .profile_title h2 {
+    line-height: 1.5rem !important;
+    text-align: center !important;
+    font-size: 18px !important;
+  }
+
+  .bottom-navbar-menu-outer ul.navbar-nav {
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow: scroll;
+    width: 100%;
+  }
+
+  .bottom-navbar-menu-outer {
+    overflow: auto;
+  }
+
+  .bottom-navbar {
+    margin-bottom: 2rem !important;
+  }
+
+  .bottom-navbar-menu-outer .navbar {
+    width: max-content;
+    margin: auto;
+  }
+
+  .coupon-card-heading h4 {
+    font-size: 16px !important;
+  }
+
+  .reward-card-description {
+    font-size: 14px !important;
+  }
+
+  .term-and-conditon {
+    font-size: 14px !important;
+  }
+
+  .support-container h1 {
+    font-size: 18px !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .support-form-section input.form-control {
+    padding: 6px 10px !important;
+    font-size: 14px !important;
+  }
+
+  .support-form-section textarea.form-control {
+    padding: 6px 10px !important;
+    font-size: 14px !important;
+    border-radius: 16px !important;
+  }
+
+  .custom-support-btn .support-btn {
+    font-size: 14px !important;
+    padding: 4px 0px !important;
+  }
+
+  .reward-amount {
+    font-size: 14px !important;
+    padding: 2px 8px !important;
+  }
+
+  .reward-content table {
+    width: 66% !important;
+  }
+
+  .col-md-8.expire-date-title {
+    width: 75%;
+  }
+
+  .col-md-4.reward-logo {
+    width: 25%;
+  }
+
+  .crousel-card-banner {
+    height: 125px !important;
+  }
+
+  .modal-form-sign-in-option {
+    padding: 0px 6px !important;
+  }
+
+  .reward-logo img {
+    height: 65px !important;
+  }
+
+  .rewards-title h2 {
+    font-size: 20px !important;
+  }
+
+  .rewards-table .rewards-rk {
+    width: 25px !important;
+    height: 25px !important;
+    font-size: 10px !important;
+  }
+
+  .rewards-table h4 {
+    font-size: 12px !important;
+  }
+
+  .rewards-table .rewards-as {
+    width: 25px !important;
+    height: 25px !important;
+    font-size: 10px !important;
+  }
+
+  .rewards-table .rewards-pk {
+    width: 25px !important;
+    height: 25px !important;
+    font-size: 10px !important;
+  }
+
+  .table-bordered > :not(caption) > * > * {
+    font-size: 12px !important;
+  }
+
+  /* user form */
+  .about-content-title .about-main-heading {
+    font-size: 20px !important;
+  }
+
+  .user-detail-sec-inner {
+    padding: 2rem 22px !important;
+  }
+
+  .main-content {
+    padding-top: 90px !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .bottom-navbar-menu-outer .navbar .navbar-nav .nav-link {
+    font-size: 14px !important;
+  }
+
+  .form-header h2 {
+    font-size: 20px !important;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .regiseration-valdated-fields {
+    line-height: 25px !important;
+    font-size: 14px !important;
+  }
+
+  .regiseration-valdated-fields p {
+    margin: 0px 0px 0px 5px;
+    padding-top: 5px;
+  }
+
+  .password-strong {
+    top: 38px !important;
+  }
+
+  .submit-movie-note {
+    font-size: 14px !important;
+  }
+
+  .model-submit-btn span {
+    font-size: 12px !important;
+    padding: 8px 0px !important;
+  }
+
+  .user-detail-sec-inner input {
+    padding: 6px 12px !important;
+    font-size: 14px !important;
+  }
+
+  .form-label {
+    font-size: 14px !important;
+    margin: 0px !important;
+  }
+  .slider-overlay {
+    position: absolute;
+    z-index: 9;
+    width: 100% !important;
+    left: 0% !important;
+  }
+
+  .profile-img-sec {
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+  .change-profile-text {
+    font-size: 12px !important;
+  }
+
+  .user-detail-sec .mb-5 {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .user-detail-sec-inner .btn-lg {
+    font-size: 16px !important;
+  }
+
+  /* payment option */
+  .payment-contect-content {
+    display: block !important;
+  }
+
+  .payment-card-outer {
+    padding: 0px !important;
+  }
+
+  .payment-card-outer img {
+    height: 200px !important;
+    object-fit: cover;
+    object-position: 100% 0%;
+  }
+
+  .payment-card-content-outer .card-title {
+    margin-top: 0.5rem !important;
+  }
+
+  .payment-movie-details .navbar-nav li {
+    padding: 2px 8px !important;
+    font-size: 14px !important;
+  }
+
+  .payment-option-button button {
+    margin: 0px 0px 12px !important;
+    font-size: 14px !important;
+    padding: 6px 20px !important;
+  }
+
+  .payment-option-description {
+    font-size: 14 px !important;
+  }
+
+  .payment-option-title.card-title h2,
+  .amout-payable,
+  .payment-detail-title h3 {
+    font-size: 20px !important;
+    font-weight: 500 !important;
+  }
+
+  .payment-card-content-outer .text-end {
+    text-align: center !important;
+  }
+
+  .payment-detail-card {
+    padding: 0px !important;
+  }
+
+  .payment-contect-content .MuiInputBase-root.MuiInput-root.MuiInput-underline {
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+  }
+
+  .change-payment-btn.payment-option-button {
+    text-align: center;
+  }
+
+  .payment-detail-title.text-center.card-title {
+    margin: 0px !important;
+  }
+
+  .payment-option .payment-detail-card .card-body {
+    padding: 2rem 1rem !important;
+  }
+
+  #sliderpoints-wrapper.slider-overlay {
+    width: 100% !important;
+    left: 0% !important;
+    top: 15% !important;
+  }
+
+  .payment-contect-content-redio img {
+    width: 80%;
+  }
+
+  .payment-contect-content-redio input {
+    margin-top: 16px !important;
+  }
+
+  .payment-card-content-outer {
+    margin-top: 4px;
+  }
+
+  .payment-detail-card,
+  .payment-option-card {
+    margin: 0px 10px;
+  }
+
+  .payment-option-card-inner {
+    padding: 12px 30px !important;
+  }
+
+  .payment-movie-details {
+    margin: 4px 0px;
+  }
+
+  /* movie detail */
+  /* movie detail */
+  .about-description {
+    font-size: 14px !important;
+    line-height: 26px !important;
+  }
+
+  .main-movie-detail .slider-image img {
+    object-position: 46% 100% !important;
+  }
+
+  .slider-content {
+    top: 4.5rem !important;
+  }
+
+  .rent-option-button button {
+    margin-left: 10px !important;
+    line-height: 1rem !important;
+  }
+
+  .section-heading-band h3 {
+    font-size: 16px !important;
+  }
+
+  .movie-icon-button button {
+    padding: 6px 10px !important;
+    font-size: 10px !important;
+  }
+
+  .swiper-container-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: 40px !important;
+  }
+
+  .movie-iconbtn {
+    margin: 26px 0px 0px 0px !important;
+  }
+
+  .movie-detail .movie-EventAttributes {
+    margin-bottom: 10px !important;
+    margin-top: 0px !important;
+    line-height: 14px !important;
+  }
+
+  .movie-detail p {
+    font-size: 16px !important;
+    line-height: 24px !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .slider-image {
+    height: 785px !important;
+  }
+
+  .review-submit-sec button {
+    font-size: 12px !important;
+    padding: 5px 25px !important;
+  }
+
+  .rating-lable-text {
+    font-size: 14px !important;
+  }
+
+  .review-user-profile img {
+    font-size: 14px !important;
+  }
+
+  .review-user-title h5 {
+    font-size: 16px !important;
+  }
+
+  .review-form-header svg {
+    font-size: 20px !important;
+  }
+
+  .review-form-header h4 {
+    font-size: 18px !important;
+  }
+
+  .movie-iconbtn p {
+    font-size: 18px !important;
+  }
+
+  .movie-about {
+    padding: 32px 0px 10px 0px !important;
+  }
+
+  .movie-languages-button .movie-lang-btn button {
+    font-size: 14px !important;
+    line-height: 20px !important;
+    padding: 6px 20px !important;
+  }
+
+  .section-heading h3,
+  .movie-cast-detail h3,
+  .movie-reviews-detail h3 {
+    font-size: 26px !important;
+  }
+
+  .section-heading h3 {
+    font-size: 16px !important;
+    line-height: 2rem !important;
+  }
+
+  .movie-about p {
+    line-height: 24px !important;
+    letter-spacing: 0.5px !important;
+    font-size: 16px !important;
+    font-weight: 300 !important;
+  }
+
+  .movie-cast-detail {
+    padding-bottom: 28px !important;
+  }
+
+  .movie-subcast img {
+    width: 96px !important;
+    height: 96px !important;
+  }
+
+  .reviews-content {
+    padding: 0px !important;
+  }
+
+  .reviews-banner {
+    padding: 20px 30px !important;
+  }
+
+  .reviews-content h6 {
+    margin-bottom: 24px !important;
+  }
+
+  .registration-banner {
+    padding-top: 2px !important;
+    padding-bottom: 52px !important;
+  }
+
+  .movie-subcast h5.card-title {
+    font-size: 14px !important;
+  }
+
+  .movie-subcast h5.card-title {
+    margin-bottom: 2px !important;
+  }
+
+  .movie-detail span.movie-time {
+    font-size: 16px !important;
+    line-height: 40px !important;
+  }
+
+  #sliderpoints-wrapper .movie-detail h1 {
+    font-size: 26px !important;
+    margin-bottom: 6px !important;
+  }
+
+  /* notification*/
+  .notification .col-sm-3 {
+    width: 25% !important;
+  }
+
+  .notification .col-sm-6 {
+    width: 50% !important;
+  }
+
+  .notificaton-modal .modal-body {
+    width: 100% !important;
+  }
+
+  .main-movie-languages {
+    padding-top: 0px !important;
+  }
+
+  /* Dhaakad Support Centre */
+  .footer-section-main {
+    padding: 18px 0px !important;
+  }
+
+  .footer-section-main hr.line-footer {
+    margin: 15px 0 !important;
+  }
+
+  .footer-text p {
+    font-size: 14px !important;
+  }
+
+  .footer-icons svg.MuiSvgIcon-root {
+    font-size: 26px !important;
+    margin: 0px 4px !important;
+  }
+
+  .reges-banner p {
+    font-size: 16px !important;
+  }
+
+  .crousel-card-banner-content .card-banner-language {
+    font-size: 14px !important;
+  }
+
+  .crousel-card-banner-content h5 {
+    font-size: 14px !important;
+  }
+
+  .custom-profile svg.person-outline {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  .custom-profile {
+    min-height: 55px !important;
+  }
+
+  .movies-sidebar-wrapper .profile-list a.nav-link {
+    line-height: 38px !important;
+  }
+
+  .support-form-section {
+    width: 100% !important;
+    padding: 0px 35px !important;
+  }
+
+  .top-navbar .logo-dhaakad-cinema img.Cinema {
+    display: none;
+  }
+
+  .top-navbar .logo-dhaakad-cinema img.Dhakad {
+    display: none;
+  }
+
+  .logo-dhaakad-cinema {
+    margin-left: 0px !important;
+  }
+  #sliderpoints-wrapper #hoverPlayer .hoverplayer {
+    height: unset;
+  }
+  #sliderpoints-wrapper .movie-detail.movie-content-section {
+    margin-left: 10px;
+  }
+
+  #sliderpoints-wrapper .share-movie-btn button {
+    font-size: 12px !important;
+    padding: 5px 15px !important;
+  }
+  #sliderpoints-wrapper .share-movie-btn button .MuiSvgIcon-root {
+    font-size: 18px !important;
+  }
+  /* Dhaakad Support Centre */
+}
+
+@media screen and (min-device-width: 541px) and (max-device-width: 640px) {
+  #sliderpoints-wrapper .share-movie-btn {
+    right: 0px !important;
+    top: 0px !important;
+  }
+  #sliderpoints-wrapper .sliderpoints-bannercard {
+    width: 100%;
+  }
+  #sliderpoints-wrapper .slider-cards {
+    width: 100%;
+  }
+  #sliderpoints-wrapper .movie-detail.movie-content-section {
+    margin-left: 10px;
+    margin-top: 50px;
+  }
+  #sliderpoints-wrapper #hoverPlayer .hoverplayer {
+    height: unset;
+  }
+  #masthead-overlay-swiper #hoverPlayer .hoverplayer {
+    height: unset;
+  }
+  #masthead-overlay-swiper .movie-detail-wrapper.movie-detail-content {
+    padding-top: 2rem;
+  }
+  #masthead-overlay-swiper .slider-banner {
+    height: 875px;
+  }
+  /* home-slider  Start*/
+  .home-slider .mySwiper .swiper-button-prev {
+    display: none;
+  }
+
+  .home-slider .mySwiper .swiper-button-next {
+    display: none;
+  }
+
+  .home-slider .slider-content-outer .col-sm-4 {
+    width: 100%;
+  }
+
+  .home-slider .slider-content-outer .col-sm-8 {
+    width: 100%;
+  }
+
+  .home-slider.main-swiper-slider .slider-banner {
+    height: 854px !important;
+  }
+
+  .home-slider .movie-card-wrapper .movie-card {
+    height: 278px !important;
+  }
+
+  .home-slider .slider-content.movie-banner {
+    padding-top: 32px;
+  }
+
+  .home-slider .movie-icon-button {
+    margin: 16px 0px 0px 0px !important;
+  }
+
+  .home-slider .movie-detail h1 {
+    font-size: 30px !important;
+  }
+
+  .home-slider .movie-detail p {
+    font-size: 16px !important;
+    line-height: 22px !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .home-slider .movie-detail span.movie-time {
+    font-size: 18px;
+    line-height: 0px;
+  }
+
+  .slider-cards .movie-card .video-player {
+    width: 100% !important;
+  }
+
+  .home-slider li.border-rounded {
+    width: 50px !important;
+    height: 28px !important;
+  }
+
+  .home-slider .movie-EventAttributes li {
+    padding: 6px 6px !important;
+    font-size: 16px !important;
+  }
+
+  .home-slider .movie-detail span.movie-time {
+    font-size: 16px !important;
+    line-height: 30px !important;
+  }
+
+  .home-slider .movie-EventAttributes li svg.MuiSvgIcon-root {
+    color: #ffb800;
+    width: 0.8em;
+    height: 0.8em;
+  }
+
+  .home-slider .movie-detail .movie-EventAttributes {
+    margin-bottom: 6px !important;
+    margin-top: 6px !important;
+    line-height: 14px !important;
+  }
+
+  .movie-information-outer {
+    align-items: baseline;
+  }
+
+  .home-slider .movie-information button {
+    padding: 8px 15px !important;
+    font-size: 12px !important;
+  }
+
+  .main-movie-languages.main-movie-languages .movie-languages-button {
+    padding: 0px 0px 14px 0px;
+  }
+
+  /* home-slider  end */
+
+  /* home-page*/
+  .movie-lang-btn {
+    padding-bottom: 6px;
+  }
+
+  .modal-title {
+    font-size: 16px !important;
+  }
+
+  .modal-header {
+    padding: 10px 1rem !important;
+  }
+
+  .share-culumn h5 {
+    font-size: 16px !important;
+  }
+
+  .movie-card-wrapper .movie-card .MuiSvgIcon-root {
+    font-size: 2.5rem !important;
+  }
+
+  .movie-languages-button .movie-lang-btn button {
+    font-size: 14px !important;
+    padding: 6px 20px !important;
+  }
+
+  .main-content {
+    padding-top: 60px !important;
+    padding-bottom: 2rem !important;
+  }
+
+  /* end */
+  .nav-item {
+    border-bottom: unset !important;
+  }
+
+  .nav-menu.active {
+    width: 40% !important;
+  }
+
+  .registration-content {
+    padding: 26px 0px !important;
+    display: block !important;
+  }
+
+  .registration-content h3 {
+    font-size: 16px !important;
+    margin-bottom: 20px;
+  }
+
+  /* reward pages*/
+  .bottom-navbar-profile-sec {
+    display: block !important;
+  }
+
+  .bottom-navbar .profile-outer {
+    text-align: center !important;
+  }
+
+  .bottom-navbar .profile-img-sec {
+    margin: auto;
+  }
+
+  .bottom-navbar .profile_title h2 {
+    line-height: 2.5rem !important;
+    text-align: center !important;
+    font-size: 22px !important;
+  }
+
+  .bottom-navbar-menu-outer .navbar .navbar-nav .nav-link {
+    font-size: 14px !important;
+  }
+
+  .profile-img-sec {
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  .bottom-navbar-menu-outer ul.navbar-nav {
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow: scroll;
+    width: 100%;
+  }
+
+  .bottom-navbar-menu-outer {
+    overflow: auto;
+  }
+
+  .bottom-navbar-menu-outer .navbar {
+    width: max-content;
+    margin: auto;
+  }
+
+  .col-md-8.expire-date-title {
+    width: 75%;
+  }
+
+  .col-md-4.reward-logo {
+    width: 25%;
+  }
+
+  .crousel-card-banner {
+    height: 125px !important;
+  }
+
+  .modal-form-sign-in-option {
+    padding: 0px 6px !important;
+  }
+
+  .reward-cards-wrapper {
+    width: 50% !important;
+    float: left;
+  }
+
+  .reward-logo img {
+    height: 40px !important;
+  }
+
+  .card-subtitle {
+    padding: 8px 0px !important;
+  }
+
+  .reward-cards-wrapper .card-title {
+    font-size: 18px !important;
+  }
+
+  .card-subtitle.h6 {
+    font-size: 15px !important;
+  }
+
+  .reward-card-description,
+  p.text-center.card-text {
+    font-size: 14px !important;
+  }
+
+  /* user form */
+  .user-detail-sec-inner {
+    padding: 2rem 18px !important;
+  }
+
+  .support-container h1 {
+    font-size: 26px !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .support-form-section label {
+    font-size: 14px !important;
+  }
+
+  .support-form-section input.form-control {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .support-form-section textarea.form-control {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .custom-support-btn .support-btn {
+    font-size: 14px !important;
+    padding: 6px 0px !important;
+  }
+
+  .form-header h2 {
+    font-size: 24px !important;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .user-detail-sec .mb-5 {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .user-detail-sec-inner .btn-lg {
+    font-size: 16px !important;
+  }
+
+  /* payment option */
+  .payment-contect-content {
+    display: block !important;
+  }
+
+  .payment-card-outer {
+    padding: 0px !important;
+  }
+
+  .payment-card-outer img {
+    height: 270px;
+    object-fit: cover;
+    object-position: 100% 0%;
+  }
+
+  .payment-card-content-outer .card-title {
+    margin-top: 0.5rem !important;
+  }
+
+  .payment-movie-details .navbar-nav li {
+    padding: 4px 10px !important;
+    font-size: 14px !important;
+  }
+
+  .payment-option-button button {
+    margin: 12px 0px !important;
+    font-size: 14px !important;
+    padding: 6px 20px !important;
+  }
+
+  .payment-option-description {
+    font-size: 14px !important;
+  }
+
+  .payment-option-title.card-title h2,
+  .amout-payable,
+  .payment-detail-title h3 {
+    font-size: 20px !important;
+    font-weight: 500 !important;
+  }
+
+  .payment-card-content-outer .text-end {
+    text-align: center !important;
+  }
+
+  .payment-detail-card {
+    padding: 0px !important;
+  }
+
+  .payment-contect-content .MuiInputBase-root.MuiInput-root.MuiInput-underline {
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+  }
+
+  .change-payment-btn.payment-option-button {
+    text-align: center;
+  }
+
+  .payment-detail-title.text-center.card-title {
+    margin: 0px !important;
+  }
+
+  .payment-option .payment-detail-card .card-body {
+    padding: 2rem 1rem !important;
+  }
+
+  .payment-contect-content-redio img {
+    width: 80%;
+  }
+
+  .payment-contect-content-redio input {
+    margin-top: 16px !important;
+  }
+
+  .payment-card-content-outer {
+    margin-top: 4px;
+  }
+
+  .payment-detail-card,
+  .payment-option-card {
+    margin: 0px 40px;
+  }
+
+  .payment-movie-details {
+    margin: 4px 0px;
+  }
+
+  /* movie detail */
+  /* movie detail */
+  .main-movie-detail .slider-image img {
+    object-position: 46% 100% !important;
+  }
+
+  .slider-content {
+    top: 4.5rem !important;
+  }
+
+  .movie-card-wrapper .movie-card {
+    height: 278px;
+  }
+
+  .rent-option-button button {
+    margin-left: 14px !important;
+  }
+
+  .movie-icon-button button {
+    padding: 8px 15px !important;
+    font-size: 12px !important;
+  }
+
+  .movie-iconbtn {
+    margin: 26px 0px 0px 0px !important;
+  }
+
+  .movie-detail .movie-EventAttributes {
+    margin-bottom: 10px !important;
+    margin-top: 0px !important;
+    line-height: 14px !important;
+  }
+
+  .movie-detail p {
+    font-size: 16px !important;
+    line-height: 24px !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .slider-image {
+    height: 855px !important;
+  }
+
+  .movie-iconbtn p {
+    font-size: 18px !important;
+  }
+
+  .movie-about {
+    padding: 32px 0px 10px 0px !important;
+  }
+
+  .section-heading h3,
+  .movie-cast-detail h3,
+  .movie-reviews-detail h3 {
+    font-size: 26px !important;
+  }
+
+  .section-heading h3 {
+    line-height: 28px !important;
+  }
+
+  .movie-about p {
+    line-height: 20px !important;
+    letter-spacing: 0.5px !important;
+    font-size: 14px !important;
+  }
+
+  .movie-cast-detail {
+    padding-bottom: 28px !important;
+  }
+
+  .movie-subcast img {
+    width: 90px !important;
+    height: 90px !important;
+  }
+
+  .movie-review-content {
+    margin-top: 1rem !important;
+  }
+
+  .slider-overlay {
+    width: 100% !important;
+    left: 0% !important;
+  }
+
+  .reviews-content {
+    padding: 0px !important;
+  }
+
+  .reviews-banner {
+    padding: 20px 30px !important;
+  }
+
+  .review-form-header h4 {
+    font-size: 18px !important;
+  }
+
+  .review-form-header svg {
+    font-size: 20px !important;
+    margin: 9px 11px !important;
+  }
+
+  .movie-review-content {
+    padding: 0px 20px !important;
+  }
+
+  .reviews-content h6 {
+    margin-bottom: 24px !important;
+  }
+
+  .registration-banner {
+    padding-top: 2px !important;
+    padding-bottom: 52px !important;
+  }
+
+  .review-user-profile {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .review-user-profile img {
+    font-size: 14px !important;
+  }
+
+  .review-user-title h5 {
+    font-size: 16px !important;
+  }
+
+  .review-user-detail {
+    margin-bottom: 10px !important;
+  }
+
+  .rating-lable-text {
+    font-size: 14px !important;
+  }
+
+  .rating-title-area {
+    font-size: 14px !important;
+    padding: 3px 10px !important;
+  }
+
+  .regiseration-valdated-fields {
+    font-size: 14px !important;
+    line-height: 30px !important;
+  }
+
+  .regiseration-valdated-fields p {
+    margin: 0px 0px 0px 5px !important;
+    padding-top: 5px !important;
+  }
+
+  .registration-content button {
+    font-size: 14px !important;
+    padding: 6px 20px !important;
+  }
+
+  .user-detail-sec-inner input {
+    padding: 8px 10px !important;
+    font-size: 14px !important;
+  }
+
+  .password-strong {
+    top: 46px !important;
+  }
+
+  .coupon-card-heading h4 {
+    font-size: 15px;
+  }
+
+  .term-and-conditon {
+    font-size: 14px !important;
+  }
+
+  .rewards-title h2 {
+    font-size: 20px !important;
+  }
+
+  .rewards-table h4 {
+    font-size: 13px !important;
+  }
+
+  .submit-movie-note {
+    font-size: 14px !important;
+  }
+
+  .model-submit-btn span {
+    font-size: 14px !important;
+    padding: 8px 0px !important;
+  }
+
+  .movie-subcast h5.card-title {
+    font-size: 14px !important;
+  }
+
+  .movie-subcast h5.card-title {
+    margin-bottom: 2px !important;
+  }
+
+  .movie-detail span.movie-time {
+    font-size: 16px !important;
+    line-height: 40px !important;
+  }
+
+  .movie-detail h1 {
+    font-size: 2rem !important;
+    margin-bottom: 0px !important;
+  }
+
+  .main-movie-detail .slider-content.movie-banner .col-sm-4,
+  .main-movie-detail .slider-content.movie-banner .col-sm-8 {
+    width: 100% !important;
+  }
+
+  /* notification*/
+  .notification .col-sm-3 {
+    width: 25% !important;
+  }
+
+  .notification .col-sm-6 {
+    width: 50% !important;
+  }
+
+  .notificaton-modal .modal-body {
+    width: 100% !important;
+  }
+
+  .main-movie-languages {
+    padding-top: 0px !important;
+  }
+
+  /* Dhaakad Support Centre */
+
+  .support-form-section {
+    width: 100% !important;
+    padding: 20px !important;
+  }
+
+  .top-navbar .logo-dhaakad-cinema img.Cinema {
+    display: none;
+  }
+
+  .top-navbar .logo-dhaakad-cinema img.Dhakad {
+    display: none;
+  }
+
+  .logo-dhaakad-cinema {
+    margin-left: 0px !important;
+  }
+
+  .swiper-container-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: 40px !important;
+  }
+
+  .footer-text p {
+    font-size: 14px !important;
+  }
+
+  /* Dhaakad Support Centre */
+}
+
+@media screen and (min-device-width: 641px) and (max-device-width: 767px) {
+  .share-movie-btn {
+    right: 0px !important;
+  }
+  #sliderpoints-wrapper .share-movie-btn button {
+    font-size: 12px !important;
+    padding: 5px 15px !important;
+  }
+  #masthead-container-slider .slider-banner {
+    height: 490px !important;
+  }
+  /* #sliderpoints-wrapper .slider-cards .movie-card {
+    height: 245px !important;
+  } */
+  #sliderpoints-wrapper .slider-cards {
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+  #sliderpoints-wrapper .sliderpoints-bannercard {
+    width: 50%;
+  }
+  #customizeswiper .movie-detail h1 {
+    font-size: 2rem;
+    padding: 4px 0px;
+  }
+  #masthead-overlay-swiper #hoverPlayer .hoverplayer {
+    height: unset;
+  }
+  #masthead-overlay-swiper .movie-detail-wrapper.movie-detail-content {
+    padding-top: 1rem;
+  }
+  #masthead-overlay-swiper .slider-banner {
+    height: 875px;
+  }
+
+  /* home-slider  Start*/
+  .home-slider .mySwiper .swiper-button-prev {
+    display: none;
+  }
+
+  .home-slider .mySwiper .swiper-button-next {
+    display: none;
+  }
+
+  .home-slider .slider-content-outer .col-sm-4 {
+    width: 100%;
+  }
+
+  .home-slider .slider-content-outer .col-sm-8 {
+    width: 100%;
+  }
+
+  /* .home-slider.main-swiper-slider .slider-banner {
+    height: 854px !important;
+  } */
+
+  .home-slider .movie-card-wrapper .movie-card {
+    height: 300px;
+  }
+
+  .home-slider .slider-content.movie-banner {
+    padding-top: 32px;
+  }
+
+  .home-slider .movie-icon-button {
+    margin: 16px 0px 0px 0px !important;
+  }
+
+  .home-slider .movie-detail h1 {
+    font-size: 34px !important;
+    margin: 0px;
+  }
+
+  .home-slider .movie-detail p {
+    font-size: 16px !important;
+    line-height: 22px !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .home-slider .movie-detail span.movie-time {
+    font-size: 18px;
+    line-height: 0px;
+  }
+
+  .home-slider li.border-rounded {
+    width: 50px !important;
+    height: 24px !important;
+    padding: 4px 0px;
+  }
+
+  .home-slider .movie-EventAttributes li {
+    padding: 4px 6px !important;
+    font-size: 16px !important;
+  }
+
+  .home-slider .movie-detail span.movie-time {
+    font-size: 16px !important;
+    line-height: 30px !important;
+  }
+
+  .home-slider .movie-EventAttributes li svg.MuiSvgIcon-root {
+    color: #ffb800;
+    width: 0.8em;
+    height: 0.8em;
+  }
+
+  .home-slider .movie-detail .movie-EventAttributes {
+    margin-bottom: 6px !important;
+    margin-top: 6px !important;
+    line-height: 14px !important;
+  }
+
+  .movie-information-outer {
+    align-items: baseline;
+  }
+
+  .home-slider .movie-information button {
+    padding: 8px 14px !important;
+    font-size: 13px !important;
+  }
+
+  .rent-option-button button {
+    margin-left: 14px !important;
+  }
+
+  .main-movie-languages.main-movie-languages .movie-languages-button {
+    padding: 0px 0px 14px 0px;
+  }
+
+  /* home-slider  end */
+
+  /* home-page*/
+  .movie-lang-btn {
+    padding-bottom: 6px;
+  }
+
+  /* end */
+  .movie-card-wrapper .movie-card .MuiSvgIcon-root {
+    font-size: 3.5rem !important;
+  }
+
+  .submit-movie-note {
+    font-size: 14px !important;
+  }
+
+  .nav-item {
+    border-bottom: unset !important;
+  }
+
+  .registration-content {
+    padding: 28px 0px !important;
+    display: block !important;
+  }
+
+  .registration-content h3 {
+    font-size: 18px !important;
+    margin-bottom: 22px;
+  }
+
+  .review-user-profile img {
+    font-size: 15px !important;
+  }
+
+  .review-user-title h5 {
+    font-size: 18px !important;
+  }
+
+  .rating-lable-text {
+    font-size: 15px !important;
+  }
+
+  .rating-title-area {
+    font-size: 14px !important;
+    padding: 3px 10px !important;
+  }
+
+  .rating-comment-area {
+    font-size: 14px !important;
+    padding: 3px 10px !important;
+  }
+
+  .registration-content button {
+    padding: 10px 30px !important;
+  }
+
+  /* reward pages*/
+  .bottom-navbar-menu .navbar-expand-sm {
+    justify-content: center !important;
+    margin: auto;
+  }
+
+  .bottom-navbar-profile-sec {
+    display: block !important;
+  }
+
+  .bottom-navbar .profile-outer {
+    text-align: center !important;
+  }
+
+  .bottom-navbar .profile-img-sec {
+    margin: auto;
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+  .bottom-navbar .profile_title h2 {
+    line-height: 22px !important;
+    text-align: center !important;
+    font-size: 20px !important;
+  }
+
+  .crousel-card-banner {
+    height: 125px !important;
+  }
+
+  .bottom-navbar-menu-outer ul.navbar-nav {
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow: scroll;
+    width: 100%;
+  }
+
+  .movie-languages-button .movie-lang-btn button {
+    font-size: 14px !important;
+    padding: 4px 20px !important;
+  }
+
+  .bottom-navbar-menu-outer {
+    overflow: auto;
+  }
+
+  .bottom-navbar-menu-outer .navbar {
+    width: max-content;
+  }
+
+  .bottom-navbar-menu-outer .navbar .navbar-nav .nav-link {
+    font-size: 15px !important;
+  }
+
+  .col-md-8.expire-date-title {
+    width: 75%;
+  }
+
+  .col-md-4.reward-logo {
+    width: 25%;
+  }
+
+  .modal-form-sign-in-option {
+    padding: 0px 6px !important;
+  }
+
+  .reward-cards-wrapper {
+    width: 50% !important;
+    float: left;
+  }
+
+  .reward-logo img {
+    height: 40px !important;
+  }
+
+  .card-subtitle {
+    padding: 8px 0px !important;
+  }
+
+  .coupon-card-heading h4 {
+    font-size: 18px !important;
+  }
+
+  .term-and-conditon {
+    font-size: 14px !important;
+  }
+
+  .reward-cards-wrapper .card-title {
+    font-size: 18px !important;
+  }
+
+  .card-subtitle.h6 {
+    font-size: 15px !important;
+  }
+
+  .reward-card-description,
+  p.text-center.card-text {
+    font-size: 14px !important;
+  }
+
+  /* user form */
+  .support-container h1 {
+    font-size: 26px !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .support-form-section label {
+    font-size: 14px !important;
+  }
+
+  .support-form-section input.form-control {
+    font-size: 14px !important;
+    padding: 6px 12px !important;
+  }
+
+  .support-form-section textarea.form-control {
+    padding: 6px 12px !important;
+    font-size: 14px !important;
+  }
+
+  .custom-support-btn .support-btn {
+    font-size: 14px !important;
+    padding: 6px 0px !important;
+  }
+
+  .user-detail-sec-inner {
+    padding: 1rem 25px !important;
+  }
+
+  .form-header h2 {
+    font-size: 24px !important;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .user-detail-sec .mb-5 {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .user-detail-sec-inner .btn-lg {
+    font-size: 16px !important;
+  }
+
+  .user-policy {
+    margin-top: 2rem !important;
+  }
+
+  /* payment option */
+  .payment-contect-content {
+    display: block !important;
+  }
+
+  .payment-card-outer {
+    padding: 0px !important;
+  }
+
+  .payment-card-outer img {
+    height: 270px;
+    object-fit: cover;
+    object-position: 100% 0%;
+  }
+
+  .payment-card-content-outer .card-title {
+    margin-top: 0.5rem !important;
+  }
+
+  .payment-movie-details .navbar-nav li {
+    padding: 4px 10px !important;
+    font-size: 14px !important;
+  }
+
+  .payment-option-button button {
+    margin: 12px 0px !important;
+    padding: 6px 20px !important;
+    font-size: 14px;
+  }
+
+  .payment-option-description {
+    font-size: 16px !important;
+  }
+
+  .payment-option-title.card-title h2,
+  .amout-payable,
+  .payment-detail-title h3 {
+    font-size: 22px !important;
+    font-weight: 500 !important;
+  }
+
+  .payment-card-content-outer .text-end {
+    text-align: center !important;
+  }
+
+  .payment-detail-card {
+    padding: 0px !important;
+  }
+
+  .payment-contect-content .MuiInputBase-root.MuiInput-root.MuiInput-underline {
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+  }
+
+  .swiper-container-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: 25px !important;
+  }
+
+  .change-payment-btn.payment-option-button {
+    text-align: center;
+  }
+
+  .card-text:last-child {
+    font-size: 14px !important;
+  }
+
+  .payment-detail-title.text-center.card-title {
+    margin: 0px !important;
+  }
+
+  .payment-option .payment-detail-card .card-body {
+    padding: 2rem 1rem !important;
+  }
+
+  .payment-contect-content-redio img {
+    width: 80%;
+  }
+
+  .payment-contect-content-redio input {
+    margin-top: 16px !important;
+  }
+
+  .payment-card-content-outer {
+    margin-top: 4px;
+  }
+
+  .payment-detail-card,
+  .payment-option-card {
+    margin: 0px 20px;
+  }
+
+  .password-strong {
+    top: 40px !important;
+  }
+
+  .payment-movie-details {
+    margin: 4px 0px;
+  }
+
+  /* movie detail */
+  /* movie detail */
+
+  .main-movie-detail .slider-image img {
+    object-position: 46% 100% !important;
+  }
+
+  .main-content {
+    padding-top: 60px !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .about-content-title .about-main-heading {
+    margin-top: 70px !important;
+    font-size: 22px !important;
+    padding-bottom: 5px !important;
+  }
+
+  .about-description {
+    font-size: 14px !important;
+  }
+
+  .about-content {
+    margin-bottom: 1rem !important;
+  }
+
+  .bottom-navbar-inner {
+    padding-top: 60px !important;
+  }
+
+  .slider-content {
+    top: 4.5rem !important;
+  }
+
+  .movie-icon-button button {
+    padding: 8px 14px !important;
+    font-size: 13px !important;
+  }
+
+  .movie-iconbtn {
+    margin: 26px 0px 0px 0px !important;
+  }
+
+  .movie-detail .movie-EventAttributes {
+    margin-bottom: 10px !important;
+    margin-top: 0px !important;
+    line-height: 14px !important;
+  }
+
+  .movie-detail p {
+    font-size: 16px !important;
+    line-height: 24px !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .slider-image {
+    height: 854px !important;
+  }
+
+  .movie-about {
+    padding: 32px 0px 10px 0px !important;
+  }
+
+  .section-heading h3,
+  .movie-cast-detail h3,
+  .movie-reviews-detail h3 {
+    font-size: 26px !important;
+  }
+
+  .section-heading h3 {
+    line-height: 2.5rem !important;
+    font-size: 18px !important;
+  }
+
+  .movie-about p {
+    line-height: 24px !important;
+    letter-spacing: 0.5px !important;
+    font-size: 14px !important;
+  }
+
+  .movie-cast-detail {
+    padding-bottom: 28px !important;
+  }
+
+  .reviews-content {
+    padding: 0px !important;
+  }
+
+  .reviews-banner {
+    padding: 20px 30px !important;
+  }
+
+  .reviews-content h6 {
+    margin-bottom: 24px !important;
+  }
+
+  .registration-banner {
+    padding-top: 2px !important;
+    padding-bottom: 52px !important;
+  }
+
+  .movie-subcast h5.card-title {
+    font-size: 14px !important;
+  }
+
+  .movie-subcast h5.card-title {
+    margin-bottom: 2px !important;
+  }
+
+  .movie-detail span.movie-time {
+    font-size: 16px !important;
+    line-height: 40px !important;
+  }
+
+  .movie-subcast img {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  .main-movie-detail .slider-content.movie-banner .col-sm-4,
+  .main-movie-detail .slider-content.movie-banner .col-sm-8 {
+    width: 100% !important;
+  }
+  .movie-detail h1 {
+    font-weight: 500 !important;
+    font-size: 24px !important;
+  }
+
+  .nav-item {
+    border-bottom: unset !important;
+  }
+
+  .main-movie-languages {
+    padding-top: 0px !important;
+  }
+
+  .crousel-card-banner-content h5 {
+    font-size: 14px !important;
+  }
+
+  /* Dhaakad Support Centre */
+
+  .support-form-section {
+    width: 100% !important;
+    padding: 0px 50px !important;
+  }
+
+  .logo-dhaakad-cinema {
+    margin-left: 0px !important;
+  }
+
+  /* Dhaakad Support Centre */
+  .input-label {
+    font-size: 14px !important;
+  }
+
+  .user-detail-sec-inner input {
+    font-size: 14px !important;
+    padding: 6px 8px !important;
+  }
+
+  .regiseration-valdated-fields {
+    line-height: 25px !important;
+  }
+
+  .regiseration-valdated-fields p {
+    padding-top: 3px !important;
+    margin-top: 0px !important;
+  }
+
+  .review-form-header svg {
+    font-size: 22px !important;
+    margin: 9px 15px;
+  }
+
+  .review-form-header h4 {
+    font-size: 20px !important;
+  }
+
+  .model-submit-btn span {
+    padding: 6px 0px !important;
+    font-size: 14px !important;
+  }
+
+  .footer-text p {
+    font-size: 14px !important;
+  }
+
+  .footer-icons svg.MuiSvgIcon-root {
+    font-size: 30px !important;
+    margin: 0px 5px !important;
+  }
+
+  .footer-section-main hr.line-footer {
+    margin: 16px 0px !important;
+  }
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 991px) {
+  #sliderpoints-wrapper .share-movie-btn {
+    right: 0px !important;
+    top: 0px !important;
+  }
+  #sliderpoints-wrapper .movie-detail h1 {
+    font-size: 1.8rem !important;
+  }
+  .registration-content h3 {
+    font-size: 1.5rem !important;
+    line-height: 32px !important;
+  }
+  #customizeswiper .movie-detail h1 {
+    font-size: 1.5rem;
+    padding: 8px 0px;
+  }
+  #sliderpoints-wrapper .slider-cards {
+    display: flex;
+    align-items: center;
+  }
+  .registration-content {
+    width: 100% !important;
+    justify-content: space-between;
+  }
+
+  /* home silde */
+  .home-slider .swiper-button-prev::after {
+    font-size: 12px !important;
+  }
+
+  .home-slider .swiper-button-next::after {
+    font-size: 12px !important;
+  }
+
+  .home-slider .mySwiper .swiper-button-prev {
+    top: 55% !important;
+    padding: 15px 15px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .home-slider .mySwiper .swiper-button-next {
+    top: 55% !important;
+    padding: 15px 15px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .home-slider .slider-content-outer .col-sm-4 {
+    width: 45%;
+  }
+
+  .home-slider .slider-content-outer .col-sm-8 {
+    width: 55%;
+  }
+
+  .home-slider .slider-content.movie-banner .container {
+    max-width: 94% !important;
+  }
+
+  .home-slider.main-swiper-slider .slider-banner {
+    height: 530px !important;
+  }
+
+  .home-slider .movie-card-wrapper .movie-card {
+    height: 390px;
+  }
+
+  .home-slider .slider-content-outer .movie-detail-wrapper {
+    margin-top: 16px;
+  }
+
+  /* home slide */
+
+  .payment-movie-details .navbar-nav li {
+    padding: 10px 4px !important;
+  }
+
+  .col-md-8.expire-date-title {
+    width: 75%;
+  }
+
+  .col-md-4.reward-logo {
+    width: 25%;
+  }
+
+  .modal-form-sign-in-option {
+    padding: 0px 6px !important;
+  }
+
+  .reward-logo img {
+    height: 34px !important;
+    object-fit: contain !important;
+  }
+
+  .card-subtitle {
+    padding: 8px 0px !important;
+  }
+
+  .reward-cards-wrapper .card-title {
+    font-size: 18px !important;
+  }
+
+  .card-subtitle.h6 {
+    font-size: 15px !important;
+  }
+
+  .reward-card-description,
+  p.text-center.card-text {
+    font-size: 13px !important;
+  }
+
+  /* payment option */
+  .payment-card-outer {
+    padding: 0px !important;
+  }
+
+  .payment-option .payment-card-banner-sec.col-md-3 {
+    width: 30% !important;
+  }
+
+  .payment-option .payment-card-content-sec.col-md-9 {
+    width: 70% !important;
+  }
+
+  .payment-option .payment-movie-details .navbar-nav:nth-child(1) {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .payment-option .payment-movie-details .navbar-nav li {
+    padding: 0px 10px !important;
+  }
+
+  .payment-option-description.col-md-8 {
+    width: 100% !important;
+  }
+
+  .payment-detail-card.payment-option-card .card-body,
+  .payment-option-card.shadow-lg.card .col-md-10.mx-auto.card-body {
+    width: 100% !important;
+  }
+
+  .payment-option .payment-option-card .card-body {
+    padding: 2rem 2rem !important;
+  }
+
+  .payment-movie-details .navbar-nav li,
+  .payment-option-description {
+    font-size: 16px !important;
+  }
+
+  .payment-option-description {
+    padding: 18px 10px !important;
+  }
+
+  .payment-option-button button {
+    padding: 10px 50px !important;
+  }
+
+  .payment-contect-content-redio input {
+    margin-top: 22px !important;
+  }
+
+  /* submit your movie*/
+  .submit-movie-content .col-md-5 {
+    width: 100% !important;
+  }
+
+  /* movie detail */
+  /* movie detail */
+  /* .movie-subtitle {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  } */
+  .main-movie-detail .slider-content.movie-banner .col-sm-4 {
+    width: 45% !important;
+  }
+
+  .main-movie-detail .slider-content.movie-banner .col-sm-8 {
+    width: 55% !important;
+  }
+
+  .main-movie-detail .slider-content.movie-banner .container {
+    max-width: 94% !important;
+  }
+
+  .slider-image {
+    height: 570px !important;
+  }
+
+  .main-movie-detail .movie-detail-wrapper {
+    margin-top: 10px;
+  }
+
+  .main-movie-languages {
+    padding-top: 0px !important;
+  }
+
+  /* Dhaakad Support Centre */
+
+  .support-form-section {
+    width: 100% !important;
+    padding: 30px !important;
+  }
+
+  .logo-dhaakad-cinema {
+    margin-left: 0px !important;
+  }
+
+  /* Dhaakad Support Centre */
+}
+
+@media screen and (min-device-width: 992px) and (max-device-width: 1024px) {
+  .registration-content h3 {
+    font-size: 1.5rem !important;
+    line-height: 32px !important;
+  }
+  #sliderpoints-wrapper .slider-cards {
+    display: flex;
+    align-items: center;
+  }
+  #sliderpoints-wrapper .share-movie-btn {
+    right: 0px !important;
+    top: 0px !important;
+  }
+  .navbar-container ul.navbar-dhaakad-cinema {
+    display: none;
+  }
+
+  /* home silde */
+  .home-slider .swiper-button-prev::after {
+    font-size: 12px !important;
+  }
+
+  .home-slider .swiper-button-next::after {
+    font-size: 12px !important;
+  }
+
+  .home-slider .mySwiper .swiper-button-prev {
+    top: 55% !important;
+    padding: 15px 15px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .home-slider .mySwiper .swiper-button-next {
+    top: 55% !important;
+    padding: 15px 15px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .home-slider .slider-content-outer .col-sm-4 {
+    width: 45%;
+  }
+
+  .home-slider .slider-content-outer .col-sm-8 {
+    width: 55%;
+  }
+
+  .home-slider .slider-content.movie-banner .container {
+    max-width: 94% !important;
+  }
+
+  .home-slider.main-swiper-slider .slider-banner {
+    height: 540px !important;
+  }
+
+  /* home slide */
+
+  .registration-banner {
+    padding: 32px 14px;
+  }
+
+  .registration-content h3 {
+    font-size: 22px !important;
+  }
+
+  /* payment option */
+  .payment-card-outer {
+    padding: 0px !important;
+  }
+
+  .payment-movie-details .navbar-nav li {
+    font-size: 16px !important;
+  }
+
+  /* movie detail */
+  /* .movie-subtitle {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  } */
+  .main-movie-detail .slider-content.movie-banner .col-sm-4 {
+    width: 35% !important;
+  }
+
+  .main-movie-detail .slider-content.movie-banner .col-sm-8 {
+    width: 65% !important;
+  }
+
+  .main-movie-detail .slider-content.movie-banner .container {
+    max-width: 94% !important;
+  }
+
+  .slider-image {
+    height: 570px !important;
+  }
+
+  .main-movie-detail .movie-detail-wrapper {
+    margin-top: 14px;
+  }
+
+  /*add padding: 40px 0px; to .registration-content on 768 */
+}
+
+@media screen and (min-device-width: 1025px) and (max-device-width: 1199px) {
+  .registration-content h3 {
+    font-size: 1.5rem !important;
+    line-height: 32px !important;
+  }
+
+  .registration-content h3 {
+    font-size: 1.6rem !important;
+    line-height: 32px;
+  }
+
+  .navbar-container ul.navbar-dhaakad-cinema {
+    display: none;
+  }
+
+  /* home silde */
+  .home-slider .mySwiper .swiper-button-prev {
+    top: 50% !important;
+  }
+
+  .home-slider .mySwiper .swiper-button-next {
+    top: 50% !important;
+  }
+
+  .home-slider .slider-content-outer .col-sm-4 {
+    width: 35% !important;
+  }
+
+  .home-slider .slider-content-outer .col-sm-8 {
+    width: 65% !important;
+  }
+
+  .home-slider .slider-content.movie-banner .container {
+    max-width: 85% !important;
+  }
+
+  .home-slider.main-swiper-slider .slider-banner {
+    height: 540px !important;
+  }
+
+  .home-slider .slider-content-outer .movie-card-wrapper .movie-card {
+    height: 314px !important;
+    margin-top: 0px !important;
+  }
+
+  /* home slide */
+  .payment-movie-details .navbar-nav li {
+    font-size: 16px !important;
+  }
+
+  .payment-card-outer {
+    padding: 0px !important;
+  }
+
+  /* movie detail */
+  /* .movie-subtitle {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  } */
+  .main-movie-detail .slider-content.movie-banner .col-sm-4 {
+    width: 35% !important;
+  }
+
+  .main-movie-detail .slider-content.movie-banner .col-sm-8 {
+    width: 65% !important;
+  }
+
+  .main-movie-detail .slider-content.movie-banner .container {
+    max-width: 85% !important;
+  }
+
+  .slider-image {
+    height: 570px !important;
+  }
+
+  .main-movie-detail .movie-detail-wrapper {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1280px) {
+  .registration-content h3 {
+    font-size: 1.5rem !important;
+  }
+
+  .logo-dhaakad-cinema {
+    margin-left: 0px;
+  }
+
+  /* home silde */
+  .home-slider .mySwiper .swiper-button-prev {
+    top: 50% !important;
+  }
+
+  .home-slider .mySwiper .swiper-button-next {
+    top: 50% !important;
+  }
+
+  .home-slider .slider-content-outer .col-sm-4 {
+    width: 35% !important;
+  }
+
+  .home-slider .slider-content-outer .col-sm-8 {
+    width: 65% !important;
+  }
+
+  .home-slider .slider-content.movie-banner .container {
+    max-width: 85% !important;
+  }
+
+  .home-slider.main-swiper-slider .slider-banner {
+    height: 540px !important;
+  }
+
+  .home-slider .slider-content-outer .movie-card-wrapper .movie-card {
+    height: 315px !important;
+    margin-top: 0px !important;
+  }
+
+  /* home slide */
+
+  /* movie detail */
+  /* .movie-subtitle {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  } */
+  .main-movie-detail .slider-content.movie-banner .col-sm-4 {
+    width: 35% !important;
+  }
+
+  .main-movie-detail .slider-content.movie-banner .col-sm-8 {
+    width: 65% !important;
+  }
+
+  .main-movie-detail .slider-content.movie-banner .container {
+    max-width: 85% !important;
+  }
+
+  .slider-image {
+    height: 570px !important;
+  }
+
+  .main-movie-detail .movie-detail-wrapper {
+    margin-top: 40px;
+  }
+
+  .main-movie-languages {
+    padding-top: 0px !important;
+  }
+}
+
+@media screen and (min-device-width: 1281px) and (max-device-width: 1480px) {
+  .registration-content h3 {
+    font-size: 2.3rem !important;
+  }
+
+  /* home silde */
+  .home-slider .mySwiper .swiper-button-prev {
+    top: 50% !important;
+  }
+
+  .home-slider .mySwiper .swiper-button-next {
+    top: 50% !important;
+  }
+
+  #masthead-overlay-swiper.main-swiper-slider .slider-banner {
+    height: 540px !important;
+  }
+  #masthead-container-slider .slider-banner {
+    width: 100%;
+    height: 480px !important;
+  }
+  .home-slider .slider-content-outer .movie-card-wrapper .movie-card {
+    height: 230px !important;
+    margin-top: 0px !important;
+  }
+  #sliderpoints-wrapper .slider-cards .movie-card {
+    height: 255px;
+    margin-top: 40px;
+  }
+  #sliderpoints-wrapper .slider-cards {
+    display: flex;
+    align-items: center;
+  }
+  .slider-content .container.container-carousel {
+    max-width: 90% !important;
+  }
+
+  /* home slide */
+  /* movie detail */
+
+  .main-movie-detail .slider-content.movie-banner .col-sm-4 {
+    width: 35% !important;
+  }
+
+  .main-movie-detail .slider-content.movie-banner .col-sm-8 {
+    width: 65% !important;
+  }
+
+  .main-movie-detail .slider-content.movie-banner .container {
+    max-width: 90% !important;
+  }
+
+  .slider-image {
+    height: 570px !important;
+  }
+
+  .main-movie-detail .movie-detail-wrapper {
+    margin-top: 38px;
+  }
+}
+
+@media screen and (min-device-width: 1481px) and (max-device-width: 1680px) {
+  .registration-content h3 {
+    font-size: 2rem !important;
+  }
+
+  .main-movie-detail .slider-image {
+    height: 570px !important;
+  }
+
+  .main-movie-detail .movie-detail-wrapper {
+    margin-top: 24px;
+  }
+
+  .crousel-wrapper .crousel-card .crousel-overly-inner {
+    min-height: 324px !important;
+  }
+}
+
+@media screen and (min-device-width: 1681px) and (max-device-width: 1920px) {
+  /* movie detail */
+  .top-navbar .container.navbar-container {
+    max-width: 85% !important;
+  }
+
+  .slider-content .container.container-banner {
+    max-width: 85% !important;
+  }
+
+  .slider-content .container.container-carousel {
+    max-width: 85% !important;
+  }
+
+  ul.navbar-dhaakad-cinema {
+    margin-left: auto !important;
+  }
+
+  .main-movie-detail .movie-detail-wrapper {
+    margin-top: 24px;
+  }
+
+  .slider-cards .movie-card {
+    height: 285px !important;
+  }
+}
+
+@media screen and (min-device-width: 1921px) and (max-device-width: 2560px) {
+  .movie-banner .slider-cards {
+    justify-content: center;
+  }
+
+  .top-navbar .container.navbar-container {
+    max-width: 85% !important;
+  }
+
+  .slider-content .container.container-carousel {
+    max-width: 85% !important;
+  }
+
+  .navbar-container ul.navbar-dhaakad-cinema {
+    margin-left: auto !important;
+  }
+
+  .registration-banner .container.container-bottom {
+    max-width: 85% !important;
+  }
+
+  .slider-cards .movie-card {
+    height: 360px !important;
+    width: 100%;
+  }
+
+  /* movie-detail  */
+  .slider-content .container.container-banner {
+    max-width: 85%;
+  }
+
+  .movie-EventAttributes {
+    margin-bottom: 10px !important;
+    margin-top: 10px !important;
+  }
+
+  .movie-detail h1 {
+    margin-bottom: 12px !important;
+    margin-top: 12px !important;
+  }
+
+  .movie-detail p {
+    padding-bottom: 16px !important;
+  }
+}
+
+@media screen and (min-device-width: 1241px) and (max-device-width: 1290px) {
+  .section-heading h3 {
+    line-height: 5rem !important;
+  }
+
+  .main-movie-languages {
+    padding-top: 0px !important;
+  }
+}
+
+@media screen and (min-device-width: 1025px) and (max-device-width: 3000px) {
+  /* slick css*/
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 38px !important;
+  }
+
+  .slick-next {
+    right: 7px !important;
+  }
+
+  .slick-prev {
+    left: -8px !important;
+    z-index: 999 !important;
+  }
+
+  .slick-prev,
+  .slick-next {
+    top: 40% !important;
+  }
+}
+
+@media screen and (min-device-width: 1481px) and (max-device-width: 3000px) {
+  .main-swiper-slider .slider-banner {
+    height: 600px !important;
+  }
+
+  .swiper-container-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: 25px !important;
+  }
+}
