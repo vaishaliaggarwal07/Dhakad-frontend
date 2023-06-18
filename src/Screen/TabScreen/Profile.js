@@ -191,7 +191,7 @@ const PersonalDetils = () => {
                         </div>
                       </label>
                       <select
-                        class="form-select"
+                        className="form-select"
                         aria-label="Default select example"
                         style={{
                           color: "#000",

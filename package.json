@@ -51,6 +51,9 @@
     "simple-react-comments": "^1.1.0",
     "slick-carousel": "^1.8.1",
     "swiper": "^6.8.4",
+    "video.js": "7.15.4",
+    "videojs-contrib-quality-levels": "2.1.0",
+    "videojs-hls-quality-selector": "1.1.4",
     "web-vitals": "^1.0.1",
     "yup": "^0.32.11"
   },

@@ -126,7 +126,7 @@ const Slider = (props) => {
                             data-bs-target="#shareModal"
                           >
                             <Share
-                              link={`/movie-detail/${item?._id}`}
+                              link={`/movie-detail/${item?._id}?shareT=true`}
                               modalBtn={
                                 <UniqueBtn
                                   iconsClass="sharebtn"

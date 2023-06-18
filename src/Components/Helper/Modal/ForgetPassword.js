@@ -161,7 +161,7 @@ export function ForgetPassword(props) {
                   <ModalBtn
                     modalBtnType={"button"}
                     modalBtnTitle={
-                      <div class="spinner-border" role="status"></div>
+                      <div className="spinner-border" role="status"></div>
                     }
                     btnClass={"btn-lg my-2"}
                   />

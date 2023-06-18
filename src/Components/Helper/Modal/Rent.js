@@ -472,7 +472,7 @@ export function Rent(props) {
               TextBottomGroup="d-none"
               buttonTitle={
                 <div
-                  class="spinner-border"
+                  className="spinner-border"
                   style={{ width: "25px", height: "25px" }}
                   role="status"
                 ></div>

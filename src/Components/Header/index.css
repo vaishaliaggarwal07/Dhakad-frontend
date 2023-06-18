@@ -30,7 +30,8 @@
 img.navbar-logo-img {
   height: auto;
   position: relative;
-  width: 60px;
+  /*width: 60px;*/
+  margin-left:-15px
 }
 img.Dhakad {
   object-fit: cover;

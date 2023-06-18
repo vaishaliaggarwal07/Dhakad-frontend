@@ -21,6 +21,7 @@ export function Share(props) {
   const [message, setMessage] = useState(false);
   const [copyText, setCopyText] = useState();
   const onButtonClick = () => {
+    console.log('Share:onButtonClick: ');
     setCopyText(
       `http://dhaakadcinema.com.s3-website-ap-northeast-1.amazonaws.com${link}`
     );

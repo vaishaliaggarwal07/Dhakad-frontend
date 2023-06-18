@@ -14,24 +14,24 @@ import "firebase/compat/auth";
 
 export function Signup(props) {
   const dispatch = useDispatch();
-  firebase.initializeApp({
-    apiKey: process.env.REACT_APP_API_KEY,
-    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-    databaseURL: process.env.REACT_APP_DATABASE_URL,
-    projectId: process.env.REACT_APP_PROJECT_ID,
-    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-    appId: process.env.REACT_APP_APP_ID,
-    measurementId: process.env.REACT_APP_MEASUREMENT_ID,
-  });
-  const googleProvider = new firebase.auth.GoogleAuthProvider();
-  const facebookProvider = new firebase.auth.FacebookAuthProvider();
-  // const emailProvider = new firebase.auth.EmailAuthProvider();
-
-  const auth = firebase.auth();
+  // firebase.initializeApp({
+  //   apiKey: process.env.REACT_APP_API_KEY,
+  //   authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  //   databaseURL: process.env.REACT_APP_DATABASE_URL,
+  //   projectId: process.env.REACT_APP_PROJECT_ID,
+  //   storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  //   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  //   appId: process.env.REACT_APP_APP_ID,
+  //   measurementId: process.env.REACT_APP_MEASUREMENT_ID,
+  // });
+  // const googleProvider = new firebase.auth.GoogleAuthProvider();
+  // const facebookProvider = new firebase.auth.FacebookAuthProvider();
+  // // const emailProvider = new firebase.auth.EmailAuthProvider();
+  //
+  // const auth = firebase.auth();
   // signInWithGoogle
   const signInWithGoogle = () => {
-    auth
+   /* auth
       .signInWithPopup(googleProvider)
       .then((res) => {
         // console.log(res.user.multiFactor.user.accessToken);
@@ -41,12 +41,12 @@ export function Signup(props) {
       })
       .catch((error) => {
         console.log(error.message, "+++++>");
-      });
+      });*/
   };
   //signInWithFacebook
   const signInWithFacebook = () => {
     // console.log("signInWithFacebook");
-    auth
+   /* auth
       .signInWithPopup(facebookProvider)
       .then((res) => {
         // console.log(res, ".user.multiFactor.user.accessToken");
@@ -56,7 +56,7 @@ export function Signup(props) {
       })
       .catch((error) => {
         console.log(error.message);
-      });
+      });*/
   };
   //signInWithEMail
   // const signInWithEMail = () => {

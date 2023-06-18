@@ -44,8 +44,8 @@ export const signup = (data) => async (dispatch) => {
         theme: "dark",
       });
       setTimeout(() => {
-        window.location.href = "/";
-      }, 2000);
+        window.location.href = data.redirectUrl;
+      }, 500);
     }
   } catch (err) {
     const error = err.response ? err.response.data.message : err.message;
@@ -59,6 +59,9 @@ export const signup = (data) => async (dispatch) => {
 
 export const loginUser = (data) => async (dispatch) => {
   try {
+    console.log('auth:valuse : ',data);
+    const redirectPath = data.redirectPath;
+    delete data.redirectPath;
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -73,10 +76,12 @@ export const loginUser = (data) => async (dispatch) => {
     if (res) {
       localStorage.setItem("token", res?.data?.token);
       localStorage.setItem("id", res?.data?.id);
-
+      toast.success('Login Success', {
+        theme: "dark",
+      });
       setTimeout(() => {
-        window.location.href = "/";
-      }, 2000);
+        window.location.href = redirectPath;
+      }, 500);
     }
   } catch (err) {
     const error = err.response ? err.response.data.message : err.message;

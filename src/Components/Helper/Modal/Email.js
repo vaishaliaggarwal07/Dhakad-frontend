@@ -9,12 +9,16 @@ import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { API_URL } from "../../../Utils/helpers/api_url";
 import * as Yup from "yup";
+import {useLocation} from "react-router-dom";
 
 const Email = () => {
   const dispatch = useDispatch();
   const [terms, setTerms] = useState(false);
   const [showInput, setshowInput] = useState(false);
   const [allUsers, setallUsers] = useState();
+  const {search} = useLocation();
+  const queryParams = new URLSearchParams(search);
+
   useEffect(() => {
     var myHeaders = new Headers();
     myHeaders.append("Authorization", "Bearer null");
@@ -154,6 +158,10 @@ const Email = () => {
                       payload.passwordConfirm !== null
                     ) {
                       if (payload.password === payload.passwordConfirm) {
+                        payload.redirectUrl = '/';
+                        if(queryParams.get('mrid')){
+                          payload.redirectUrl = `/movie-detail/${queryParams.get('mrid')}`
+                        }
                         terms === true
                           ? dispatch(signup(payload))
                           : toast.error(
@@ -317,7 +325,7 @@ const Email = () => {
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="16"
                                         height="16"
-                                        class="bi bi-eye-slash"
+                                        className="bi bi-eye-slash"
                                         viewBox="0 0 16 16"
                                         fill="#3868b6"
                                       >
@@ -330,7 +338,7 @@ const Email = () => {
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="16"
                                         height="16"
-                                        class="bi bi-eye"
+                                        className="bi bi-eye"
                                         viewBox="0 0 16 16"
                                         fill="#3868b6"
                                       >
@@ -383,7 +391,7 @@ const Email = () => {
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="16"
                                         height="16"
-                                        class="bi bi-eye-slash"
+                                        className="bi bi-eye-slash"
                                         viewBox="0 0 16 16"
                                         fill="#3868b6"
                                       >
@@ -396,7 +404,7 @@ const Email = () => {
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="16"
                                         height="16"
-                                        class="bi bi-eye"
+                                        className="bi bi-eye"
                                         viewBox="0 0 16 16"
                                         fill="#3868b6"
                                       >

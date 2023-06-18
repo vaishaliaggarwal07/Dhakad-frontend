@@ -131,7 +131,7 @@ body {
   border-radius: 22px;
   background-color: #ffcc00;
   border: 1px solid #ffcc00;
-  color: #2449ad;
+  /*color: #2449ad;*/
   padding: 8px 25px;
   font-size: 16px;
   font-weight: 600;
@@ -208,13 +208,14 @@ body {
   margin-left: 20px;
 }
 .share-movie-btn {
-  position: absolute;
+  /*position: absolute;*/
   right: 8rem;
   top: 0px;
+  margin-left: 3px;
 }
 .share-movie-btn button {
   font-size: 20px;
-  padding: 10px 20px;
+  padding: 4px 20px;
   border-radius: 22px;
   background-color: #2449ad;
   border: 1px solid #2449ad;
@@ -2253,4 +2254,12 @@ button.custom-Str-btn.out-line-btn {
 .dropdown-content a:last-child {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+.flex{
+  display: flex;
+}
+
+.row{
+  flex-direction: row;
 }

@@ -6,6 +6,7 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import MessengerCustomerChat from "react-messenger-customer-chat";
+import makeInIndiaLogo from '../../Assets/Images/Make-in-India-Logo-PNG-HD_2.svg'
 
 import { Link } from "react-router-dom";
 
@@ -42,6 +43,7 @@ function Footer() {
             the industry's standard
           </p>
           <p>Copyright 2021 © Dhaakad Cinema Pvt. Ltd. All Rights Reserved. </p>
+          <img src={makeInIndiaLogo}/>
         </div>
       </footer>
     </React.Fragment>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../../Screen/SideNavigation/index.css";
-import { NavLink } from "react-router-dom";
+import {NavLink, useLocation} from "react-router-dom";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 import { CgProfile } from "@react-icons/all-files/cg/CgProfile";
@@ -39,6 +39,15 @@ function SideNavigation() {
     dispatch(getUser(userId));
   }, [dispatch, userId]);
   const userDetails = getUserDataById?.user?.data?.user;
+
+  const location = useLocation();
+  console.log('index:SideNavigation: location ',location);
+  let registerRedirectPath = ''
+  if(location.pathname.includes('/movie-detail')){
+    const locationSplit = location.pathname.split('/')
+    console.log('index:SideNavigation: locastion splt ',locationSplit);
+    registerRedirectPath = '?mrid='+locationSplit[2]
+  }
 
   return (
     <>
@@ -150,7 +159,7 @@ function SideNavigation() {
             ) : (
               <>
                 <li className="nav-item">
-                  <NavLink exact={true} to="/register" className="nav-link">
+                  <NavLink exact={true} to={`/register${registerRedirectPath}`} className="nav-link">
                     <FaUserPlus className="profile-icons" />
                     Sign Up
                   </NavLink>

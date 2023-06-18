@@ -30,6 +30,8 @@ import { ToastContainer } from "react-toastify";
 import RentedMovies from "./Screen/TabScreen/RentedMovies.js";
 import BookingAllHistory from "./Screen/TabScreen/BookingAllHistory.js";
 import ExpiredMovie from "./Screen/ExpiredMovie.js";
+import VideoJSPlayer from "./Components/Helper/VideoPlayer/VideoJSPlayer";
+import videojs from 'video.js';
 
 function App() {
   const token = localStorage.getItem("token");
@@ -87,5 +89,43 @@ function App() {
     </React.Fragment>
   );
 }
+
+/*const App = ()=>{
+  const playerRef = React.useRef(null);
+
+  const videoJsOptions = {
+    autoplay: true,
+    controls: true,
+    responsive: true,
+    fluid: true,
+    sources: [{
+      src: 'https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+      type: 'video/mp4'
+    }]
+  };
+
+  const handlePlayerReady = (player) => {
+    playerRef.current = player;
+
+    player.currentTime(120);
+
+    // You can handle player events here, for example:
+    player.on('waiting', () => {
+      videojs.log('player is waiting');
+    });
+
+    player.on('dispose', () => {
+      videojs.log('player will dispose');
+    });
+  };
+
+  return (
+      <>
+        <div>Rest of app here</div>
+        <VideoJSPlayer options={videoJsOptions} onReady={handlePlayerReady} />
+        <div>Rest of app here</div>
+      </>
+  );
+}*/
 
 export default App;
