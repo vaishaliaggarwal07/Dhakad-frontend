@@ -8,6 +8,8 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
+env:
+  REACT_APP_MAIN_URL: ${{vars.REACT_APP_MAIN_URL}}
 
 jobs:
   build:
@@ -28,6 +30,7 @@ jobs:
         cache: 'npm'
     - run: npm ci --legacy-peer-deps
     - run: npm run build --if-present
+    - run: echo ${{vars.REACT_APP_MAIN_URL}}
     - name: Run a multi-line script
       run: |
         mkdir ../build
