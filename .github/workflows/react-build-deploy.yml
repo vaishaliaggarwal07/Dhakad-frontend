@@ -31,9 +31,9 @@ jobs:
     - name: Run a multi-line script
       run: |
         mkdir ../build
-        cp -TR ./build/* ../build
+        cp -TR ./build/. ../build
         tar -cvf deploy.tar ../build/
-        rm -rf ../buld
+        rm -rf ../build
     - name: copy file via ssh password
       uses: appleboy/scp-action@master
       with:
