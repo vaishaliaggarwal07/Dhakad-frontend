@@ -32,7 +32,7 @@ jobs:
       run: |
         mkdir ../build
         cp -TR ./build/. ../build
-        tar -cvf deploy.tar ../build/
+        tar -cvf dhaakad_website.tar ../build/
         rm -rf ../build
     - name: copy file via ssh password
       uses: appleboy/scp-action@master
@@ -40,5 +40,12 @@ jobs:
         host: ${{ secrets.AWS_HOST }}
         username: ${{ secrets.AWS_USER }}
         key: ${{ secrets.AWS_KEY }}
-        source: "deploy.tar"
+        source: "dhaakad_website.tar"
         target: "~"
+    - name: executing remote ssh commands using ssh key
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.AWS_HOST }}
+        username: ${{ secrets.AWS_USER }}
+        key: ${{ secrets.AWS_KEY }}
+        script: sh deploy_dhaakad_website.sh
