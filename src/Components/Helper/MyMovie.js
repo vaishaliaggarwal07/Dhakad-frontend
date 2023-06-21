@@ -52,6 +52,7 @@ const MyMovie = (props) => {
     const {id} = useParams();
     // set star ratting
     const [start, setStars] = useState();
+    const [isTrailerPlayed, setIsTrailerPlayed] = useState(false);
     //movie details
     const [movieDetail, setMovieDetail] = useState();
     useEffect(() => {
@@ -140,7 +141,7 @@ const MyMovie = (props) => {
             videoJsPlayer.play()
         }, 500)
     }
-    if (isViaShare && movieDetails && movieDetails.trailerUrl?.length > 0 && trailerModalElement) {
+    if (isViaShare && movieDetails && movieDetails.trailerUrl?.length > 0 && trailerModalElement && !isTrailerPlayed) {
         modalRef = new Modal(trailerModalElement, {backdrop: false});
         modalRef.show();
     }
@@ -148,6 +149,7 @@ const MyMovie = (props) => {
 
     const onHandleTrailerClose = () => {
         modalRef.hide();
+        setIsTrailerPlayed(true);
         setTimeout(() => {
             document.body.style.overflow = "auto";
         }, 500)
