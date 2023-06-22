@@ -14,11 +14,7 @@ export function Login(props) {
     console.log('Login:Login: locationPathname ', location.pathname);
     let redirectPath = '/';
     if (location.pathname.includes('movie-detail')) {
-        const locationSplit = location.pathname.split('/');
-        if (locationSplit.length === 3) {
-            redirectPath = location.pathname
-        }
-
+        redirectPath = location.pathname
     }
 
     const togglePassword = () => {

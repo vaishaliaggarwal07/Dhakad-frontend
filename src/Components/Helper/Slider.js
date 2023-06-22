@@ -131,7 +131,7 @@ const Slider = (props) => {
                                 <UniqueBtn
                                   iconsClass="sharebtn"
                                   className="share-icon"
-                                  title="Share"
+                                  title="Share Trailer"
                                   icon={<ShareIcon />}
                                 ></UniqueBtn>
                               }
