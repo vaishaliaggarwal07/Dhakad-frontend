@@ -19,7 +19,7 @@ import PaymentOption from "./Screen/PaymentOption.js";
 import RefundPolicy from "./Screen/RefundPolicy.js";
 import Email from "./Components/Helper/Modal/Email.js";
 import TermAndCondition from "./Screen/TermAndCondition/TermAndCondition.js";
-import PrivacyPolicy from "./Screen/TermAndCondition/PrivacyPolicy.js";
+
 import Support from "./Screen/TabScreen/Support.js";
 import PurchaseHistory from "./Screen/TabScreen/PurchaseHistory.js";
 import PrivateRoute from "./Components/PrivateRoute.js";
@@ -30,8 +30,10 @@ import { ToastContainer } from "react-toastify";
 import RentedMovies from "./Screen/TabScreen/RentedMovies.js";
 import BookingAllHistory from "./Screen/TabScreen/BookingAllHistory.js";
 import ExpiredMovie from "./Screen/ExpiredMovie.js";
-import VideoJSPlayer from "./Components/Helper/VideoPlayer/VideoJSPlayer";
-import videojs from 'video.js';
+import PrivacyPolicy from "./Screen/PrivacyPolicy/PrivacyPolicy";
+import UserAgreement from "./Screen/UserAgreement/UserAgreement";
+import Grievance from "./Screen/Grievance/Grievance";
+import FAQ from "./Screen/FAQ/FAQ";
 
 function App() {
   const token = localStorage.getItem("token");
@@ -59,7 +61,12 @@ function App() {
         />
         <Route exact path="/refund-policy" component={RefundPolicy} />
         <Route exact path="/term&conditions" component={TermAndCondition} />
+        <Route exact path="/submit-movie" component={submitMovie} />
+
         <Route exact path="/privacy-policy" component={PrivacyPolicy} />
+        <Route exact path="/grievance" component={Grievance} />
+        <Route exact path="/faq" component={FAQ} />
+        <Route exact path="/user-agreement" component={UserAgreement} />
         <Route exact path="/submit-movie" component={submitMovie} />
 
         <PrivateRoute isAuthenticated={isAuthenticated}>
@@ -89,43 +96,5 @@ function App() {
     </React.Fragment>
   );
 }
-
-/*const App = ()=>{
-  const playerRef = React.useRef(null);
-
-  const videoJsOptions = {
-    autoplay: true,
-    controls: true,
-    responsive: true,
-    fluid: true,
-    sources: [{
-      src: 'https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
-      type: 'video/mp4'
-    }]
-  };
-
-  const handlePlayerReady = (player) => {
-    playerRef.current = player;
-
-    player.currentTime(120);
-
-    // You can handle player events here, for example:
-    player.on('waiting', () => {
-      videojs.log('player is waiting');
-    });
-
-    player.on('dispose', () => {
-      videojs.log('player will dispose');
-    });
-  };
-
-  return (
-      <>
-        <div>Rest of app here</div>
-        <VideoJSPlayer options={videoJsOptions} onReady={handlePlayerReady} />
-        <div>Rest of app here</div>
-      </>
-  );
-}*/
 
 export default App;

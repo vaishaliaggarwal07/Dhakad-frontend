@@ -1,0 +1,81 @@
+span.highlightColor{
+    color: #0D6EFD;
+}
+
+.gTitle{
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+    color:#0D6EFD;
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+
+.gText{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.gTableContainer{
+    overflow: auto;
+}
+
+.gTable td,.gTable th{
+    padding: 1%;
+}
+
+.gTable td{
+    border-width: 0.4px;
+    border-style: solid;
+    border-color: #0D6EFD;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.gTable th{
+    text-align: center;
+}
+
+.gTable .contentHeaderStyle{
+    background-color: #FFCC00;
+    color: #FFFFFF;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0em;
+    height: 46px;
+}
+
+.gTable .mainHeaderStyle{
+    background: #0D6EFD;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0em;
+}
+
+.gTable .slWidth{
+    width:143px;
+}
+
+.gTable .classificationWidth{
+    width:209px;
+}
+
+.gTable .descriptionWidth{
+    width:652px;
+}
+
+
+

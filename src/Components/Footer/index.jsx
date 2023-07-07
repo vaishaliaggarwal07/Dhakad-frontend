@@ -7,8 +7,8 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import MessengerCustomerChat from "react-messenger-customer-chat";
 import makeInIndiaLogo from '../../Assets/Images/Make-in-India-Logo-PNG-HD_2.svg'
-
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Footer() {
   return (
@@ -37,11 +37,14 @@ function Footer() {
         </div>
         <hr className="line-footer" />
         <div className="container  footer-text">
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been <br />
-            the industry's standard
-          </p>
+          <div className="row align-content-center mb-2">
+            <div className="col-12">
+              <NavLink to="/privacy-policy" className="footer-link mr-1" activeClassName="active_div">Privacy Policy</NavLink>
+              <NavLink to="/grievance" className="footer-link mr-1" activeClassName="active_div">Grievance</NavLink>
+              <NavLink to="/faq" className="footer-link mr-1" activeClassName="active_div">FAQ</NavLink>
+              <NavLink to="/user-agreement" className="footer-link mr-1" activeClassName="active_div">User Agreement</NavLink>
+            </div>
+          </div>
           <p>Copyright 2021 © Dhaakad Cinema Pvt. Ltd. All Rights Reserved. </p>
           <img src={makeInIndiaLogo}/>
         </div>

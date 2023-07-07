@@ -71,3 +71,17 @@
     padding: 0px 10px !important;
   }
 }
+
+.footer-link{
+  color: white;
+  text-decoration: none;
+}
+
+.footer-link:hover{
+  color: #ffcc00;
+  cursor: pointer;
+}
+
+.mr-1{
+  margin-right: 1%;
+}

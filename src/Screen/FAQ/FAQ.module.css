@@ -1,0 +1,80 @@
+span.highlightColor{
+    color: #0D6EFD;
+}
+
+.faqTitle{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #0D6EFD;
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+.faqSubText{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+    width: 75%;
+}
+
+.faqMainText{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 2%;
+}
+
+.faqMainTextBold{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+}
+
+.faqLevel1Title{
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #0D6EFD;
+    margin-top: 4%;
+}
+
+.faqPoints{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 4%;
+    margin-bottom: 1%;
+}
+
+.faqQuestion{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 2%;
+}
+.faqAnswer{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+.faqAnswerList{
+    list-style-type: square;
+}

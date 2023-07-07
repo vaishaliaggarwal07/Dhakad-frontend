@@ -1,0 +1,67 @@
+.uaTitle{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 6%;
+    color: #0D6EFD;
+}
+
+.uaText{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 4%;
+}
+
+span.highlightColor{
+    color: #0D6EFD;
+}
+
+.uaQuestionTitle{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0em;
+    margin-top: 3%;
+}
+
+.uaAnswerChar{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0em;
+}
+
+.uaAnswer{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+}
+
+.uaDefinitionTitle{
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0em;
+    margin-top: 3%;
+}
+
+.uaDefinitionText{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    margin-top: 3%;
+}
+
+.uaDefinitionPointChar{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+}

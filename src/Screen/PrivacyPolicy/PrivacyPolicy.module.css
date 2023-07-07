@@ -1,0 +1,69 @@
+div{
+    --level1marginLeft:7%;
+}
+
+
+.privacyPolicyTitle{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    color: #0D6EFD;
+    text-align: center;
+    margin-top: 4%;
+}
+
+.privacyPolicySubText{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 4%;
+    width: 72%;
+}
+
+span.highlightColor{
+    color: #0D6EFD;
+}
+
+
+.level1Title{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    color: #0D6EFD;
+    margin-top: 4%;
+}
+
+.level1Text{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 3%;
+    margin-left: var(--level1marginLeft);
+}
+
+.level2Title{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    margin-top: 3%;
+    margin-left: var(--level1marginLeft);
+    color: #0D6EFD;
+
+}
+
+.level2Text{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-left: 14%;
+    margin-top:2%
+}
