@@ -1,0 +1,52 @@
+span.highlightColor{
+    color: #0D6EFD;
+}
+
+.tcTitle{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.tcSubTitle{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.tcLevel1Title{
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 3%;
+    color: #0D6EFD;
+}
+
+.tcPoints{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    list-style-type: decimal;
+    margin-top: 3%;
+    margin-left: 2%;
+}
+
+.tcLevel1Text{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 2%;
+    margin-left: 2%;
+}

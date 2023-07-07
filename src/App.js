@@ -18,8 +18,6 @@ import ForgetScreen from "./Screen/ForgetScreen.jsx";
 import PaymentOption from "./Screen/PaymentOption.js";
 import RefundPolicy from "./Screen/RefundPolicy.js";
 import Email from "./Components/Helper/Modal/Email.js";
-import TermAndCondition from "./Screen/TermAndCondition/TermAndCondition.js";
-
 import Support from "./Screen/TabScreen/Support.js";
 import PurchaseHistory from "./Screen/TabScreen/PurchaseHistory.js";
 import PrivateRoute from "./Components/PrivateRoute.js";
@@ -34,6 +32,7 @@ import PrivacyPolicy from "./Screen/PrivacyPolicy/PrivacyPolicy";
 import UserAgreement from "./Screen/UserAgreement/UserAgreement";
 import Grievance from "./Screen/Grievance/Grievance";
 import FAQ from "./Screen/FAQ/FAQ";
+import TermsAndConditions from "./Screen/TermsAndConditions/TermsAndConditions";
 
 function App() {
   const token = localStorage.getItem("token");
@@ -60,14 +59,13 @@ function App() {
           component={MovieLanguages}
         />
         <Route exact path="/refund-policy" component={RefundPolicy} />
-        <Route exact path="/term&conditions" component={TermAndCondition} />
         <Route exact path="/submit-movie" component={submitMovie} />
 
         <Route exact path="/privacy-policy" component={PrivacyPolicy} />
         <Route exact path="/grievance" component={Grievance} />
         <Route exact path="/faq" component={FAQ} />
         <Route exact path="/user-agreement" component={UserAgreement} />
-        <Route exact path="/submit-movie" component={submitMovie} />
+        <Route exact path="/terms-and-conditions" component={TermsAndConditions} />
 
         <PrivateRoute isAuthenticated={isAuthenticated}>
           <Route exact path="/profile" component={PersonalDetils} />

@@ -43,6 +43,7 @@ function Footer() {
               <NavLink to="/grievance" className="footer-link mr-1" activeClassName="active_div">Grievance</NavLink>
               <NavLink to="/faq" className="footer-link mr-1" activeClassName="active_div">FAQ</NavLink>
               <NavLink to="/user-agreement" className="footer-link mr-1" activeClassName="active_div">User Agreement</NavLink>
+              <NavLink to="/terms-and-conditions" className="footer-link mr-1" activeClassName="active_div">Terms & Conditions</NavLink>
             </div>
           </div>
           <p>Copyright 2021 © Dhaakad Cinema Pvt. Ltd. All Rights Reserved. </p>
