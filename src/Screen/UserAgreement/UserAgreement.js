@@ -305,76 +305,48 @@ const UserAgreement = () => {
                     You shall not host, display, upload, modify, publish, transmit, update or share any information
                     that:
                     <br/>
-                    <span className={classes.uaDefinitionPointChar}>I.&nbsp;</span>
-                    belongs to another person and to which You do not have any right to; or interferes with another
-                    user`s use and enjoyment of DHAAKAD CINEMA
-                    <br/>
-                    <span className={classes.uaDefinitionPointChar}>II.&nbsp;</span>
-                    that is harmful, harassing, blasphemous, defamatory, obscene, pornographic, libellous, invasive
-                    of another`s privacy, hateful, or ethnically objectionable, disparaging, relating or encouraging
-                    money laundering or gambling, or otherwise unlawful in any manner whatever, or unlawfully
-                    threatening or unlawfully harassing including but not limited to "indecent representation of women"
-                    within the meaning of the Indecent Representation of Women (Prohibition) Act, 1986, of another
-                    person;
-                    <br/>
-                    <span className={classes.uaDefinitionPointChar}>III.&nbsp;</span>
-                    misleading in any way; or
-                    <br/>
-                    <span className={classes.uaDefinitionPointChar}>IV.&nbsp;</span>
-                    is patently offensive to the online community, such as content that promotes paedophilia, racism,
-                    bigotry, or physical harm of any kind against any group or individual;
-                    <br/>
-                    <span className={classes.uaDefinitionPointChar}>V.&nbsp;</span>
-                    involves the transmission of "junk mail," "chain letters," or unsolicited mass mailing or
-                    "spamming"
-                    <br/>
-                    <span className={classes.uaDefinitionPointChar}>VI.&nbsp;</span>
-                    infringes upon intellectual property rights of third party or violates rights of privacy
-                    (including without limitation unauthorized disclosure of a person`s name, email address, physical
-                    address or phone number) or rights of publicity
-                    <br/>
-                    <span className={classes.uaDefinitionPointChar}>VII.&nbsp;</span>
-                    Contains restricted or password-only access pages, or hidden pages or images
-                    <br/>
-                    <span className={classes.uaDefinitionPointChar}>VIII.&nbsp;</span>
-                    Provides material that exploits people in a violent or otherwise inappropriate manner or
-                    solicits personal information from anyone
-                    <br/>
-                    <span className={classes.uaDefinitionPointChar}>IX.&nbsp;</span>
-                    Provides instructional information about illegal activities such as making or buying illegal
-                    weapons or providing or creating computer viruses
-                    <br/>
-                    <span className={classes.uaDefinitionPointChar}>X.&nbsp;</span>
-                    Contains video, photographs, or images of another person without his or her express written
-                    consent and permission or the permission or the consent of his her guardian in the case of minor
-                    <br/>
-                    <span className={classes.uaDefinitionPointChar}>XI.&nbsp;</span>
-                    Engages in commercial activities and/or sales without Our prior written consent such as
-                    contests, sweepstakes, barter, advertising etc. Throughout these Terms of Use, Our "prior written
-                    consent" means a communication coming from Our authorized representative, specifically in response
-                    to Your request, and specifically addressing the activity or conduct for which You seek
-                    authorization
-                    <br/>
-                    <span className={classes.uaDefinitionPointChar}>XII.&nbsp;</span>
-                    Harm minors in any way
-                    <br/>
-                    <span className={classes.uaDefinitionPointChar}>XIII.&nbsp;</span>
-                    Violates any law for the time being in force
-                    <br/>
-                    <span className={classes.uaDefinitionPointChar}>XIV.&nbsp;</span>
-                    Threatens the unity, integrity, defense, security or sovereignty of India, friendly relations
-                    with foreign states, or public order or causes incitement to the commission of any cognizable
-                    offence or prevents investigation of any offence or is insulting to any other nation
-                    <br/>
-                    <span className={classes.uaDefinitionPointChar}>XV.&nbsp;</span>
-                    contains software virus, or any other computer code, file or program designed to
-                    interrupt,destroy or limit the functionality of any computer resource;
-                    <br/>
-                    <span className={classes.uaDefinitionPointChar}>XVI.&nbsp;</span>
-                    is patently false and untrue, and is written or published in any form, with the intent to
-                    mislead or harass a person, entity or agency for financial gain or to cause any injury to any
-                    person;
-                    <br/>
+                    <ul className={classes.uaDefinitionSubPoint}>
+                        <li>
+                            belongs to another person and to which You do not have any right to; or interferes with another
+                            user`s use and enjoyment of DHAAKAD CINEMA
+                        </li>
+                        <li>that is harmful, harassing, blasphemous, defamatory, obscene, pornographic, libellous, invasive
+                            of another`s privacy, hateful, or ethnically objectionable, disparaging, relating or encouraging
+                            money laundering or gambling, or otherwise unlawful in any manner whatever, or unlawfully
+                            threatening or unlawfully harassing including but not limited to "indecent representation of women"
+                            within the meaning of the Indecent Representation of Women (Prohibition) Act, 1986, of another
+                            person;</li>
+                        <li>misleading in any way; or</li>
+                        <li>is patently offensive to the online community, such as content that promotes paedophilia, racism,
+                            bigotry, or physical harm of any kind against any group or individual;</li>
+                        <li>involves the transmission of "junk mail," "chain letters," or unsolicited mass mailing or
+                            "spamming"</li>
+                        <li>infringes upon intellectual property rights of third party or violates rights of privacy
+                            (including without limitation unauthorized disclosure of a person`s name, email address, physical
+                            address or phone number) or rights of publicity</li>
+                        <li>Contains restricted or password-only access pages, or hidden pages or images</li>
+                        <li>Provides material that exploits people in a violent or otherwise inappropriate manner or
+                            solicits personal information from anyone</li>
+                        <li>Provides instructional information about illegal activities such as making or buying illegal
+                            weapons or providing or creating computer viruses</li>
+                        <li>Contains video, photographs, or images of another person without his or her express written
+                            consent and permission or the permission or the consent of his her guardian in the case of minor</li>
+                        <li>Engages in commercial activities and/or sales without Our prior written consent such as
+                            contests, sweepstakes, barter, advertising etc. Throughout these Terms of Use, Our "prior written
+                            consent" means a communication coming from Our authorized representative, specifically in response
+                            to Your request, and specifically addressing the activity or conduct for which You seek
+                            authorization</li>
+                        <li>Harm minors in any way</li>
+                        <li>Violates any law for the time being in force</li>
+                        <li>Threatens the unity, integrity, defense, security or sovereignty of India, friendly relations
+                            with foreign states, or public order or causes incitement to the commission of any cognizable
+                            offence or prevents investigation of any offence or is insulting to any other nation</li>
+                        <li>contains software virus, or any other computer code, file or program designed to
+                            interrupt,destroy or limit the functionality of any computer resource;</li>
+                        <li>is patently false and untrue, and is written or published in any form, with the intent to
+                            mislead or harass a person, entity or agency for financial gain or to cause any injury to any
+                            person;</li>
+                    </ul>
                     <span className={classes.uaDefinitionPointChar}>G.&nbsp;</span>
                     You shall not use any "deep-link", "page-scrape", "robot", "spider" or other automatic device,
                     program, algorithm or methodology, or any similar or equivalent manual process, to access, acquire,

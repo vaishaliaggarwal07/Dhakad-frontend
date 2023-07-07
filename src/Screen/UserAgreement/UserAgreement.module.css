@@ -49,6 +49,7 @@ span.highlightColor{
     line-height: 32px;
     letter-spacing: 0em;
     margin-top: 3%;
+    color: #0D6EFD;
 }
 
 .uaDefinitionText{
@@ -64,4 +65,17 @@ span.highlightColor{
     font-weight: 500;
     line-height: 28px;
     letter-spacing: 0em;
+}
+
+.uaDefinitionSubPoint{
+    list-style-type: upper-roman;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    margin-left: 1%;
+}
+
+.uaDefinitionSubPoint > li::marker {
+    font-weight: 500;
 }
