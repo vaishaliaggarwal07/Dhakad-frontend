@@ -253,3 +253,18 @@ div.vjs-control-bar {
 .vjs-control {
     height: 80%;
 }
+
+.vjs-title-bar{
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-align: center;
+}
+
+button.vjs-playback-rate{
+    height: 40px !important;
+}

@@ -67,12 +67,15 @@ const VideoJsPlayer = (props) => {
             videojs.registerComponent("fastForward", fastForward);
             player.getChild("ControlBar").addChild("fastForward", {}, 3);
 
+            videojs.registerComponent("testTitle", TitleBar);
+            const divControlBar = player.getChild('ControlBar').addChild('testTitle',{videoTitle:options.videoTitle},4);
+
+
             player.on("timeupdate", () => {
                 if(counter<timeIntervalUpdates){
                     counter++;
                 }else if (counter === timeIntervalUpdates){
                     const time = player.currentTime().toFixed();
-                    // console.log('VideoJSPlayer::time update  ',time);
                     counter=0;
                     props.timeUpdate(time);
                 }
@@ -83,7 +86,6 @@ const VideoJsPlayer = (props) => {
             player.on("keydown", (e) => {
                 const playerVolume = player.volume();
                 const playerCurrentTime = player.currentTime();
-                console.log('VideoJSPlayer:e: ',e.code);
                 switch (e.code) {
                     case "Space":
                         if (player.paused()) {
@@ -152,3 +154,48 @@ const VideoJsPlayer = (props) => {
 
 // playList[URLsWatcher]?.src
 export default VideoJsPlayer;
+
+const Component = videojs.getComponent('Component');
+
+class TitleBar extends Component {
+
+    // The constructor of a component receives two arguments: the
+    // player it will be associated with and an object of options.
+    constructor(player, options = {}) {
+
+        // It is important to invoke the superclass before anything else,
+        // to get all the features of components out of the box!
+        super(player, options);
+
+        // If a `text` option was passed in, update the text content of
+        // the component.
+        if (options.videoTitle) {
+            this.updateTextContent(options.videoTitle);
+        }
+    }
+
+    // The `createEl` function of a component creates its DOM element.
+    createEl() {
+        return videojs.dom.createEl('div', {
+
+            // Prefixing classes of elements within a player with "vjs-"
+            // is a convention used in Video.js.
+            className: 'vjs-title-bar'
+        });
+    }
+
+    // This function could be called at any time to update the text
+    // contents of the component.
+    updateTextContent(videoTitle) {
+
+        // If no text was provided, default to "Title Unknown"
+        if (typeof videoTitle !== 'string') {
+            videoTitle = 'Title Unknown';
+        }
+
+        // Use Video.js utility DOM methods to manipulate the content
+        // of the component's element.
+        videojs.emptyEl(this.el());
+        videojs.appendContent(this.el(), videoTitle);
+    }
+}

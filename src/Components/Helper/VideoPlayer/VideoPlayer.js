@@ -172,17 +172,17 @@ const VideoPlayer = ({movieData, is_loding, current_movie_time, is_loading_curre
             controls: true,
             responsive: true,
             fluid: true,
+            videoTitle:moveDetail?.brandTitle || 'NA',
+            playbackRates: [0.5, 1, 1.5, 2],
             sources: [{
                 src: moveDetail?.movieUrl[0],
                 type: 'video/mp4'
             }]
             // for hls stream
-            /*
-            sources: [{
+            /*sources: [{
                 src:'https://cdn.flowplayer.com/a30bd6bc-f98b-47bc-abf5-97633d4faea0/hls/de3f6ca7-2db3-4689-8160-0f574a5996ad/playlist.m3u8',
                 type: 'application/x-mpegURL'
-            }]
-             */
+            }]*/
         };
 
         const handlePlayerReady = (player) => {
