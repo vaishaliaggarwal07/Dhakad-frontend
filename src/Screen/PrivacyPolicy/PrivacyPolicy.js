@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './PrivacyPolicy.module.css';
+import {NavLink} from "react-router-dom";
 
 const PrivacyPolicy = () => {
     return (
@@ -11,12 +12,11 @@ const PrivacyPolicy = () => {
                 <div className="flex justify-content-center">
                     <div className={classes.privacyPolicySubText}>
                         This Privacy Policy shall be read in conjunction and together with
-                        the <span className={classes.highlightColor}>Terms of Use / User Agreement</span> forms an
+                        the <NavLink to='/terms-and-conditions'>Terms of Use / User Agreement</NavLink> forms an
                         integral
                         part of the User Agreement between You ( “User(s) or you” ) and Dhaakad Cinema
                         (“We/Our/Us/Dhaakad Cinema”). Capitalized terms not defined herein shall have the meaning
-                        attributed to them under the <span
-                        className={classes.highlightColor}>Terms of Use / User Agreement</span>
+                        attributed to them under the <NavLink to='/terms-and-conditions'>Terms of Use / User Agreement</NavLink>
                     </div>
                 </div>
 
@@ -70,7 +70,7 @@ const PrivacyPolicy = () => {
                 <div className={classes.level2Title}>2.3 Content, Following, and other Public Information</div>
                 <div className={classes.level2Text}>Dhaakad Cinema is an Over the Top (OTT) digital on demand Service
                     which offers a wide range of content for entertainment purposes including without limitations,
-                    audio, visual, audiovisual and gaming content, so most of the information you provide us is
+                    audio, visual, audiovisual, so most of the information you provide us is
                     information that you choose to be made public. This includes not only the content that you post and
                     data provided with such content, such as when it was posted, but also the accounts you follow, the
                     content that you like or comment on, and other public interactions on the Services. Your public
@@ -136,20 +136,14 @@ const PrivacyPolicy = () => {
                     use of our Services. These third-party service providers may use cookies and other technologies to
                     collect information about your use of our Services and other websites and services, including your
                     IP address, device ID, pages viewed, and links clicked. Our service providers
-                    include <span className={classes.highlightColor}>Google Analytics</span> and
-                    its demographics and interests reporting feature, which you can opt out
-                    of <span className={classes.highlightColor}>here</span> and <span
-                        className={classes.highlightColor}>here</span>.
-                    Player also use Facebook ad support:
-                    <span className={classes.highlightColor}>https://www.facebook.com/business/ads-guide</span>. Dhaakad
+                    include Google Analytics and its demographics and interests reporting feature.
+                    Player also use Facebook ad support: https://www.facebook.com/business/ads-guide. Dhaakad
                     Cinema also uses YouTube API Services in some of it's products. That means if you are using a
                     Dhaakad Cinema's service which makes use of YouTube APIs, then you are agreeing to
-                    the <span className={classes.highlightColor}>YouTube Terms
-                    of Service & Google Privacy Policy</span> as well. <br/>
+                    the YouTube Terms of Service & Google Privacy Policy as well. <br/>
                     <span style={{marginLeft: '5%'}}></span> Dhaakad Cinema also uses Google API through which Dhaakad
                     Cinema collects information of the
-                    “Installed Application” in the Users android based devices and store it to
-                    <span className={classes.highlightColor}>https://mxase.clmbtech.com</span>
+                    “Installed Application” in the Users android based devices.
                 </div>
 
                 <div className={classes.level2Title}>2.10 Interest-Based Ads</div>
@@ -166,20 +160,13 @@ const PrivacyPolicy = () => {
                     <br/>
                     <br/>
                     Based on your choice on Admob ad personalization consent page, Admob & its partners will deliver
-                    personalized ads or non-personalized ads to you while using our Services. But, if you ever change
-                    your mind in the future, you can easily change your choice about interest-based ads anytime by:
-                    <br/>
-                    <br/>
-                    · Tap Help menu in our app<br/>
-                    · Tap Ad Preferences and make your choice<br/>
-                    · Revisit our Services
+                    personalized ads or non-personalized ads to you while using our Services.
                 </div>
 
 
                 <div className={classes.level1Title}>3. Sensitive Personal Data and Information</div>
                 <div className={classes.level1Text}>
-                    Dhaakad Cinema will never ask you and you must never provide sensitive Dhaakad Cinema will never ask
-                    you and you must never provide Sensitive Personal Data Or Information to Dhaakad Cinema or to any
+                    Dhaakad Cinema will never ask you and you must never provide Sensitive Personal Data Or Information to Dhaakad Cinema or to any
                     person/entity representing Dhaakad Cinema. Any disclosure of Sensitive Personal Data Or Information
                     shall be at your sole risk and without any liability to Dhaakad Cinema (including its directors, key
                     managerial personnel, officers and employees). You understand, acknowledge and agree that Dhaakad
@@ -254,14 +241,14 @@ const PrivacyPolicy = () => {
                     Our Services is primarily meant for the Users who have attained the age of 18 years or above and you
                     have given us your consent to allow any of your minor dependents (less than 13 years) to use and
                     access our Services. If you access our Services, then you shall be bound by
-                    our <span className={classes.highlightColor}>Age Suitability Terms.</span>
+                    our <NavLink to="/grievance">Age Suitability Terms.</NavLink>
                 </div>
 
                 <div className={classes.level1Title}>6. Our Policy Towards Children</div>
                 <div className={classes.level1Text}>
                     Our Services are not directed to minors who are under the age of 13. If you become aware that your
                     child has provided us with Personal Information without your consent, please email
-                    to <span className={classes.highlightColor}>Support@dhaakadcinema.com</span>. We do not knowingly
+                    to <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=support@dhaakadcinema.com" target="_blank">support@dhaakadcinema.com</a>. We do not knowingly
                     collect personal information from children under the age of 13. If we become aware that a
                     child under the age of 13 has provided us with personal information, we take steps to
                     remove such information and terminate the child's account
@@ -312,8 +299,7 @@ const PrivacyPolicy = () => {
                     If you do not consent to any part of the terms of this Privacy Policy or wish to withdraw consent to
                     process Your Personal Data then you may stop using the Services and ask us to remove your Personal
                     Data/ Information from our records by writing to our grievance
-                    officer <span className={classes.highlightColor}>Mr. Ankit Yadav</span> at
-                    <span className={classes.highlightColor}>&nbsp;ankityadav@dhaakadcinema.com.</span>
+                    officer <span className={classes.highlightColor}>Mr. Ankit Yadav</span> at <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=ankityadav@dhaakadcinema.com" target="_blank">ankityadav@dhaakadcinema.com</a>.
 
                 </div>
 
@@ -322,13 +308,12 @@ const PrivacyPolicy = () => {
                     We may revise this Privacy Policy from time to time without any further notification (except for
                     material changes). The most current version of the policy will govern our use of your Personal
                     Information and will always be updated and available
-                    at <span className={classes.highlightColor}>https://www.Dhaakadcinema.in/privacy-policy.</span> If
+                    at <NavLink to="/privacy-policy">https://www.Dhaakadcinema.in/privacy-policy.</NavLink> If
                     we make a change to this policy that, in our sole discretion, is material, we will notify you via
                     an email to the email address associated with your account or through the Services. By continuing to
                     access or use the Services after those changes become effective, you agree to be bound by the
                     revised Privacy Policy.
                 </div>
-
 
             </div>
         </div>

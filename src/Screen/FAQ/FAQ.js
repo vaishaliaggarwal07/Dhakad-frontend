@@ -39,9 +39,8 @@ const FAQ = () => {
                     <br/>
                     5. Receive personalized recommendations and communication basis your watch history
                     <br/>
-                    If you're facing difficulties when trying to register with us,
-                    see <span
-                    style={{color: '#D0342C', fontWeight: 400}}>I'm unable to register with DHAAKAD CINEMA.</span>
+                    If you're facing difficulties when trying to register with us, please
+                    contact <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=support@dhaakadcinema.com" target="_blank">support@dhaakadcinema.com</a>
                 </div>
 
                 <div className={classes.faqLevel1Title}>
@@ -51,7 +50,7 @@ const FAQ = () => {
                 </div>
 
                 <div className={classes.faqPoints}>
-                    1. RENTAL VALIDITY: You have a specific number of day to start playing the movie once rented. This
+                    1. RENTAL VALIDITY: You have a specific number of days to start playing the movie once rented. This
                     may differ for each movie.
                     <br/>
                     2. WATCH TIME VALIDITY: You have a specific number of hours to finish watching the movie after you
@@ -64,39 +63,31 @@ const FAQ = () => {
                 <div className={classes.faqQuestion}>
                     1. Where can I find the recent movie I’ve rented?
                 </div>
-                <div className={classes.faqAnswer}>Some text some text Some text some text Some text some text Some text
-                    some text Some text some text Some text some text Some text some text Some text some text Some text
-                    some text Some text some text Some text some text Some text some text
-                    Some text some text Some text some text Some text some text Some text some text Some text some text
-                    Some text some text
-                    Some text some text Some text some text Some text some text Some text.
+                <div className={classes.faqAnswer}>Please login with your credentials and go to your profile
+                    click on <NavLink to="/rented-movies">rented movies</NavLink>
                 </div>
 
                 <div className={classes.faqQuestion}>
                     2. How can I check the time remaining to stream my movie?
                 </div>
-                <div className={classes.faqAnswer}>Some text some text Some text some text Some text some text Some text
-                    some text Some text some text Some text some text Some text some text Some text some text Some text
-                    some text Some text some text Some text some text Some text some text
-                    Some text some text Some text some text Some text some text Some text some text Some text some text
-                    Some text some text
-                    Some text some text Some text some text Some text some text Some text.
-                </div>
+                <div className={classes.faqAnswer}>Yet to be implemented</div>
 
                 <div className={classes.faqQuestion}>
                     3. Where are my online downloaded videos?
                 </div>
-                <div className={classes.faqAnswer}>You will be able to see the online downloaded videos by tapping on
+                <div className={classes.faqAnswer}>Yet to be implemented</div>
+                {/*<div className={classes.faqAnswer}>You will be able to see the online downloaded videos by tapping on
                     the download icon available on the top right corner of the screen. Alternatively, you can access it
                     via the navigation menu> select “My downloads” available beneath your profile.
-                </div>
+                </div>*/}
 
                 <div className={classes.faqQuestion}>
                     4. Why does the app consumes so much data while watching online?
                 </div>
-                <div className={classes.faqAnswer}>To reduce data usage while watching content, kindly tap on the
+                <div className={classes.faqAnswer}>Yet to be implemented</div>
+                {/*<div className={classes.faqAnswer}>To reduce data usage while watching content, kindly tap on the
                     Navigation menu available on the app > Click on settings> and Enable the Data Saver option.
-                </div>
+                </div>*/}
 
                 <div className={classes.faqQuestion}>
                     5. Can't install app due to insufficient space.
@@ -128,7 +119,8 @@ const FAQ = () => {
                         <li>Step 2: If the app shows an error, then send it to us. We will get back to you asap!</li>
                         <li>
                             Step 3: If it still doesn’t work then please share the following details to –
-                            <span className={classes.highlightColor}>support@dhaakadcinema.com</span>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=support@dhaakadcinema.com" target="_blank">support@dhaakadcinema.com</a>
+                            {/*<span className={classes.highlightColor}>support@dhaakadcinema.com</span>*/}
                             <ul>
                                 <li>your device information</li>
                                 <li>your internet service provider</li>
@@ -155,8 +147,7 @@ const FAQ = () => {
                 </div>
                 <div className={classes.faqAnswer}>
                     <ul className={classes.faqAnswerList}>
-                        <li> Please upload your bug report to <span
-                            className={classes.highlightColor}>support@dhaakadcinema.com</span>
+                        <li> Please upload your bug report to <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=support@dhaakadcinema.com" target="_blank">support@dhaakadcinema.com</a>
                         </li>
                         <li>System log is needed when the bug crashes your player.</li>
                         <li>If you know that specific video file or subtitle file cause a problem, please send us

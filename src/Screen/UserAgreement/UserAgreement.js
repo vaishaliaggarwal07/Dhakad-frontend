@@ -18,7 +18,7 @@ const UserAgreement = () => {
                     thereunder pertaining to electronic records in various statutes as amended by the Information
                     Technology Act, 2000.
                     <br/>
-                    The website, <span className={classes.highlightColor}>www.DhaakadCinema.com</span> and its website
+                    The website, <NavLink to="/">https://dhaakadcinema.com</NavLink> and its website
                     and Application is owned, operated and maintained by Dhaakad Cinema Pvt Limited ("DCPL").
                     <br/>
                     PLEASE READ THE TERMS CAREFULLY BEFORE USE OF THE DHAAKAD CINEMA SERVICES. THESE TERMS CONSTITUTE A
@@ -26,13 +26,13 @@ const UserAgreement = () => {
                     DHAAKAD CINEMA), AND GOVERN YOUR USE OF THE DHAAKAD CINEMA. BY CHECKING/CLICKING ON THE `I AGREE`
                     LINK AND/OR BY DOWNLOADING AND/OR INSTALLING AND/OR BROWSING OR USING DHAAKAD CINEMA, YOU EXPRESSLY
                     ACCEPT THE TERMS. IF YOU DO NOT ACCEPT TO THE TERMS, PLEASE DO NOT BROWSE AND/OR DOWNLOAD AND/OR
-                    INSTALL AND/OR USE DHAAKAD <span className={classes.highlightColor}>CINEMA</span>. You agree and
+                    INSTALL AND/OR USE DHAAKAD CINEMA. You agree and
                     grant permission to Dhaakad Cinema to send WhatsApp
                     notifications to your registered mobile number.
-                    <br/>
+                    {/*<br/>
                     <span className={classes.highlightColor}>In case you wish to opt out of receiving WhatsApp notifications, you may go to 'Edit Profile' inside
                     the Dhaakad Cinema app and untick the 'I want to receive updates and notifications over WhatsApp'
-                        checkbox.</span>
+                        checkbox.</span>*/}
                     <br/>
                     For the purpose of these Terms of Use, the terms "You" "Your" or "User" shall mean any person,
                     natural or legal who uses or browses DHAAKAD CINEMA. The term "We", "Us", "Our" shall mean DCPL.
@@ -57,8 +57,8 @@ const UserAgreement = () => {
                     by a list of supported payment options where you can complete the transaction and start enjoying the
                     content.
                     <br/>
-                    Note that 48 hours will be given to start watching that particular content as this is a pay-per-view
-                    service (pack validity). Also, once you’ve started watching, the session will last for 9 hours
+                    Note that stipulated amount of time will be given to start watching that particular content as this is a pay-per-view
+                    service (pack validity). Also, once you’ve started watching, the session will last for limited hours
                     (watch time validity). You can pause and resume the content multiple times only within watch time
                     validity. Furthermore, content will be available for download or offline viewing for the particular
                     time period mentioned above. Recording/transmitting the content in any manner is strictly prohibited
@@ -80,21 +80,21 @@ const UserAgreement = () => {
                     after transaction?
                 </div>
                 <div className={classes.uaAnswer}><span className={classes.uaAnswerChar}>A.&nbsp;</span>
-                    <span className={classes.highlightColor}>
-                        A confirmation message (SMS & Email) will be sent to you
-                        after a successful transaction. This will inform you about the pack and watch time validity.
-                    </span> This information will also be visible on app and web once the transaction is completed.
+                    A confirmation message (SMS & Email) will be sent to you
+                    after a successful transaction. This will inform you about the pack and watch time validity.
+                    This information will also be visible on app and web once the transaction is completed.
                     Watch time validity shall be within the local time zone in your country of access.
                 </div>
 
                 <div className={classes.uaQuestionTitle}>Q. Can I watch content on multiple devices?</div>
                 <div className={classes.uaAnswer}><span className={classes.uaAnswerChar}>A.&nbsp;</span>
-                    <span className={classes.highlightColor}>
+                    {/*<span className={classes.highlightColor}>
                         After renting the content, it can be watched across 2 devices however, at any given point, you can
                     watch it on only one single device. You can start viewing, pause and resume on your second device
                     only if you have logged in using the right credentials and your watch time validity has not expired.
                     The start time and end time will remain unchanged for both devices.
-                    </span>
+                    </span>*/}
+                    Yes
                 </div>
 
                 <div className={classes.uaQuestionTitle}>Q. Can I purchase/rent movies in advance?</div>
@@ -106,8 +106,6 @@ const UserAgreement = () => {
                 <div className={classes.uaQuestionTitle}> Q. Can I cancel my transaction?</div>
                 <div className={classes.uaAnswer}><span className={classes.uaAnswerChar}>A.&nbsp;</span>
                     Once you have rented content, the amount cannot be refunded or redeemed against any other benefit.
-                    The rented content will be available for 48 hours for you to start watching it and will be valid
-                    only during the watch time validity.
                 </div>
 
 
@@ -126,9 +124,8 @@ const UserAgreement = () => {
                     3. `Devices` means any and all internet enabled devices like smart phones, tablets, laptops,
                     desktops, etc. which are compatible with and have access to the Internet.
                     <br/>
-                    4. `DHAAKAD CINEMA` means DHAAKAD CINEMA website, <span
-                    className={classes.highlightColor}>www.DhaakadCinema.com</span>,
-                    DHAAKAD CINEMA mobile web , and any other future variations or domain, Application and any present
+                    4. `DHAAKAD CINEMA` means DHAAKAD CINEMA website, <NavLink to="/">https://dhaakadcinema.com</NavLink>,
+                    DHAAKAD CINEMA mobile, and any other future variations or domain, Application and any present
                     and future means and modes to offer Services.
                     <br/>
                     5. `Internet` shall mean the system making use of the TCP/IP software protocols known as the
@@ -145,7 +142,7 @@ const UserAgreement = () => {
                     <br/>
                     Unless otherwise specified, DHAAKAD CINEMA is available for individuals who have attained the age of
                     majority in their jurisdiction. In the case of India, this service is restricted to Users who are
-                    aged 18 years or older. If You are under the relevant age of majority in Your jurisdiction, You may
+                    aged 18 years or older. If you are under the relevant age of majority in Your jurisdiction, you may
                     only access the Site and the Services only in accordance with applicable law which enables a minor
                     in your jurisdiction to access such a service. In India, by browsing or downloading and/or
                     installing and/or using the DHAAKAD CINEMA, YOU represent and warrant that YOU are 18 years of age
@@ -158,14 +155,14 @@ const UserAgreement = () => {
                     DISCRETION IS ADVISED. ALSO, SOME CONTENT OFFERED ON THE SITE MAY NOT BE APPROPRIATE FOR VIEWERSHIP
                     BY CHILDREN. PARENTS AND/OR LEGAL GUARDIANS ARE ADVISED TO EXERCISE DISCRETION BEFORE ALLOWING THEIR
                     CHILDREN AND/OR WARDS TO ACCESS CONTENT ON THIS WEBSITE. Your access to and use of the Services is
-                    subject to these Terms of Use, <NavLink to="/privacy-policy">Privacy Policy</NavLink> and all
+                    subject to these Terms of Use, Privacy Policy and all
                     applicable laws, rules, and regulations.
                     <br/>
                     YOUR RESPONSIBILITIES
                     <br/>
                     YOU will be solely responsible for obtaining and maintaining the Device and Internet connection
                     needed in order to access and use DHAAKAD CINEMA and paying for all such charges in relation
-                    thereto. Internet charges will depend on the plan subscribed by You from the internet service
+                    thereto. Internet charges will depend on the plan subscribed by you from the internet service
                     provider.
                     <br/>
                     DHAAKAD CINEMA is compatible on selected operating systems and specific versions and Device(s). The
@@ -179,9 +176,9 @@ const UserAgreement = () => {
                     reasonable control of DCPL including but not limited to act of God, any act or omission of
                     government or quasi-government agencies or lock out, strike, curfew, technical errors etc. DCPL may,
                     at its sole discretion, make bug fixes, updates for the installed Application. In the event DCPL has
-                    upgraded the Application or any features thereof, You will be required to update Your Device in
+                    upgraded the Application or any features thereof, you will be required to update Your Device in
                     order to make the Device compatible with such upgrades. DCPL shall not be responsible or liable to
-                    YOU in the event You are unable to access DHAAKAD CINEMA or view the Content on DHAAKAD CINEMA due
+                    YOU in the event you are unable to access DHAAKAD CINEMA or view the Content on DHAAKAD CINEMA due
                     to Your failure to upgrade Your Device.
                     The Content contained or available on DHAAKAD CINEMA is protected by copyright, trademark, patent,
                     trade secret and other laws and shall be used as provided in these Terms of Use, without written
@@ -190,7 +187,7 @@ const UserAgreement = () => {
 
                 <div className={classes.uaDefinitionTitle}>REGISTERED USERS</div>
                 <div className={classes.uaDefinitionText}>YOU may register YOURSELF as a user of DHAAKAD CINEMA and
-                    become a registered user of the the DHAAKAD CINEMA platform ("Registered User"). During the
+                    become a registered user of the DHAAKAD CINEMA platform ("Registered User"). During the
                     registration process, YOU as Registered User are required to create user name (by using YOUR mobile
                     number) and password.
                     <br/>
@@ -244,7 +241,7 @@ const UserAgreement = () => {
                     use.
                     <br/>
                     DHAAKAD CINEMA shall have the discretion to make certain or all Content that is a part of the
-                    Subscription available to You on either one or limited number of end user device concurrently.
+                    Subscription available to you on either one or limited number of end user device concurrently.
                 </div>
 
                 <div className={classes.uaDefinitionTitle}>OWNERSHIP</div>
@@ -267,7 +264,7 @@ const UserAgreement = () => {
                     measure (including, without limitation, geo-filtering and/or encryption) associated with the
                     Content.
                     You hereby agree that all intellectual property rights, title and interest in the user generated
-                    content published or generated on DHAAKAD CINEMA by You shall vest with DCPL.
+                    content published or generated on DHAAKAD CINEMA by you shall vest with DCPL.
                     RESTRICTIONS
                 </div>
 
@@ -279,7 +276,7 @@ const UserAgreement = () => {
                     device, software, web-based service, or by other means, copy, download, archive, perform, display,
                     upload, publish, transmit or retransmit the Content or create any work or material that is derived
                     from or based on the Content, rent, lease, duplicate, sublicense, assign, pledge, loan, or resell
-                    the Content of DHAAKAD CINEMA. YOU shall not translate, reverse engineer, decompile, disassemble
+                    the Content of DHAAKAD CINEMA. YOU shall not translate, reverse engineer, decompile and disassemble
                     DHAAKAD CINEMA. YOU shall only use the DHAAKAD CINEMA on Device that is under YOUR exclusive control
                     and ownership. YOU shall not permit any third party to benefit from the use or functionality of
                     DHAAKAD CINEMA, either directly or via any facility management, timesharing, service bureau or any
@@ -298,7 +295,7 @@ const UserAgreement = () => {
                     You hereby expressly agree to use DHAAKAD CINEMA in strict compliance with applicable laws;
                     <br/>
                     <span className={classes.uaDefinitionPointChar}>E.&nbsp;</span>
-                    You agree, undertake and confirm that Your use of DHAAKAD CINEMA shall be strictly governed by
+                    You agree, undertake and confirm that your use of DHAAKAD CINEMA shall be strictly governed by
                     the following binding principles:
                     <br/>
                     <span className={classes.uaDefinitionPointChar}>F.&nbsp;</span>
@@ -307,7 +304,7 @@ const UserAgreement = () => {
                     <br/>
                     <ul className={classes.uaDefinitionSubPoint}>
                         <li>
-                            belongs to another person and to which You do not have any right to; or interferes with another
+                            belongs to another person and to which you do not have any right to; or interferes with another
                             user`s use and enjoyment of DHAAKAD CINEMA
                         </li>
                         <li>that is harmful, harassing, blasphemous, defamatory, obscene, pornographic, libellous, invasive
@@ -334,7 +331,7 @@ const UserAgreement = () => {
                         <li>Engages in commercial activities and/or sales without Our prior written consent such as
                             contests, sweepstakes, barter, advertising etc. Throughout these Terms of Use, Our "prior written
                             consent" means a communication coming from Our authorized representative, specifically in response
-                            to Your request, and specifically addressing the activity or conduct for which You seek
+                            to Your request, and specifically addressing the activity or conduct for which you seek
                             authorization</li>
                         <li>Harm minors in any way</li>
                         <li>Violates any law for the time being in force</li>
@@ -342,7 +339,7 @@ const UserAgreement = () => {
                             with foreign states, or public order or causes incitement to the commission of any cognizable
                             offence or prevents investigation of any offence or is insulting to any other nation</li>
                         <li>contains software virus, or any other computer code, file or program designed to
-                            interrupt,destroy or limit the functionality of any computer resource;</li>
+                            interrupt, destroy or limit the functionality of any computer resource;</li>
                         <li>is patently false and untrue, and is written or published in any form, with the intent to
                             mislead or harass a person, entity or agency for financial gain or to cause any injury to any
                             person;</li>
@@ -362,14 +359,14 @@ const UserAgreement = () => {
                     information on any other user of or visitor to DHAAKAD CINEMA to its source.
                     <br/>
                     <span className={classes.uaDefinitionPointChar}>I.&nbsp;</span>
-                    You agree that You will not take any action that imposes an unreasonable or disproportionately
+                    You agree that you will not take any action that imposes an unreasonable or disproportionately
                     large load on the infrastructure of DHAAKAD CINEMA or any systems or networks connected to DHAAKAD
                     CINEMA.
                     <br/>
                     <span className={classes.uaDefinitionPointChar}>J.&nbsp;</span>
                     You may not forge headers or otherwise manipulate identifiers in order to disguise the origin of
-                    any message or transmittal You send to Us on or through DHAAKAD CINEMA or any service offered on or
-                    through DHAAKAD CINEMA. You may not pretend that You are, or that You represent, someone else, or
+                    any message or transmittal you send to Us on or through DHAAKAD CINEMA or any service offered on or
+                    through DHAAKAD CINEMA. You may not pretend that you are, or that you represent, someone else, or
                     impersonate any other individual or entity.
                     <br/>
                     <span className={classes.uaDefinitionPointChar}>K.&nbsp;</span>
@@ -381,7 +378,7 @@ const UserAgreement = () => {
                     Your correspondence or business dealings with, or participation in promotions of, third party
                     advertisers found on or through DHAAKAD CINEMA, including payment and delivery of goods or services,
                     and any other terms, conditions, warranties or representations associated with such dealings, are
-                    solely between You and such third party advertiser. We shall not be responsible or liable for any
+                    solely between you and such third party advertiser. We shall not be responsible or liable for any
                     loss or damage of any sort incurred as the result of any such dealings or as the result of the
                     presence of such third party advertisers on DHAAKAD CINEMA. YOU acknowledge and agree that DCPL is
                     not responsible or liable for: (i) the availability or accuracy of such websites or resources or
@@ -392,13 +389,13 @@ const UserAgreement = () => {
                     <br/>
                     <span className={classes.uaDefinitionPointChar}>M.&nbsp;</span>
                     It is possible that other users (including unauthorized users or "hackers") may post or transmit
-                    offensive or obscene materials on DHAAKAD CINEMA and that You may be involuntarily exposed to such
+                    offensive or obscene materials on DHAAKAD CINEMA and that you may be involuntarily exposed to such
                     offensive and obscene materials. It also is possible for others to obtain personal information about
-                    You on the public forum due to Your use of DHAAKAD CINEMA, and that the recipient may use such
-                    information to harass or injure You. We do not approve of such unauthorized uses but by
+                    You on the public forum due to your use of DHAAKAD CINEMA, and that the recipient may use such
+                    information to harass or injure you. We do not approve of such unauthorized uses but by
                     browsing/using DHAAKAD CINEMA, You acknowledge and agree that We shall not responsible for the use
-                    of any personal information that You publicly disclose or share with others on DHAAKAD CINEMA.
-                    Please carefully select the type of information that You publicly disclose or share with others on
+                    of any personal information that you publicly disclose or share with others on DHAAKAD CINEMA.
+                    Please carefully select the type of information that you publicly disclose or share with others on
                     DHAAKAD CINEMA.
                     <br/>
                     <span className={classes.uaDefinitionPointChar}>N.&nbsp;</span>
@@ -434,9 +431,9 @@ const UserAgreement = () => {
                     therein. At DCPL`s request and expense, YOU will execute documents and take such further acts as
                     DCPL may reasonably request to assist DCPL to acquire, perfect, and maintain its intellectual
                     property rights and other legal protections for the Feedback. You further acknowledge and agree that
-                    DCPL shall not be under an obligation to take any action pursuant to the Feedback provided by You.
+                    DCPL shall not be under an obligation to take any action pursuant to the Feedback provided by you.
                     DCPL may, at its sole discretion, decide whether any action is required to be taken based on the
-                    Feedback received from You. You hereby expressly agree to indemnify and keep DCPL harmless against
+                    Feedback received from you. You hereby expressly agree to indemnify and keep DCPL harmless against
                     any liabilities that may suffered or incurred by DCPL as a consequence of any action taken by DCPL
                     pursuant to Your Feedback.
                 </div>
@@ -505,13 +502,13 @@ const UserAgreement = () => {
                 </div>
 
                 <div className={classes.uaDefinitionTitle}>PRIVACY POLICY</div>
-                <div className={classes.uaDefinitionText}>All information provided by You or collected by us shall be
+                <div className={classes.uaDefinitionText}>All information provided by you or collected by us shall be
                     governed in accordance with the Privacy Policy located at <NavLink
                         to="/privacy-policy">www.dhaakadcinema.com/privacy-policy</NavLink>
                 </div>
 
                 <div className={classes.uaDefinitionTitle}>RELATIONSHIP</div>
-                <div className={classes.uaDefinitionText}>The relationship between DCPL and You is on a
+                <div className={classes.uaDefinitionText}>The relationship between DCPL and you is on a
                     principal-to-principal basis. You are in no way DCPL’s legal representative, partner or agent for
                     any reason whatsoever.
                 </div>
@@ -552,10 +549,10 @@ const UserAgreement = () => {
                 </div>
 
                 <div className={classes.uaDefinitionTitle}>ELECTRONIC COMMUNICATION</div>
-                <div className={classes.uaDefinitionText}>When You use or send any data, information or communication to
-                    DCPL, You agree and understand that You are communicating with DCPL through electronic records and
-                    You consent to receive communications via electronic records from DCPL periodically and as and when
-                    required. DCPL will communicate with You by email or any push or other message or electronic records
+                <div className={classes.uaDefinitionText}>When you use or send any data, information or communication to
+                    DCPL, you agree and understand that you are communicating with DCPL through electronic records and
+                    you consent to receive communications via electronic records from DCPL periodically and as and when
+                    required. DCPL will communicate with you by email or any push or other message or electronic records
                     on the email address and or mobile number available with DCPL which will be deemed adequate service
                     of notice / electronic record.
                 </div>
@@ -563,17 +560,17 @@ const UserAgreement = () => {
                 <div className={classes.uaDefinitionTitle}>NOTICE</div>
                 <div className={classes.uaDefinitionText}>Any notices or other communications required will be in
                     writing and emailed to DCPL
-                    at <span className={classes.highlightColor}>support.in@dhaakadcinema.com</span>. For notices made by
+                    at <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=support@dhaakadcinema.com" target="_blank">support@dhaakadcinema.com</a>. For notices made by
                     e-mail, the date of receipt will be deemed the date on which such notice is transmitted. In the
                     event you have any complaints with respect to any Content on DHAAKAD CINEMA, please write to us
-                    at <span className={classes.highlightColor}>support.in@dhaakadcinema.com</span>. with details of the
+                    at <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=support@dhaakadcinema.com" target="_blank">support@dhaakadcinema.com</a>. with details of the
                     objectionable content and Your details including Your name and mobile number and such other details
                     as may be requested by Us. Based on the complaint raised, we will take reasonable measures to
                     resolve the issue. You hereby expressly agree that DCPL shall under no circumstance shall be liable
-                    to You for any damages whatsoever. Further, You hereby expressly agree that DCPL makes no
-                    representations under these Terms of Use that any complaint raised by You will be resolved to Your
+                    to you for any damages whatsoever. Further, you hereby expressly agree that DCPL makes no
+                    representations under these Terms of Use that any complaint raised by you will be resolved to Your
                     satisfaction. All steps to be taken by DCPL in this regard shall be at the sole discretion of DCPL.
-                    If You have any claims with respect to the ownership of Content transmitted through DHAAKAD CINEMA,
+                    If you have any claims with respect to the ownership of Content transmitted through DHAAKAD CINEMA,
                     please lodge a complaint in the prescribed format at <NavLink
                         to="/privacy-policy">www.dhaakadcinema.com/privacy-policy</NavLink>.
                 </div>
@@ -594,8 +591,8 @@ const UserAgreement = () => {
                     shall not be under an obligation to notify you of any changes to the Terms of Use. YOU shall be
                     solely responsible for reviewing the Terms of Use from time to time for any modifications. By
                     continuing to use DHAAKAD CINEMA after the Updated Terms of Use have been published, YOU affirm YOUR
-                    agreement to the Updated Terms of Use. CONTACT You have any questions about these Terms of Use,
-                    please contact DCPL at <span className={classes.highlightColor}>support.in@dhaakadcinema.com</span>.
+                    agreement to the Updated Terms of Use. CONTACT you have any questions about these Terms of Use,
+                    please contact DCPL at <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=support@dhaakadcinema.com" target="_blank">support@dhaakadcinema.com</a>.
                 </div>
 
             </div>
