@@ -1,0 +1,78 @@
+.selectCountryIcon {
+    height: 40px;
+    width: 40px;
+}
+
+.selectDropDownIcon {
+    height: 20px;
+    width: 20px;
+}
+
+.dropDownCountryOutline {
+    border: 1px solid #FFCC00;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.selectCountryIconSeparator {
+    border-right: 0.7px solid #68686880;
+    height: 31px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.selectCountryIconBtn {
+    height: 44px;
+    width: 82px;
+}
+
+.mobileInputBox {
+    width: 440px;
+    height: 50px;
+    padding: 6px 218px 6px 5px;
+    border-radius: 30px;
+    border: 1px solid #FFCC00;
+    display: flex;
+    align-items: center;
+    margin-left: 1%;
+}
+
+.countryCodePlaceholder{
+    margin-right: 20px;
+    background-color: #EAEAEA;
+    padding: 4%;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.mobileInput {
+    border: 0;
+    outline: 0;
+}
+
+.mobileInput:focus {
+    outline: none !important;
+}
+
+.otpBtn{
+    font-family: Quicksand, serif !important;
+    width: 166px !important;
+    height: 50px !important;
+    border-radius: 30px !important;
+    background-color: #0D6EFD !important;
+    color: white !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    margin-left: 20px !important;
+}
+
+.otpBtn:hover{
+    background-color: rgba(13, 110, 253, 0.71) !important;
+}
+
+.errorText{
+    color: lightcoral;
+    margin-left: 3%;
+}

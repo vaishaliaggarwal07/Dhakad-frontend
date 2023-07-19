@@ -7,9 +7,9 @@ import { FaFacebook } from "@react-icons/all-files/fa/FaFacebook";
 import { FcGoogle } from "@react-icons/all-files/fc/FcGoogle";
 import { FaUser } from "@react-icons/all-files/fa/FaUser";
 import { Link } from "react-router-dom";
-import { loginWithGoogle } from "../../../Redux/Actions/auth";
+// import { loginWithGoogle } from "../../../Redux/Actions/auth";
 import { useDispatch } from "react-redux";
-import firebase from "firebase/compat/app";
+// import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 
 export function Signup(props) {
