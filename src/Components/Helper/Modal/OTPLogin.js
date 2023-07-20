@@ -1,20 +1,23 @@
 import React, {useState} from "react";
 import classes from './OTPLogin.module.css'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import ModalLayout from "../../ModalLayout";
-import ModalBtn from "../../ModalBtn";
 import indIcon from "../../../Assets/icons/ind_flag.svg"
 import dropDownArrow from "../../../Assets/icons/down-arrow-5.svg"
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
-import PhotoCamera from '@material-ui/icons/PhotoCamera';
+import tickIcon from '../../../Assets/icons/check_svgrepo.svg';
+import rightArrowOTPIcon from '../../../Assets/icons/right_arrow_otp.svg';
 
 const OTPLogin = (props)=>{
 
     const [anchorEl, setAnchorEl] = useState(null);
-    const [isOTPSent, setIsOTPSent] = useState(true);
+    const [isOTPRequested, setIsOTPRequested] = useState(false);
+    const [timer, setTimer] = useState('00:00');
+    const [isOTPResend, setIsOTPResend] = useState(false);
+    const [isOTPVerifySuccess, setIsOTPVerifySuccess] = useState(true);
+
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
@@ -24,7 +27,7 @@ const OTPLogin = (props)=>{
     };
 
     const handleSendOTP = ()=>{
-        setIsOTPSent(true);
+        setIsOTPRequested(true);
     }
 
     const handlePhoneNumberSubmit = (values,setSubmitting)=>{
@@ -58,13 +61,17 @@ const OTPLogin = (props)=>{
         }
     }
 
-    const verifyOTP = (event)=>{
+    const handleVerifyOTP = (event)=>{
+
+    }
+
+    const handleGetStarted = ()=>{
 
     }
 
     return (
         <>
-            {!isOTPSent && <Formik
+            {false && <Formik
                 initialValues={{ mobile: '' }}
                 validate={values => {
                     const errors = {};
@@ -119,7 +126,7 @@ const OTPLogin = (props)=>{
             </Formik>
             }
 
-            {isOTPSent && <Formik
+            {isOTPRequested && <Formik
                 initialValues={{OTPNumber1:'',OTPNumber2:'',OTPNumber3:'',OTPNumber4:''}} onSubmit={handleOTPSubmit}>
 
                 {({ isSubmitting }) => (
@@ -133,20 +140,36 @@ const OTPLogin = (props)=>{
                             <Field className={`${classes.numberInput} ${classes.otpInput}`} type="number" name="OTPNumber3" min="0" max="9" onKeyDown={handleKeyDownForOtpInput} onKeyUp={handleKeyUpForOTPInput} />
                             <Field className={`${classes.numberInput} ${classes.otpInput}`} type="number" name="OTPNumber4" min="0" max="9" onKeyDown={handleKeyDownForOtpInput} onKeyUp={handleKeyUpForOTPInput} />
                         </div>
+                        <div className={classes.otpInputError}>
+                            Please enter valid OTP
+                        </div>
 
-                        <span className={classes.timeRemainingText}>1:00</span>
+                        {/*<span className={classes.timeRemainingText}>1:00</span>*/}
+                        <div className={classes.didntGetOTP}>Didn’t get OTP ?<span className={classes.resendOTP}> Re-send now</span></div>
 
                         <div className="w-100 flex flex-row justify-content-center mt-4">
-                            <Button variant="contained" className={classes.verifyOTPBtn} disableElevation onClick={verifyOTP}>
+                            <Button variant="contained" className={classes.verifyOTPBtn} disableElevation onClick={handleVerifyOTP}>
                                 Verify OTP
                             </Button>
                         </div>
-
                     </Form>
                 )}
             </Formik>
             }
+            {isOTPVerifySuccess && <div className="flex flex-column justify-content-center mt-5 mb-5">
+                <div className={classes.verifyTickContainer}>
+                    <img className={classes.verifyTickIcon} src={tickIcon}/>
+                </div>
 
+                <span className={classes.verifiedText}>Verified</span>
+
+                <div className="w-100 flex flex-row justify-content-center mt-4">
+                    <Button variant="contained" className={classes.getStartedBtn} disableElevation onClick={handleGetStarted()}>
+                        Get Started <img className={classes.rightArrowIcon} src={rightArrowOTPIcon}/>
+                    </Button>
+                </div>
+
+            </div>}
 
         </>
     );

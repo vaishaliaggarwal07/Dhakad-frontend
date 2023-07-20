@@ -39,7 +39,7 @@
     margin-left: 1%;
 }
 
-.countryCodePlaceholder{
+.countryCodePlaceholder {
     margin-right: 20px;
     background-color: #EAEAEA;
     padding: 4%;
@@ -56,7 +56,7 @@
     outline: none !important;
 }
 
-.otpBtn{
+.otpBtn {
     font-family: Quicksand, serif !important;
     width: 166px !important;
     height: 50px !important;
@@ -68,21 +68,21 @@
     margin-left: 20px !important;
 }
 
-.otpBtn:hover{
+.otpBtn:hover {
     background-color: rgba(13, 110, 253, 0.71) !important;
 }
 
-.errorText{
+.errorText {
     color: lightcoral;
     margin-left: 3%;
 }
 
-.otpInputSection{
+.otpInputSection {
     font-family: Quicksand;
     color: #0D6EFD;
 }
 
-.OTPEnterText{
+.OTPEnterText {
     font-size: 16px;
     font-weight: 600;
     line-height: 26px;
@@ -90,7 +90,7 @@
     text-align: center;
 }
 
-.OTPSentText{
+.OTPSentText {
     font-size: 13px;
     font-weight: 400;
     line-height: 26px;
@@ -110,7 +110,7 @@
     -moz-appearance: textfield;
 }
 
-.otpInput{
+.otpInput {
     border-bottom: 2px solid #0D6EFD;
     width: 50px;
     height: 50px;
@@ -121,11 +121,11 @@
     color: #0D6EFD;
 }
 
-.otpInput:focus{
+.otpInput:focus {
     border-bottom: 2px solid #FFCC00;
 }
 
-.timeRemainingText{
+.timeRemainingText {
     font-size: 14px;
     font-weight: 400;
     line-height: 26px;
@@ -133,7 +133,7 @@
     margin-top: 5px;
 }
 
-.verifyOTPBtn{
+.verifyOTPBtn {
     width: 270px;
     height: 36px;
     border-radius: 20px;
@@ -141,10 +141,88 @@
     color: white;
 }
 
-.verifyOTPBtn:hover{
+.verifyOTPBtn:hover {
     background-color: rgba(13, 110, 253, 0.6);
 }
 
-.otpInputContainer{
+.otpInputContainer {
     margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.otpInputError {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FD180C;
+    margin-top: -10px;
+}
+
+.didntGetOTP {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #5E5E5E
+}
+
+.resendOTP {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0.1em;
+    color: #0D6EFD;
+    cursor: pointer;
+}
+
+.resendOTP:hover {
+    color: rgba(13, 110, 253, 0.74);
+}
+
+.verifyTickContainer {
+    width: 140px;
+    height: 140px;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: #0D6EFD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.verifyTickIcon {
+    width: 100px;
+    height: 100px;
+}
+
+.verifiedText {
+    font-family: Quicksand, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+.rightArrowIcon {
+    width: 18.3px;
+    height: 9.9px;
+    margin-left: 3px;
+}
+
+.getStartedBtn {
+    width: 150px;
+    height: 36px;
+    background-color: #FFCC00;
+    color: #0D6EFD;
+    border-radius: 25px;
+}
+
+.getStartedBtn:hover{
+    background-color: rgba(255, 204, 0, 0.6);
 }
