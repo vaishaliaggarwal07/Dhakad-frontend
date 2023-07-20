@@ -47,12 +47,12 @@
     border-radius: 50%;
 }
 
-.mobileInput {
+.numberInput {
     border: 0;
     outline: 0;
 }
 
-.mobileInput:focus {
+.numberInput:focus {
     outline: none !important;
 }
 
@@ -75,4 +75,76 @@
 .errorText{
     color: lightcoral;
     margin-left: 3%;
+}
+
+.otpInputSection{
+    font-family: Quicksand;
+    color: #0D6EFD;
+}
+
+.OTPEnterText{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.OTPSentText{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.numberInput::-webkit-outer-spin-button,
+.numberInput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+.numberInput[type=number] {
+    -moz-appearance: textfield;
+}
+
+.otpInput{
+    border-bottom: 2px solid #0D6EFD;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 16px;
+    font-family: Quicksand;
+    color: #0D6EFD;
+}
+
+.otpInput:focus{
+    border-bottom: 2px solid #FFCC00;
+}
+
+.timeRemainingText{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.verifyOTPBtn{
+    width: 270px;
+    height: 36px;
+    border-radius: 20px;
+    background-color: #0D6EFD;
+    color: white;
+}
+
+.verifyOTPBtn:hover{
+    background-color: rgba(13, 110, 253, 0.6);
+}
+
+.otpInputContainer{
+    margin-left: 10px;
 }
