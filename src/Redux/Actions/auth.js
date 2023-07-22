@@ -59,7 +59,6 @@ export const signup = (data) => async (dispatch) => {
 
 export const loginUser = (data) => async (dispatch) => {
   try {
-    console.log('auth:valuse : ',data);
     const redirectPath = data.redirectPath;
     delete data.redirectPath;
     const config = {
@@ -400,6 +399,49 @@ export const updateProfile = (value) => (dispatch) => {
     const error = err.response ? err.response.data.message : err.message;
     if (error) {
       toast.error(error);
+    }
+  }
+};
+
+export const registerFirebaseUser = (data) => async (dispatch) => {
+  try {
+    console.log('registerFirebaseUser:values : ',data);
+    /*const redirectPath = data.redirectPath;
+    delete data.redirectPath;*/
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+    const body = JSON.stringify(data);
+    const res = await axios.post(`${API_URL}/api/v1/users/signup/firebase`, body, config);
+    if (res) {
+      console.log('auth:res : ',res);
+      localStorage.setItem("token", res?.data?.token);
+      localStorage.setItem("id", res?.data?.id);
+
+      dispatch({
+        type: LOGIN_SUCCESS,
+        payload: res.data,
+      });
+
+      toast.success('Login Success', {
+        theme: "dark",
+      });
+
+      /*setTimeout(() => {
+        window.location.href = redirectPath;
+      }, 500);*/
+    }
+  } catch (err) {
+    const error = err.response ? err.response.data.message : err.message;
+    if (error) {
+      toast.error(error, {
+        theme: "dark",
+      });
+      dispatch({
+        type: LOGIN_FAIL,
+      });
     }
   }
 };

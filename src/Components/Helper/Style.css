@@ -2263,3 +2263,9 @@ button.custom-Str-btn.out-line-btn {
 .row{
   flex-direction: row;
 }
+
+.grecaptcha-badge{
+  right: 0 !important;
+  position: unset !important;
+  bottom: 0 !important;
+}

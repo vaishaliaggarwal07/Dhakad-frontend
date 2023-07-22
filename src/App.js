@@ -33,6 +33,7 @@ import UserAgreement from "./Screen/UserAgreement/UserAgreement";
 import Grievance from "./Screen/Grievance/Grievance";
 import FAQ from "./Screen/FAQ/FAQ";
 import TermsAndConditions from "./Screen/TermsAndConditions/TermsAndConditions";
+import "./Components/Helper/Style.css";
 
 function App() {
   const token = localStorage.getItem("token");

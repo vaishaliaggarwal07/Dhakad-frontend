@@ -21,6 +21,7 @@ const PurchaseHistory = ({ Is_loading, purch_list, rented_movieList }) => {
   ); // loading
   const loggedIn = () => {
     if (Is_loading === true) {
+      console.log('PurchaseHistory:loggedIn: ');
       return <LoadingSpinner />;
     }
   };

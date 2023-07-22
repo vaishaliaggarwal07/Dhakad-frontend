@@ -18,8 +18,10 @@ const MovieLanguages = (props) => {
   }, [dispatch]);
   const movieData = movieByLangList ? movieByLangList?.data?.movies : "";
   // loading
+
   const loggedIn = () => {
     if (props.is_loading === true) {
+      console.log('Movies:MovieLanguages: loading');
       return <LoadingSpinner />;
     }
   };

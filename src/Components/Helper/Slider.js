@@ -40,7 +40,7 @@ const Slider = (props) => {
   // loading
   const loggedIn = () => {
     if (props.is_loading === true) {
-      return <LoadingSpinner />;
+      // return <LoadingSpinner />;
     }
   };
   const getRatingStatus = (rattingStatus) => {

@@ -37,6 +37,11 @@
     display: flex;
     align-items: center;
     margin-left: 1%;
+    margin-bottom: 20px;
+}
+
+.inputBoxError{
+    border: 1px solid #FD180C;
 }
 
 .countryCodePlaceholder {
@@ -45,6 +50,9 @@
     padding: 4%;
     text-align: center;
     border-radius: 50%;
+}
+.mobileInput{
+    min-width: 360px;
 }
 
 .numberInput {
@@ -55,6 +63,19 @@
 .numberInput:focus {
     outline: none !important;
 }
+
+/* Chrome, Safari, Edge, Opera */
+.numberInput::-webkit-outer-spin-button,
+.numberInput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+.numberInput[type=number] {
+    -moz-appearance: textfield;
+}
+
 
 .otpBtn {
     font-family: Quicksand, serif !important;
@@ -73,8 +94,14 @@
 }
 
 .errorText {
-    color: lightcoral;
-    margin-left: 3%;
+    font-family: Quicksand;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    color: #FD180C;
+    margin-left: 5%;
+    margin-top: -20px;
 }
 
 .otpInputSection {
@@ -98,17 +125,7 @@
     text-align: center;
 }
 
-/* Chrome, Safari, Edge, Opera */
-.numberInput::-webkit-outer-spin-button,
-.numberInput::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
 
-/* Firefox */
-.numberInput[type=number] {
-    -moz-appearance: textfield;
-}
 
 .otpInput {
     border-bottom: 2px solid #0D6EFD;
@@ -136,13 +153,13 @@
 .verifyOTPBtn {
     width: 270px;
     height: 36px;
-    border-radius: 20px;
-    background-color: #0D6EFD;
-    color: white;
+    border-radius: 20px !important;
+    background-color: #0D6EFD !important;
+    color: white !important;
 }
 
 .verifyOTPBtn:hover {
-    background-color: rgba(13, 110, 253, 0.6);
+    background-color: rgba(13, 110, 253, 0.6) !important;
 }
 
 .otpInputContainer {
@@ -218,11 +235,22 @@
 .getStartedBtn {
     width: 150px;
     height: 36px;
-    background-color: #FFCC00;
-    color: #0D6EFD;
-    border-radius: 25px;
+    background-color: #FFCC00 !important;
+    color: #0D6EFD !important;
+    border-radius: 25px !important;
 }
 
 .getStartedBtn:hover{
-    background-color: rgba(255, 204, 0, 0.6);
+    background-color: rgba(255, 204, 0, 0.6) !important;
+}
+
+
+.captchaContainer{
+    margin-left: 13%;
+}
+.captchaResendContainer{
+}
+
+.disabledButton{
+    background-color: lightgray !important;
 }

@@ -55,19 +55,18 @@ function SideNavigation() {
     }, [click]);
     //
     const userId = localStorage.getItem("id");
+    console.log('index:SideNavigation: userId ',userId);
     const getUserDataById = useSelector((state) => state.user);
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(getUser(userId));
     }, [dispatch, userId]);
-    const userDetails = getUserDataById?.user?.data?.user;
 
+    const userDetails = getUserDataById?.user?.data?.user;
     const location = useLocation();
-    console.log('index:SideNavigation: location ', location);
     let registerRedirectPath = ''
     if (location.pathname.includes('/movie-detail')) {
         const locationSplit = location.pathname.split('/')
-        console.log('index:SideNavigation: locastion splt ', locationSplit);
         registerRedirectPath = '?mrid=' + locationSplit[2]
     }
 
@@ -75,7 +74,7 @@ function SideNavigation() {
         setOpen(true);
     };
 
-    const handleOTPClose = () => {
+    const handleOTPModalClose = (val) => {
         setOpen(false);
     };
 
@@ -217,7 +216,7 @@ function SideNavigation() {
 
                     <Modal
                         open={open}
-                        onClose={handleOTPClose}
+                        onClose={handleOTPModalClose}
                         aria-labelledby="simple-modal-title"
                         aria-describedby="simple-modal-description">
 
@@ -227,7 +226,7 @@ function SideNavigation() {
                 Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
               </p>*/}
                             <div className="">
-                                <OTPLogin></OTPLogin>
+                                <OTPLogin onGetStartedClick={handleOTPModalClose}></OTPLogin>
                             </div>
                         </div>
 

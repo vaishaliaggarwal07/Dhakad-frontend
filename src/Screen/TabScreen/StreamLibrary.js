@@ -26,6 +26,7 @@ const StreamLibrary = (props) => {
     : "";
   const loggedIn = () => {
     if (props.is_loading === true) {
+      console.log('StreamLibrary:loggedIn: ');
       return <LoadingSpinner />;
     }
   };

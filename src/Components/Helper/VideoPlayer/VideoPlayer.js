@@ -246,6 +246,7 @@ const VideoPlayer = ({movieData, is_loding, current_movie_time, is_loading_curre
             </>
         )
     } else {
+        console.log('VideoPlayer:VideoPlayer: loading');
         return <LoadingSpinner/>
     }
 

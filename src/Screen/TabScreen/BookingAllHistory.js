@@ -19,6 +19,7 @@ const BookingAllHistory = ({ Is_loading, purch_list, rented_movieList }) => {
   // loading
   const loggedIn = () => {
     if (Is_loading === true) {
+      console.log('BookingAllHistory:loggedIn: ');
       return <LoadingSpinner />;
     }
   };

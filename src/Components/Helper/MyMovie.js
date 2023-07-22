@@ -97,6 +97,7 @@ const MyMovie = (props) => {
 
     const loggedIn = () => {
         if (props.is_loading === true) {
+            console.log('MyMovie:loggedIn: ');
             return <LoadingSpinner/>;
         }
     };

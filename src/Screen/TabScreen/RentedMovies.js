@@ -20,6 +20,7 @@ const RentedMovies = ({ Is_loading, rented_movieList, streamData }) => {
   // loading
   const loggedIn = () => {
     if (Is_loading === true) {
+      console.log('RentedMovies:loggedIn: ');
       return <LoadingSpinner />;
     }
   };

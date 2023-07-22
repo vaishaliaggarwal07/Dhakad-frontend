@@ -53,6 +53,7 @@ const Coupons = (props) => {
   // loading
   const loggedIn = () => {
     if (props.is_loading === true) {
+      console.log('Coupons:loggedIn: ');
       return <LoadingSpinner />;
     }
   };

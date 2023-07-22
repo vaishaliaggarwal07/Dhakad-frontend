@@ -19,6 +19,7 @@ const PaymentOption = (props) => {
   // loading
   const loggedIn = () => {
     if (props.is_loading === true) {
+      console.log('PaymentOption:loggedIn: ');
       return <LoadingSpinner />;
     }
   };

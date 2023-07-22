@@ -19,6 +19,7 @@ const BookingHistory = (props) => {
   // loading
   const loggedIn = () => {
     if (props.is_loading === true) {
+      console.log('BookingHistory:loggedIn: ');
       return <LoadingSpinner />;
     }
   };
