@@ -1,7 +1,69 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+## This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+## For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+#
+#name: Node.js CI
+#
+#on:
+#  push:
+#    branches: [ "master" ]
+#  pull_request:
+#    branches: [ "master" ]
+#env:
+#  REACT_APP_MAIN_URL: ${{vars.REACT_APP_MAIN_URL}}
+#  REACT_APP_API_KEY: ${{vars.REACT_APP_API_KEY}}
+#  REACT_APP_AUTH_DOMAIN: ${{vars.REACT_APP_AUTH_DOMAIN}}
+#  REACT_APP_PROJECT_ID: ${{vars.REACT_APP_PROJECT_ID}}
+#  REACT_APP_STORAGE_BUCKET: ${{vars.REACT_APP_STORAGE_BUCKET}}
+#  REACT_APP_MESSAGING_SENDER_ID: ${{vars.REACT_APP_MESSAGING_SENDER_ID}}
+#  REACT_APP_APP_ID: ${{vars.REACT_APP_APP_ID}}
+#  REACT_APP_MEASUREMENT_ID: ${{vars.REACT_APP_MEASUREMENT_ID}}
+#
+#jobs:
+#  build:
+#
+#    runs-on: ubuntu-latest
+#
+#    strategy:
+#      matrix:
+#        node-version: [18.x]
+#        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+#
+#    steps:
+#    - uses: actions/checkout@v3
+#    - name: Use Node.js ${{ matrix.node-version }}
+#      uses: actions/setup-node@v3
+#      with:
+#        node-version: ${{ matrix.node-version }}
+#        cache: 'npm'
+#    - run: npm ci --legacy-peer-deps
+#    - run: npm run build --if-present
+#    - run: echo ${{vars.REACT_APP_MAIN_URL}}
+#    - name: Run a multi-line script
+#      run: |
+#        mkdir ../build
+#        cp -TR ./build/. ../build
+#        tar -cvf dhaakad_website.tar ../build/
+#        rm -rf ../build
+#    - name: copy file via ssh password
+#      uses: appleboy/scp-action@master
+#      with:
+#        host: ${{ secrets.AWS_HOST }}
+#        username: ${{ secrets.AWS_USER }}
+#        key: ${{ secrets.AWS_KEY }}
+#        source: "dhaakad_website.tar"
+#        target: "~"
+#    - name: executing remote ssh commands using ssh key
+#      uses: appleboy/ssh-action@master
+#      with:
+#        host: ${{ secrets.AWS_HOST }}
+#        username: ${{ secrets.AWS_USER }}
+#        key: ${{ secrets.AWS_KEY }}
+#        script: sudo sh deploy_dhaakad_website.sh
 
-name: Node.js CI
+
+## FOR Azure blob storage deployment
+
+name: React BUILD DEPLOY
 
 on:
   push:
@@ -37,25 +99,20 @@ jobs:
         cache: 'npm'
     - run: npm ci --legacy-peer-deps
     - run: npm run build --if-present
-    - run: echo ${{vars.REACT_APP_MAIN_URL}}
-    - name: Run a multi-line script
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_BLOB_CREDENTIALS }}
+    - name: Upload to blob storage
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+            az storage blob upload-batch --account-name dhaakadwebsite  --auth-mode key -d '$web' -s ./build
+#    - name: Purge CDN endpoint
+#      uses: azure/CLI@v1
+#      with:
+#        inlineScript: |
+#                az cdn endpoint purge --content-paths  "/*" --profile-name "CDN_PROFILE_NAME" --name "CDN_ENDPOINT" --resource-group "RESOURCE_GROUP"
+    - name: logout
       run: |
-        mkdir ../build
-        cp -TR ./build/. ../build
-        tar -cvf dhaakad_website.tar ../build/
-        rm -rf ../build
-    - name: copy file via ssh password
-      uses: appleboy/scp-action@master
-      with:
-        host: ${{ secrets.AWS_HOST }}
-        username: ${{ secrets.AWS_USER }}
-        key: ${{ secrets.AWS_KEY }}
-        source: "dhaakad_website.tar"
-        target: "~"
-    - name: executing remote ssh commands using ssh key
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.AWS_HOST }}
-        username: ${{ secrets.AWS_USER }}
-        key: ${{ secrets.AWS_KEY }}
-        script: sudo sh deploy_dhaakad_website.sh
+          az logout
+      if: always()
