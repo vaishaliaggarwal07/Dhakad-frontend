@@ -125,6 +125,15 @@ name: Deploy to Firebase Hosting on push
   push:
     branches:
       - master
+env:
+  REACT_APP_MAIN_URL: ${{vars.REACT_APP_MAIN_URL}}
+  REACT_APP_API_KEY: ${{vars.REACT_APP_API_KEY}}
+  REACT_APP_AUTH_DOMAIN: ${{vars.REACT_APP_AUTH_DOMAIN}}
+  REACT_APP_PROJECT_ID: ${{vars.REACT_APP_PROJECT_ID}}
+  REACT_APP_STORAGE_BUCKET: ${{vars.REACT_APP_STORAGE_BUCKET}}
+  REACT_APP_MESSAGING_SENDER_ID: ${{vars.REACT_APP_MESSAGING_SENDER_ID}}
+  REACT_APP_APP_ID: ${{vars.REACT_APP_APP_ID}}
+  REACT_APP_MEASUREMENT_ID: ${{vars.REACT_APP_MEASUREMENT_ID}}
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
