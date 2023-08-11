@@ -1,6 +1,8 @@
 {
   "hosting": {
     "public": "build",
+    "target": "web",
+    "site": "dhaakadcinema-cf601",
     "ignore": [
       "firebase.json",
       "**/.*",
