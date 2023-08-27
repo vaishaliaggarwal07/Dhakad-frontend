@@ -4,6 +4,10 @@ import videojs from "video.js";
 
 
 const Trailer = (props) => {
+    let videoType = 'video/mp4';
+    if(props.trailerLink && props.trailerLink.includes('m3u8')){
+        videoType = 'application/x-mpegURL';
+    }
     const videoJsOptions = {
         autoPlay: true,
         muted:true,
@@ -12,7 +16,7 @@ const Trailer = (props) => {
         fluid: true,
         sources: [{
             src: props.trailerLink,
-            type: 'video/mp4'
+            type: videoType
         }]
         // for hls stream
         /*

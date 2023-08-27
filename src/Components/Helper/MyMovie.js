@@ -65,6 +65,7 @@ const MyMovie = (props) => {
     }, [id]);
 
     const movieDetails = movieDetail?.data?.movie ? movieDetail?.data?.movie : "";
+    console.log('MyMovie:MyMovie: movieDetails ',movieDetail);
     const castIds = movieDetails?.castIds?.toString()?.replace(/ /g, "");
     const [castDetailIds, setCastDetailIds] = useState();
     useEffect(() => {

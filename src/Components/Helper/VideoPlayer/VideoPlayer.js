@@ -73,99 +73,18 @@ const VideoPlayer = ({movieData, is_loding, current_movie_time, is_loading_curre
         : "";
 
 
-    /*return (
-      <React.Fragment>
-        <div id="watch" className="watch-movie watch-main-content">
-          <div className="col-md-12 movie-player padding-globle">
-            {loggedIn()}
-            {/!* <ReactPlayer
-              style={{ display: "none" }}
-              ref={player}
-              url={moveDetail ? moveDetail?.movieUrl[0] : ""}
-              controls={true}
-              width={"100%"}
-              height={"100vh"}
-              playing={playing}
-              config={{
-                file: {
-                  attributes: {
-                    crossOrigin: "true",
-                    controlsList: "nodownload",
-                  },
-                  tracks: subData,
-                },
-              }}
-            /> *!/}
-            {/!* <div className="player-react-section"> *!/}
-            <Player
-              src={[
-                {
-                  quality: 1080,
-                  url: `${moveDetail ? moveDetail?.movieUrl[0] : "N/A"}`,
-                },
-                {
-                  quality: 720,
-                  url: `${moveDetail ? moveDetail?.movieUrl[0] : "N/A"}`,
-                },
-                {
-                  quality: 480,
-                  url: `${moveDetail ? moveDetail?.movieUrl[0] : "N/A"}`,
-                },
-                {
-                  quality: 320,
-                  url: `${moveDetail ? moveDetail?.movieUrl[0] : "N/A"}`,
-                },
-                {
-                  quality: "Auto",
-                  url: `${moveDetail ? moveDetail?.movieUrl[0] : "N/A"}`,
-                },
-              ]}
-              // src={moveDetail ? moveDetail?.movieUrl[0] : "N/A"}
-              subtitles={mySubtitle_arr ? mySubtitle_arr : []}
-              // dimensions={{ width: "100%", height: "100%" }}
-              poster={moveDetail?.banners?.[0] ? moveDetail?.banners?.[0] : "N/A"}
-              pictureInPicture={true}
-            />
-            {/!* </div> *!/}
-            {/!* {trackLang} *!/}
-          </div>
-          {/!* <ShakaPlayer src={moveDetail ? moveDetail?.movieUrl[0] : ""} /> *!/}
-          <div className="movie-content-text">
-            <div className="padding-globle">
-              <div className="movie-title-sec d-flex justify-content-between">
-                <h3>{moveDetail?.title ? moveDetail?.title : ""}</h3>
-                <div className="cate-lang-sec">
-                  <span>{moveDetail?.duration ? moveDetail?.duration : ""}</span>
-                  <span>
-                    {moveDetail?.categories
-                      ? moveDetail?.categories?.slice(0, 2)?.join(",")
-                      : ""}
-                  </span>
-                  <span>
-                    {moveDetail?.languages
-                      ? moveDetail?.languages?.slice(0, 2)?.join(",")
-                      : ""}
-                  </span>
-                </div>
-              </div>
-              <div className="description">
-                <p>
-                  {moveDetail?.subDescription ? moveDetail?.subDescription : ""}
-                </p>
-                <p>{moveDetail?.description ? moveDetail?.description : ""}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </React.Fragment>
-    );*/
+
     const playerRef = React.useRef(null);
 
-    console.log('VideoPlayer:VideoPlayer: movieDetails',moveDetail);
-    console.log('VideoPlayer:VideoPlayer: current_movie_time',current_movie_time);
     if (moveDetail && current_movie_time !== -1) {
 
         console.log('VideoPlayer:VideoPlayer: current_movie_time ', current_movie_time);
+
+        let videoType = 'video/mp4';
+        const movieLink = moveDetail?.movieUrl[0]
+        if(movieLink && movieLink.includes('m3u8')){
+            videoType = 'application/x-mpegURL';
+        }
 
         const videoJsOptions = {
             autoplay: true,
@@ -175,8 +94,8 @@ const VideoPlayer = ({movieData, is_loding, current_movie_time, is_loading_curre
             videoTitle:moveDetail?.brandTitle || 'NA',
             playbackRates: [0.5, 1, 1.5, 2],
             sources: [{
-                src: moveDetail?.movieUrl[0],
-                type: 'video/mp4'
+                src: movieLink,
+                type: videoType
             }]
             // for hls stream
             /*sources: [{
