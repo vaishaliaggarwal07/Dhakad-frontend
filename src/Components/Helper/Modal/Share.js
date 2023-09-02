@@ -15,15 +15,16 @@ import {
   WhatsappIcon,
 } from "react-share";
 
+import {MAIN_WEBSITE} from "../../../Utils/helpers/api_url"
+
 export function Share(props) {
   const link = props?.link;
 
   const [message, setMessage] = useState(false);
   const [copyText, setCopyText] = useState();
   const onButtonClick = () => {
-    console.log('Share:onButtonClick: ');
     setCopyText(
-      `http://dhaakadcinema.com.s3-website-ap-northeast-1.amazonaws.com${link}`
+      `${MAIN_WEBSITE}${link}`
     );
     setMessage(true);
   };
