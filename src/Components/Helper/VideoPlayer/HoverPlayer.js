@@ -46,10 +46,6 @@ const HoverPlayer = ({ videoUrl, hoverPoster }) => {
     }
   }, []);
 
-
-
-  console.log('HoverPlayer:HoverPlayer: here ',videoUrl, videoType);
-
   return (
     <React.Fragment>
       <div id="hoverPlayer" className="hover-player-outer">
