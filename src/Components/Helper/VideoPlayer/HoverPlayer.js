@@ -2,10 +2,12 @@ import React, { useEffect, useRef, useState } from "react";
 import { PlayCircleFilled } from "@material-ui/icons";
 import "./style.css";
 import HoverVideoPlayer from "react-hover-video-player";
+import Hls from 'hls.js';
+import { v4 as uuidv4 } from 'uuid';
 
 const HoverPlayer = ({ videoUrl, hoverPoster }) => {
-  const videoEl = useRef(null);
-  const [trueVal, setTrueVal] = useState(false);
+  const videoRef = useRef(null);
+  /*const [trueVal, setTrueVal] = useState(false);
 
   const attemptPlay = () => {
     videoEl &&
@@ -15,7 +17,7 @@ const HoverPlayer = ({ videoUrl, hoverPoster }) => {
       });
   };
   const attemptPause = () => {
-    videoEl && videoEl.current && videoEl.current.pause();
+    videoRef && videoRef.current && videoRef.current.pause();
   };
 
   useEffect(() => {
@@ -25,7 +27,28 @@ const HoverPlayer = ({ videoUrl, hoverPoster }) => {
     if (!trueVal) {
       attemptPause();
     }
-  }, [trueVal]);
+  }, [trueVal]);*/
+
+  let videoType = 'video/mp4';
+  const movieLink = videoUrl;
+  const videoId = `#video--${uuidv4()}`
+  /*if(movieLink && movieLink.includes('m3u8')){
+    videoType = 'application/x-mpegURL';
+  }*/
+
+  useEffect(() => {
+    if (movieLink && movieLink.includes('m3u8') && Hls.isSupported() && videoRef?.current) {
+      // I need to use unique ID for each as I have many video elements on the page.
+      const hls = new Hls();
+      // Bind them together
+      hls.loadSource(movieLink);
+      hls.attachMedia(videoRef?.current);
+    }
+  }, []);
+
+
+
+  console.log('HoverPlayer:HoverPlayer: here ',videoUrl, videoType);
 
   return (
     <React.Fragment>
@@ -36,6 +59,8 @@ const HoverPlayer = ({ videoUrl, hoverPoster }) => {
             videoSrc={videoUrl}
             controlsList="nodownload nofullscreen"
             controls
+            videoRef={videoRef}
+            videoId={videoId}
           />
           <div className="poster-outer">
             <div className="hove-poster">
