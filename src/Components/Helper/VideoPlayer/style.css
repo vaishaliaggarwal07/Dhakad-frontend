@@ -50,3 +50,8 @@
   height: 60px;
   width: 60px;
 }
+
+.hoverplayer > div{
+  display: block !important;
+  height: 98%;
+}
