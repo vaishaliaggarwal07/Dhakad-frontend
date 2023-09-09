@@ -10,6 +10,7 @@ import { toast } from "react-toastify";
 import { API_URL } from "../../../Utils/helpers/api_url";
 import * as Yup from "yup";
 import {useLocation} from "react-router-dom";
+import axios from "axios";
 
 const Email = () => {
   const dispatch = useDispatch();
@@ -20,50 +21,18 @@ const Email = () => {
   const queryParams = new URLSearchParams(search);
 
   useEffect(() => {
-    var myHeaders = new Headers();
-    myHeaders.append("Authorization", "Bearer null");
 
-    var requestOptions = {
-      method: "GET",
-      headers: myHeaders,
-      redirect: "follow",
-    };
-
-    fetch(`${API_URL}/api/v1/users`, requestOptions)
-      .then((response) => response.json())
-      .then((result) => setallUsers(result?.data?.user))
+    axios(`${API_URL}/api/v1/users`)
+      .then((result) => setallUsers(result?.data?.data?.user))
       .catch((error) => console.log("error", error));
   }, []);
   const addReward = (userid) => {
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-
-    var raw = JSON.stringify({});
-
-    var requestOptions = {
-      method: "PATCH",
-      headers: myHeaders,
-      body: raw,
-      redirect: "follow",
-    };
-
-    fetch(`${API_URL}/api/v1/users/addReward/${userid}`, requestOptions)
-      .then((response) => response.json())
-      .then((result) => console.log(result))
+    axios.patch(`${API_URL}/api/v1/users/addReward/${userid}`,{})
       .catch((error) => console.log("error", error));
   };
   const findUserByRCode = (rcode) => {
-    var myHeaders = new Headers();
-
-    var requestOptions = {
-      method: "GET",
-      headers: myHeaders,
-      redirect: "follow",
-    };
-
-    fetch(`${API_URL}/api/v1/users/getUserByRefCode/${rcode}`, requestOptions)
-      .then((response) => response.json())
-      .then((result) => addReward(result?.data?.user?.[0]?._id))
+    axios.get(`${API_URL}/api/v1/users/getUserByRefCode/${rcode}`)
+      .then((result) => addReward(result?.data?.data?.user?.[0]?._id))
       .catch((error) => console.log("error", error));
   };
   /* signUpSchema */
@@ -92,7 +61,7 @@ const Email = () => {
   });
   const [code, setCode] = useState(false);
   const chechRCode = (code) => {
-    allRefCode?.map((i) => {
+    allRefCode?.forEach((i) => {
       if (i === code) {
         setCode(true);
       }

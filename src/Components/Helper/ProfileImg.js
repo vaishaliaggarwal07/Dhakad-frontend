@@ -3,7 +3,7 @@ import CameraAltOutlinedIcon from "@material-ui/icons/CameraAltOutlined";
 import profileImg from "../../Assets/Images/10.svg.png";
 import { Image } from "react-bootstrap";
 import { connect, useDispatch, useSelector } from "react-redux";
-import { getUser, updateUser, updateProfile } from "../../Redux/Actions/auth";
+import { getUser, updateUser } from "../../Redux/Actions/auth";
 
 import { v4 as uuidv4 } from "uuid";
 import { toast } from "react-toastify";
@@ -54,7 +54,8 @@ const ProfileImg = (props) => {
       });
       setUploadStatus(false);
     } else {
-      const profileUrl = data.target.files[0];
+      // TODO: Change the profile pic to Azure bucket
+      /*const profileUrl = data.target.files[0];
       var fileName = profileUrl.name;
       var file_ext = fileName.substr(
         (Math.max(0, fileName.lastIndexOf(".")) || Infinity) + 1
@@ -65,7 +66,7 @@ const ProfileImg = (props) => {
         profileUrl: profileUrl,
         profileLink: filePath,
       };
-      dispatch(updateProfile(ProfileData));
+      dispatch(updateProfile(ProfileData));*/
       setUploadStatus(true);
     }
   };

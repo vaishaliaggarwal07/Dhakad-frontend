@@ -1,5 +1,4 @@
 import { API_URL } from "../../Utils/helpers/api_url";
-import AWS from "aws-sdk";
 
 import {
   LOGIN_SUCCESS,
@@ -19,11 +18,6 @@ export const signup = (data) => async (dispatch) => {
     dispatch({
       type: IS_LOADING,
     });
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
     if (data.referralCode !== "") {
       data.rewards = {
         title: "Signup Reward",
@@ -33,8 +27,7 @@ export const signup = (data) => async (dispatch) => {
     }
     data.referralCode =
       data.firstName + Math.floor(1000 + Math.random() * 9000);
-    const body = JSON.stringify(data);
-    const res = await axios.post(`${API_URL}/api/v1/users/`, body, config);
+    const res = await axios.post(`${API_URL}/api/v1/users/`, data);
 
     if (res?.data?.status === "success") {
       localStorage.setItem("token", res?.data?.token);
@@ -61,13 +54,7 @@ export const loginUser = (data) => async (dispatch) => {
   try {
     const redirectPath = data.redirectPath;
     delete data.redirectPath;
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
-    const body = JSON.stringify(data);
-    const res = await axios.post(`${API_URL}/api/v1/users/login`, body, config);
+    const res = await axios.post(`${API_URL}/api/v1/users/login`, data);
     dispatch({
       type: LOGIN_SUCCESS,
       payload: res.data,
@@ -179,17 +166,11 @@ export const updateUser = (data, id) => async (dispatch) => {
 export const forgotPassword =
   ({ email }) =>
   async (dispatch) => {
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
-    const body = JSON.stringify({ email });
+
     try {
       const res = await axios.post(
         `${API_URL}/api/v1/users/forgotPassword`,
-        body,
-        config
+          { email },
       );
       if (res) {
         dispatch({
@@ -213,19 +194,12 @@ export const forgotPassword =
 //
 export const verifyPasswordOTP = (value) => async (dispatch) => {
   try {
-    var data = JSON.stringify({
-      email: value.email,
-      otp: Number(value.otp),
-    });
-    var config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
     const res = await axios.patch(
       `${API_URL}/api/v1/users/verifyOTP`,
-      data,
-      config
+        {
+          email: value.email,
+          otp: Number(value.otp),
+        },
     );
     const message = res?.data?.message;
     if (res) {
@@ -249,17 +223,11 @@ export const verifyPasswordOTP = (value) => async (dispatch) => {
 export const resendOTP =
   ({ email }) =>
   async (dispatch) => {
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
-    const body = JSON.stringify({ email });
+
     try {
       const res = await axios.post(
         `${API_URL}/api/v1/users/resendOTP`,
-        body,
-        config
+          { email },
       );
       if (res) {
         dispatch({
@@ -284,19 +252,12 @@ export const resendOTP =
 //
 export const createNewPassword = (value) => async (dispatch) => {
   try {
-    var data = JSON.stringify({
-      password: value?.password,
-      id: value?.id,
-    });
-    var config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
     const res = await axios.patch(
       `${API_URL}/api/v1/users/resetPassword/${value?.id}`,
-      data,
-      config
+        {
+          password: value?.password,
+          id: value?.id,
+        }
     );
     const message = res?.data?.message;
     if (res) {
@@ -320,21 +281,13 @@ export const loginWithGoogle =
   ({ token, email }) =>
   async (dispatch) => {
     try {
-      const config = {
-        headers: {
-          "Content-Type": "application/json",
-          token: `${token}`,
-        },
-      };
-      const body = JSON.stringify({
-        userType: "user",
-        email: email,
-        token: `${token}`,
-      });
       const res = await axios.post(
         `${API_URL}/api/v1/users/loginwithfirebase`,
-        body,
-        config
+          {
+            userType: "user",
+            email: email,
+            token: `${token}`,
+          }
       );
       if (res) {
         localStorage.setItem("token", res?.data?.token);
@@ -357,66 +310,10 @@ export const loginWithGoogle =
     }
   };
 
-//
-export const updateProfile = (value) => (dispatch) => {
-  const S3_BUCKET = "dhaakadmovies";
-  const REGION = "us-east-2";
-
-  AWS.config.update({
-    accessKeyId: "AKIA4KKGBAMRQPJX6FMB",
-    secretAccessKey: "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",
-  });
-
-  const myBucket = new AWS.S3({
-    params: { Bucket: S3_BUCKET },
-    region: REGION,
-    ACL: "public-read",
-  });
-
-  const profileData = {
-    file: value.profileUrl,
-    fileType: value.type,
-    fileLink: value.profileLink,
-  };
-
-  try {
-    const params = {
-      Body: profileData.file,
-      Bucket: S3_BUCKET,
-      Key: `users/${profileData.fileLink}`,
-    };
-    // ${profileData.fileType}
-    myBucket.upload(params, (error, data) => {
-      if (error) {
-        console.log(error);
-      }
-      dispatch({
-        type: UPDATE_USER_PROFILE,
-        payload: data,
-      });
-    });
-  } catch (err) {
-    const error = err.response ? err.response.data.message : err.message;
-    if (error) {
-      toast.error(error);
-    }
-  }
-};
-
 export const registerFirebaseUser = (data) => async (dispatch) => {
   try {
-    console.log('registerFirebaseUser:values : ',data);
-    /*const redirectPath = data.redirectPath;
-    delete data.redirectPath;*/
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
-    const body = JSON.stringify(data);
-    const res = await axios.post(`${API_URL}/api/v1/users/signup/firebase`, body, config);
+    const res = await axios.post(`${API_URL}/api/v1/users/signup/firebase`, data);
     if (res) {
-      console.log('auth:res : ',res);
       localStorage.setItem("token", res?.data?.token);
       localStorage.setItem("id", res?.data?.id);
 

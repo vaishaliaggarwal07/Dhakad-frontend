@@ -15,6 +15,7 @@ import useRazorpay from "react-razorpay";
 import { CreateOrder, verifyOrder } from "../../../Redux/Actions/order";
 import { API_URL } from "../../../Utils/helpers/api_url";
 import { listCoupon } from "../../../Redux/Actions/coupon";
+import axios from "axios";
 
 // import dateFormat from "dateformat";
 // import { toast } from "react-toastify";
@@ -32,17 +33,8 @@ export function Rent(props) {
     dispatch(getMovie(id));
     dispatch(listCoupon());
 
-    var myHeaders = new Headers();
-
-    var requestOptions = {
-      method: "GET",
-      headers: myHeaders,
-      redirect: "follow",
-    };
-
-    fetch(`${API_URL}/api/v1/users/${userId}`, requestOptions)
-      .then((response) => response.json())
-      .then((result) => setUser(result?.data?.user))
+    axios.get(`${API_URL}/api/v1/users/${userId}`)
+      .then((result) => setUser(result?.data?.data?.user))
       .catch((error) => console.log("error", error));
   }, [dispatch, id]);
 
@@ -65,110 +57,22 @@ export function Rent(props) {
       couponList?.reward?.filter((item) => item.couponCode == couponCode)?.[0]
         ?.amount
     );
-    // const coupCurrentDate = Date();
-    // const couponData = couponList?.reward
-    //   ? couponList?.reward?.filter((item, index) => {
-    //       item?.movies?.map((item, index) => {
-    //         console.log(item);
-    //       });
-
-    // console.log(item?.movies?.[index], item?.movies, index, "item");
-    // if (item?.movies?.[index] === id) {
-    // if (item?.couponCode === couponCode) {
-    //   if (
-    //     dateFormat(item?.expireDate, "yyyy-mm-dd") >=
-    //     dateFormat(coupCurrentDate, "yyyy-mm-dd")
-    //   ) {
-    //     toast.success("Coupon added successfully!");
-    //     return item?.amount;
-    //   } else {
-    //     toast.error("Your coupon expired!");
-    //   }
-    // } else {
-    //   toast.error("Coupon code not matched!");
-    // }
-    // }
-    // })
-    // : "";
-    // let amountCoupon = Number(couponData?.[0]?.amount)
-    //   ? Number(couponData?.[0]?.amount)
-    //   : Number(0);
-    // setCodeValue(amountCoupon);
-    // var myHeaders = new Headers();
-
-    // var formdata = new FormData();
-    // formdata.append("coupons", couponCode);
-
-    // var requestOptions = {
-    //   method: "PATCH",
-    //   headers: myHeaders,
-    //   body: formdata,
-    //   redirect: "follow",
-    // };
-
-    // fetch(`${API_URL}/api/v1/users/${userId}`, requestOptions)
-    //   .then((response) => response.json())
-    //   .then((result) => console.log(result))
-    //   .catch((error) => console.log("error", error));
   };
 
   const expireCoupon = () => {
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-
-    var raw = JSON.stringify({
+    axios.patch(`${API_URL}/api/v1/users/expireCoupon/${userId}`, {
       coupons: couponCode,
-    });
-
-    var requestOptions = {
-      method: "PATCH",
-      headers: myHeaders,
-      body: raw,
-      redirect: "follow",
-    };
-
-    fetch(`${API_URL}/api/v1/users/expireCoupon/${userId}`, requestOptions)
-      .then((response) => response.json())
+    })
       .then((result) => console.log(result))
       .catch((error) => console.log("error", error));
   };
 
   const expireReward = () => {
-    // var myHeaders = new Headers();
-    // myHeaders.append("Content-Type", "application/json");
 
-    // var raw = JSON.stringify({
-    //   rewards: [],
-    // });
 
-    // var requestOptions = {
-    //   method: "PATCH",
-    //   headers: myHeaders,
-    //   body: raw,
-    //   redirect: "follow",
-    // };
-
-    // fetch(`${API_URL}/api/v1/users/expireReward/${userId}`, requestOptions)
-    //   .then((response) => response.json())
-    //   .then((result) => console.log(result))
-    //   .catch((error) => console.log("error", error));
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-
-    var raw = JSON.stringify({
+    axios.patch(`${API_URL}/api/v1/users/expireReward/${userId}`, {
       rewards: [],
-    });
-
-    var requestOptions = {
-      method: "PATCH",
-      headers: myHeaders,
-      body: raw,
-      redirect: "follow",
-    };
-
-    fetch(`${API_URL}/api/v1/users/expireReward/${userId}`, requestOptions)
-      .then((response) => response.json())
-      .then((result) => console.log(result))
+    }).then((result) => console.log(result))
       .catch((error) => console.log("error", error));
   };
   // FIND COUPON AMOUNT
@@ -180,10 +84,8 @@ export function Rent(props) {
   const newCreateOrder = (data) => {
     let detail = data;
     try {
-      var myHeaders = new Headers();
-      myHeaders.append("Content-Type", "application/json");
 
-      var raw = JSON.stringify({
+      axios.post(`${API_URL}/api/v1/trasncations/createOrder`, {
         userId: detail?.userId,
         movieId: detail?.movieId,
         amount: detail?.paymt,
@@ -192,19 +94,8 @@ export function Rent(props) {
         notes: {
           description: detail?.notes,
         },
-      });
-
-      var requestOptions = {
-        method: "POST",
-        headers: myHeaders,
-        body: raw,
-        redirect: "manual",
-      };
-
-      fetch(`${API_URL}/api/v1/trasncations/createOrder`, requestOptions)
-        .then((res) => res.json())
-        .then((res) => {
-          setNewOderData(res);
+      }).then((res) => {
+          setNewOderData(res.data);
           expireCoupon();
           expireReward();
         });

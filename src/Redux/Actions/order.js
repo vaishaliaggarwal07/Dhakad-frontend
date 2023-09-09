@@ -2,13 +2,14 @@ import { API_URL } from "../../Utils/helpers/api_url";
 // import axios from "axios";
 import { toast } from "react-toastify";
 import { CREATE_ORDER } from "./type";
+import axios from "axios";
 
 export const CreateOrder = (detail) => async (dispatch) => {
   try {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
-    var raw = JSON.stringify({
+    var raw = {
       userId: detail?.userId,
       movieId: detail?.movieId,
       amount: detail?.paymt,
@@ -17,21 +18,12 @@ export const CreateOrder = (detail) => async (dispatch) => {
       notes: {
         description: detail?.notes,
       },
-    });
-
-    var requestOptions = {
-      method: "POST",
-      headers: myHeaders,
-      body: raw,
-      redirect: "manual",
     };
 
-    fetch(`${API_URL}/api/v1/trasncations/createOrder`, requestOptions)
-      .then((res) => res.json())
-      .then((res) => {
+    axios.post(`${API_URL}/api/v1/trasncations/createOrder`, raw).then((res) => {
         dispatch({
           type: CREATE_ORDER,
-          payload: res?.results?.order,
+          payload: res?.data.results?.order,
         });
       });
   } catch (err) {
@@ -45,32 +37,19 @@ export const verifyOrder = (response, id) => {
   console.log(response, id, "response, id");
   const raz_sign = response?.razorpay_signature;
   try {
-    var myHeaders = new Headers();
-    myHeaders.append("x-razorpay-signature", { raz_sign });
-    myHeaders.append("Content-Type", "application/json");
 
-    var raw = JSON.stringify({
-      order_id: response?.razorpay_order_id,
-      payment_id: response?.razorpay_payment_id,
-      movie_booking_type: "PREBOOK | BOOK | RENT",
-    });
-
-    var requestOptions = {
-      method: "POST",
-      headers: myHeaders,
-      body: raw,
-      redirect: "manual",
-    };
-
-    fetch(
+    axios.post(
       `${API_URL}/api/v1/trasncations/verifyOrderAndBookMovie`,
-      requestOptions
-    )
-      .then((response) => response.json())
-      .then((res) => {
-        if (res) {
-          purchaseMovie(res);
-          const message = res ? res?.message : res?.message;
+        {
+          order_id: response?.razorpay_order_id,
+          payment_id: response?.razorpay_payment_id,
+          movie_booking_type: "PREBOOK | BOOK | RENT",
+          razorpay_signature:raz_sign
+        }
+    ).then((res) => {
+        if (res.data) {
+          purchaseMovie(res.data);
+          const message = res.data ? res.data?.message : res.data?.message;
           toast.success(message, {
             theme: "dark",
           });
@@ -91,7 +70,6 @@ export const verifyOrder = (response, id) => {
 };
 
 const purchaseMovie = (data) => {
-  const token = localStorage.getItem("token");
   const purchaseData = data?.results;
   const dataHistory = purchaseData?.[purchaseData?.length - 1];
   console.log(dataHistory, "dataHistory");
@@ -100,25 +78,11 @@ const purchaseMovie = (data) => {
   console.log(dataHistory?.userId?._id, "dataHistory?.userId?.id");
 
   try {
-    var myHeaders = new Headers();
-    myHeaders.append("Authorization", `Bearer ${token}`);
-    myHeaders.append("Content-Type", "application/json");
-
-    var raw = JSON.stringify({
+    axios.post(`${API_URL}/api/v1/purchase`, {
       userId: dataHistory?.userId?._id,
       movieId: dataHistory?.movieId?.id,
       transitionId: dataHistory?.id,
-    });
-
-    var requestOptions = {
-      method: "POST",
-      headers: myHeaders,
-      body: raw,
-      redirect: "manual",
-    };
-
-    fetch(`${API_URL}/api/v1/purchase`, requestOptions)
-      .then((response) => response.json())
+    })
       .then((result) => console.log(result, "result======>>"));
   } catch (err) {
     console.log(err);

@@ -8,6 +8,7 @@ import { useDispatch, connect, useSelector } from "react-redux";
 import LoadingSpinner from "../../Components/LoaderSpinner";
 import { API_URL } from "../../Utils/helpers/api_url";
 import { useHistory } from "react-router-dom";
+import axios from "axios";
 const StreamLibrary = (props) => {
   const [Streamed, setStreamed] = useState();
 
@@ -54,25 +55,12 @@ const StreamLibrary = (props) => {
   }, [trueVal]);
 
   const getID = (id) => {
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
 
-    var raw = JSON.stringify({
+    axios.patch(`${API_URL}/api/v1/trasncations/${id}`, {
       streamed: true,
-    });
-
-    var requestOptions = {
-      method: "PATCH",
-      headers: myHeaders,
-      body: raw,
-      redirect: "follow",
-    };
-
-    fetch(`${API_URL}/api/v1/trasncations/${id}`, requestOptions)
-      .then((response) => response.json())
-      .then((result) => {
+    }).then((result) => {
         const milliseconds = Math.abs(
-          new Date(result?.data?.orders?.startedAt) - new Date()
+          new Date(result?.data?.data?.orders?.startedAt) - new Date()
         );
         const hours = milliseconds / 36e5;
 

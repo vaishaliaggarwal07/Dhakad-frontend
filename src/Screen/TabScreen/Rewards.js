@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import BottomNavbar from "../../Components/Helper/BottomNavbar";
 import { API_URL } from "../../Utils/helpers/api_url";
+import axios from "axios";
 
 const Rewards = () => {
   const [user, setUser] = useState();
@@ -9,17 +10,10 @@ const Rewards = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    var myHeaders = new Headers();
 
-    var requestOptions = {
-      method: "GET",
-      headers: myHeaders,
-      redirect: "follow",
-    };
 
-    fetch(`${API_URL}/api/v1/users/${userId}`, requestOptions)
-      .then((response) => response.json())
-      .then((result) => setUser(result?.data?.user))
+    axios.get(`${API_URL}/api/v1/users/${userId}`)
+      .then((result) => setUser(result?.data?.data?.user))
       .catch((error) => console.log("error", error));
   }, [dispatch, userId]);
 

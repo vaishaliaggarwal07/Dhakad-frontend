@@ -8,6 +8,11 @@ import {Provider} from "react-redux";
 import store from "./store";
 import ScrollToTop from './Components/Helper/ScrollToTop';
 
+
+if (!localStorage.getItem('token')) {
+
+}
+
 ReactDOM.render(
     <BrowserRouter>
         <Provider store={store}>
@@ -17,3 +22,4 @@ ReactDOM.render(
     </BrowserRouter>,
     document.getElementById("root")
 );
+

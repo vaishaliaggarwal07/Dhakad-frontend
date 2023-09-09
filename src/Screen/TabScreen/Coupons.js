@@ -6,6 +6,7 @@ import { listCoupon } from "../../Redux/Actions/coupon";
 import LoadingSpinner from "../../Components/LoaderSpinner";
 import { getRentedMovie } from "../../Redux/Actions/movies";
 import { API_URL } from "../../Utils/helpers/api_url";
+import axios from "axios";
 
 const Coupons = (props) => {
   const dispatch = useDispatch();
@@ -25,17 +26,8 @@ const Coupons = (props) => {
     dispatch(listCoupon());
     dispatch(getRentedMovie(userId));
 
-    var myHeaders = new Headers();
-
-    var requestOptions = {
-      method: "GET",
-      headers: myHeaders,
-      redirect: "follow",
-    };
-
-    fetch(`${API_URL}/api/v1/users/${userId}`, requestOptions)
-      .then((response) => response.json())
-      .then((result) => setUser(result?.data?.user))
+    axios.get(`${API_URL}/api/v1/users/${userId}`)
+      .then((result) => setUser(result?.data?.data?.user))
       .catch((error) => console.log("error", error));
   }, [dispatch, userId]);
   const usedCoupons = user?.coupons;
@@ -43,10 +35,6 @@ const Coupons = (props) => {
   const couponDetails = coupLists?.coupons_list?.reward;
   const movieIds = rented_data?.map((i) => {
     const id = i?.movieId?._id;
-    return { id };
-  });
-  const movieIdscoupon = couponDetails?.map((i) => {
-    const id = i.id;
     return { id };
   });
 
@@ -64,9 +52,9 @@ const Coupons = (props) => {
     : "";
   const validCoupons = [];
   const unexpireds = unexpired
-    ? unexpired?.filter((f) => {
-        f?.movieId?.some((d) =>
-          movieIds?.some((i) => {
+    ? unexpired?.forEach((f) => {
+        f?.movieId?.forEach((d) =>
+          movieIds?.forEach((i) => {
             if (i.id == d.id) {
               validCoupons?.push(f);
             }

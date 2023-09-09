@@ -5,15 +5,8 @@ import { toast } from "react-toastify";
 import axios from "axios";
 
 export const addmovie = (data, id) => async (dispatch) => {
-  const token = localStorage.getItem("token");
   try {
-    const config = {
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
-      },
-    };
-    const body = JSON.stringify({
+    const body = {
       name: data?.name,
       email: data?.email,
       language: data?.language,
@@ -24,11 +17,10 @@ export const addmovie = (data, id) => async (dispatch) => {
       moviePass: data?.moviePass,
       movieDescription: data?.movieDescription,
       status: "Active",
-    });
+    };
     const res = await axios.post(
       `${API_URL}/api/v1/usermovies/${id}`,
-      body,
-      config
+      body
     );
     dispatch({
       type: ADD_USER_MOVIE,

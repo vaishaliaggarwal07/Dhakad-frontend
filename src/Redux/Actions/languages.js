@@ -3,7 +3,6 @@ import { IS_LOADING, LANGUAGES } from "./type";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const token = localStorage.getItem("token");
 export const leguages = () => async (dispatch) => {
   try {
     dispatch({
@@ -11,7 +10,6 @@ export const leguages = () => async (dispatch) => {
     });
     var config = {
       headers: {
-        Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",
       },
     };

@@ -38,6 +38,7 @@ import {reviewListByMovies} from "../../Redux/Actions/review";
 import dateFormat from "dateformat";
 import Trailer from "./Modal/Trailer";
 import {Modal} from 'bootstrap';
+import axios from "axios";
 
 const MyMovie = (props) => {
     const {search} = useLocation();
@@ -56,12 +57,8 @@ const MyMovie = (props) => {
     //movie details
     const [movieDetail, setMovieDetail] = useState();
     useEffect(() => {
-        var requestOptions = {
-            method: "GET", redirect: "follow",
-        };
-        fetch(`${API_URL}/api/v1/movies/${id}`, requestOptions)
-            .then((response) => response.json())
-            .then((result) => setMovieDetail(result));
+        axios.get(`${API_URL}/api/v1/movies/${id}`)
+            .then((result) => setMovieDetail(result.data));
     }, [id]);
 
     const movieDetails = movieDetail?.data?.movie ? movieDetail?.data?.movie : "";
@@ -69,12 +66,8 @@ const MyMovie = (props) => {
     const castIds = movieDetails?.castIds?.toString()?.replace(/ /g, "");
     const [castDetailIds, setCastDetailIds] = useState();
     useEffect(() => {
-        var requestOptions = {
-            method: "GET", redirect: "follow",
-        };
-        fetch(`${API_URL}/api/v1/casts/${castIds}`, requestOptions)
-            .then((response) => response.json())
-            .then((result) => setCastDetailIds(result));
+        axios.get(`${API_URL}/api/v1/casts/${castIds}`)
+            .then((result) => setCastDetailIds(result.data));
     }, [castIds]);
     const castsIds = castDetailIds?.data?.cast ? castDetailIds?.data?.cast : "";
     // like more movie

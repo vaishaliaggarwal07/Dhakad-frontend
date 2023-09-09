@@ -5,7 +5,6 @@ import { API_URL } from "../../Utils/helpers/api_url";
 import { toast } from "react-toastify";
 // import checkAuthenticate from "../../Utils/helpers/IsAuthenticate";
 
-const token = localStorage.getItem("token");
 
 export const reviewListByMovies =
   ({ id }) =>
@@ -16,7 +15,6 @@ export const reviewListByMovies =
       });
       var config = {
         headers: {
-          Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",
         },
       };
@@ -34,6 +32,7 @@ export const reviewListByMovies =
   };
 
 export const addReview = (data) => async (dispatch) => {
+  const token = localStorage.get('token')
   if (token === null) {
     // toast.error("No access without login !", {
     //   theme: "dark",
@@ -44,7 +43,6 @@ export const addReview = (data) => async (dispatch) => {
   try {
     var config = {
       headers: {
-        Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",
       },
     };
