@@ -4508,7 +4508,7 @@
 
 @media screen and (min-device-width: 1481px) and (max-device-width: 3000px) {
   .main-swiper-slider .slider-banner {
-    height: 600px !important;
+    height: 100vh !important;
   }
 
   .swiper-container-horizontal > .swiper-pagination-bullets,

@@ -14,6 +14,7 @@ import { connect, useDispatch, useSelector } from "react-redux";
 import { featuredMovies } from "../../Redux/Actions/movies";
 import DhakadRating from "../DhakadRating";
 import ShareIcon from "@material-ui/icons/Share";
+import DoneIcon from "@material-ui/icons/Done";
 import Share from "../Helper/Modal/Share";
 import UniqueBtn from "../../Components/UniqueBtn";
 import StarIcon from "@material-ui/icons/Star";
@@ -72,7 +73,9 @@ const Slider = (props) => {
       >
         <Swiper
           autoplay={{
-            delay: 2000,
+            disableOnInteraction: false, // Optional, but recommended
+            delay: 3000,
+            pauseOnMouseEnter: true,
           }}
           initialSlide={1}
           navigation={true}
@@ -98,7 +101,7 @@ const Slider = (props) => {
                       videoSrc={item?.trailerUrl?.[0]}
                     >
                       <div className="movie-detail  col-md-12">
-                        <div className="movie-icon-button responsive-btn d-flex">
+                        {/*<div className="movie-icon-button responsive-btn d-flex">
                           {isAuthenticated ? (
                             <UniqueBtn
                               icon=""
@@ -114,8 +117,7 @@ const Slider = (props) => {
                               onClick={(e) => e.preventDefault()}
                               className="nav-link"
                               data-bs-toggle="modal"
-                              data-bs-target="#loginModal"
-                            >
+                              data-bs-target="#loginModal">
                               Play Now
                             </button>
                           )}
@@ -123,8 +125,7 @@ const Slider = (props) => {
                             className="share_icon"
                             style={{ marginLeft: "10px" }}
                             data-bs-toggle="modal"
-                            data-bs-target="#shareModal"
-                          >
+                            data-bs-target="#shareModal">
                             <Share
                               link={`/movie-detail/${item?._id}?shareT=true`}
                               modalBtn={
@@ -137,14 +138,15 @@ const Slider = (props) => {
                               }
                             />
                           </div>
-                        </div>
+                        </div>*/}
 
                         <h1>{item?.title}</h1>
-                        <span className="movie-time">
+                        <div className="rent-text"> <DoneIcon className="movie-slider-done-icon"/> Watch movie on a rent starting at just INR {item?.price} (No Ads)  </div>
+                        <div className="movie-time">
                           {item?.brandTitle ? item?.brandTitle : ""} <br />
                           {item?.duration} • {item?.categories?.join(",")} •{" "}
                           {item?.ageGroup?.join(",")}
-                        </span>
+                        </div>
                         <div className="movie-EventAttributes">
                           <ul>
                             <li>{dateFormat(item?.releaseDate, "yyyy")}</li>
@@ -180,28 +182,39 @@ const Slider = (props) => {
                               : "Lorem Ipsum has been the industry's standard"
                           }
                         />
-                        <p>{item?.description}</p>
-                        <div className="movie-information-outer">
-                          <div className="movie-information">
-                            <NavLink to={`/movie-detail/${item?.id}`}>
-                              <UniqueBtn title="More Info" icon="" />
-                            </NavLink>
-                          </div>
+                        <div className="movie-information-outer mt-3">
                           <div className="movie-icon-button rent-option-button">
                             {isAuthenticated ? (
                               <NavLink to={`/payment-option/${item?.id}`}>
                                 <UniqueBtn
-                                  title={`Rent ₹ ${item?.price} (No ads)`}
+                                  title={`Rent Now`}
                                   icon=""
                                 />
                               </NavLink>
                             ) : (
                               <UniqueBtn
-                                title={`Rent ₹ ${item?.price} (No ads)`}
+                                title={`Rent Now`}
                                 icon=""
                                 onClick={() => checkAuthenticate()}
                               />
                             )}
+                          </div>
+                          <div className="movie-information">
+                            <NavLink to={`/movie-detail/${item?.id}`}>
+                              <UniqueBtn title="More Info" icon="" />
+                            </NavLink>
+                          </div>
+                          <div
+                              className="share_icon"
+                              style={{ marginLeft: "10px" }}
+                              data-bs-toggle="modal"
+                              data-bs-target="#shareModal">
+                            <Share
+                                link={`/movie-detail/${item?._id}?shareT=true`}
+                                modalBtn={
+                                  <button className="share-icon-btn"><ShareIcon className="share-icon" /></button>
+                                }
+                            />
                           </div>
                         </div>
                       </div>

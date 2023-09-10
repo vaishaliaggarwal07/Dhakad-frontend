@@ -66,7 +66,7 @@ body {
   top: 58% !important;
   border-radius: 50%;
   padding: 0px 22px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 .swiper-pagination-bullet {
   background: #fff !important;
@@ -87,7 +87,9 @@ body {
 .slider-content {
   width: 100%;
   position: absolute;
-  top: 5rem;
+  display: flex;
+  align-items: center;
+  top: 70px;
   height: 100%;
   color: #fff;
   padding: 60px 0px 60px 0px;
@@ -99,7 +101,8 @@ body {
   );
 }
 .slider-cards .movie-card {
-  height: 270px;
+  height: 65vh;
+  width: 100%;
   box-shadow: 0px 0px 8px #000;
   cursor: pointer;
 }
@@ -113,9 +116,6 @@ body {
 }
 
 .movie-detail.movie-content-section {
-  margin-left: 2rem;
-}
-.movie-detail-content .movie-detail {
   margin-left: 2rem;
 }
 .slider-cards .movie-card .video-player {
@@ -205,7 +205,7 @@ body {
   display: flex;
 }
 .rent-option-button button {
-  margin-left: 20px;
+  margin-right: 10px;
 }
 .share-movie-btn {
   /*position: absolute;*/
@@ -2268,4 +2268,37 @@ button.custom-Str-btn.out-line-btn {
   right: 0 !important;
   position: unset !important;
   bottom: 0 !important;
+}
+
+.container-carousel{
+  padding: 0 6% 0 6%;
+  width: 100%;
+}
+
+.movie-slider-done-icon{
+  height: 20px !important;
+  width: 20px !important;
+  background-color: #ffcc00;
+  border-radius: 50%;
+  color: white;
+}
+
+.rent-text{
+  font-size: 15px;
+  margin-bottom: 3%;
+}
+
+.share-icon-btn{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #ffcc00;
+  color: #2449ad;
+  display: flex;
+  align-items: center;
+}
+
+.share-icon{
+  height: 20px !important;
+  width: 20px !important;
 }
