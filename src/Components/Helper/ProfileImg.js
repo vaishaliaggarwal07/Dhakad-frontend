@@ -4,9 +4,23 @@ import profileImg from "../../Assets/Images/10.svg.png";
 import { Image } from "react-bootstrap";
 import { connect, useDispatch, useSelector } from "react-redux";
 import { getUser, updateUser } from "../../Redux/Actions/auth";
-
-import { v4 as uuidv4 } from "uuid";
+import axios from "axios";
+import {API_URL} from "../../Utils/helpers/api_url";
+import uploadFileInChunkParallel, {createSASURLWithUUIDV4} from "../../Utils/helpers/uploadFilmToBlob"
 import { toast } from "react-toastify";
+
+async function getSASUrlFromAPICall(fileExtension) {
+  // get sas token
+  const sasResponse = await axios.post(`${API_URL}/api/v1/movies/upload/token`, {})
+  return createSASURLWithUUIDV4(sasResponse.data.data, fileExtension);
+}
+
+const uploadFile = async (file) => {
+  let extension = file.name.split(".").pop();
+  const sasUrlObj = await getSASUrlFromAPICall(extension)
+  await uploadFileInChunkParallel(file, sasUrlObj.sasUrl);
+  return sasUrlObj.uploadUrlPath;
+}
 
 const ProfileImg = (props) => {
   const userId = localStorage.getItem("id");
@@ -16,26 +30,10 @@ const ProfileImg = (props) => {
     dispatch(getUser(userId));
   }, [dispatch, userId]);
   const userDetails = getUserDataById?.user?.data?.user;
-  const requiedFields = {
-    firstName: userDetails?.firstName,
-    lastName: userDetails?.lastName,
-    email: userDetails?.email,
-    dateOfBirth: userDetails?.dateOfBirth,
-    gender: userDetails?.gender,
-    state: userDetails?.state,
-    country: userDetails?.country,
-    city: userDetails?.city,
-  };
 
-  const checkValueField = Object.values(requiedFields).every((value) => {
-    if (value === undefined) {
-      return false;
-    }
-    return true;
-  });
   // aws upload profile
   const [profileData, setProfileData] = useState();
-  const [uploadStatus, setUploadStatus] = useState(false);
+
   if (profileData === undefined) {
     setTimeout(() => {
       setProfileData(userDetails?.photo);
@@ -47,59 +45,30 @@ const ProfileImg = (props) => {
     setProfileData(profileImgLink);
   }, [profileImgLink]);
 
-  const uploadProfileHandle = (data, type) => {
-    if (checkValueField === false) {
-      toast.error("Fill all required fields!", {
-        theme: "dark",
-      });
-      setUploadStatus(false);
-    } else {
-      // TODO: Change the profile pic to Azure bucket
-      /*const profileUrl = data.target.files[0];
-      var fileName = profileUrl.name;
-      var file_ext = fileName.substr(
-        (Math.max(0, fileName.lastIndexOf(".")) || Infinity) + 1
-      );
-      let filePath = `${uuidv4()}.${file_ext}`;
-      const ProfileData = {
-        type: type,
-        profileUrl: profileUrl,
-        profileLink: filePath,
-      };
-      dispatch(updateProfile(ProfileData));*/
-      setUploadStatus(true);
+  const uploadProfileHandle = async (event, type) => {
+    // set the placeholder image
+    const fileReader = new FileReader();
+    fileReader.readAsDataURL(event.target.files[0]);
+    fileReader.onload = ()=>{
+      setProfileData(fileReader.result)
     }
-  };
-  useEffect(() => {
-    handleUserProfile(profileData);
-  }, [profileImgLink]);
+    fileReader.onerror = (err)=>{
+      console.error('ProfileImg:onerror: file reader ',err);
+    }
 
-  const handleUserProfile = (img) => {
-    const profileApiData = {
-      firstName: userDetails?.firstName,
-      lastName: userDetails?.lastName,
-      email: userDetails?.email,
-      mobile: userDetails?.mobile,
-      gender: userDetails?.gender,
-      dateOfBirth: userDetails?.dateOfBirth,
-      city: userDetails?.city,
-      state: userDetails?.state,
-      status: userDetails?.status,
-      userType: "user",
-      zipCode: userDetails?.zipCode,
-      address: userDetails?.address,
-      country: userDetails?.country,
-      photo: userDetails?.photo,
-    };
-    if (profileImgLink !== null && uploadStatus === true) {
-      const payload = {
-        ...profileApiData,
-        photo: img,
-      };
-      setTimeout(() => {
-        dispatch(updateUser(payload, userId));
-        setUploadStatus(false);
-      }, 2000);
+    // upload to blob storage
+    const uploadPhotoUrl = await uploadFile(event.target.files[0]);
+
+    // update the user
+    const result = await axios.patch(`${API_URL}/api/v1/users/${userId}/photo`,{photo:uploadPhotoUrl})
+    if(result.data.data){
+      toast.success(
+          "Profile pic updated successfully"
+      );
+    }else{
+      toast.error(
+          "Failed to update profile pic"
+      );
     }
   };
 

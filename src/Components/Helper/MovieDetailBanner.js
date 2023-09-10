@@ -4,7 +4,7 @@ import UniqueImg from "./Images";
 const MovieDetailBanner = (props) => {
   return (
     <React.Fragment>
-      <div className="slider-banner">
+      <div className="slider-banner-movie-details-banner">
         <div className="slider-image">
           <UniqueImg
             src={props.BannerSrc}

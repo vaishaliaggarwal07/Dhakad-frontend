@@ -183,7 +183,7 @@ const MyMovie = (props) => {
                             <div className="row">
                                 <div className="col-sm-5 slider-cards">
                                     <div className="movie-card-wrapper">
-                                        <div className="movie-card">
+                                        <div className="movie-card-my-movie">
                                             <HoverPlayer
                                                 videoUrl={movieDetails?.trailerUrl?.[0]}
                                                 hoverPoster={movieDetails?.banners?.[0]}
