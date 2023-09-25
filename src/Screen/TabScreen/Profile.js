@@ -37,15 +37,14 @@ const PersonalDetils = () => {
                 dateOfBirth: userDetails?.dateOfBirth,
                 city: userDetails?.city,
                 state: userDetails?.state,
-                status: userDetails?.status,
-                userType: "user",
-                zipCode: userDetails?.zipCode,
-                address: userDetails?.address,
-                photo: userDetails?.photo,
+                
+               
                 country: userDetails?.country,
               }}
               enableReinitialize={true}
               onSubmit={(data) => {
+                console.log("dispatch");
+                console.log(data);
                 dispatch(updateUser(data, userId));
               }}
             >
@@ -77,6 +76,7 @@ const PersonalDetils = () => {
                             ? userDetails?.firstName
                             : values.firstName
                         }
+                        required={true}
                       />
                     </CoulmRow>
 
@@ -102,8 +102,10 @@ const PersonalDetils = () => {
                             ? userDetails?.lastName
                             : values.lastName
                         }
+                        onChange={handleChange}
                         onBlur={handleBlur}
                         placeholder="Last Name"
+                        required={true}
                       />
                     </CoulmRow>
                   </Row>
@@ -125,6 +127,7 @@ const PersonalDetils = () => {
                         onChange={handleChange}
                         onBlur={handleBlur}
                         placeholder="Email"
+                        required={true}
                       />
                     </CoulmRow>
                     <CoulmRow
@@ -135,7 +138,12 @@ const PersonalDetils = () => {
                         htmlFor="mobile"
                         className="form-label input-label mb-3"
                       >
-                        Phone no
+                        <div className="regiseration-valdated-fields">
+                          Phone no
+                         
+                        </div>
+                        
+                       
                       </label>
                       <Input
                         type="text"
@@ -149,6 +157,7 @@ const PersonalDetils = () => {
                         onChange={handleChange}
                         onBlur={handleBlur}
                         placeholder="Phone no"
+                        
                       />
                     </CoulmRow>
                   </Row>
@@ -160,7 +169,7 @@ const PersonalDetils = () => {
                       >
                         <div className="regiseration-valdated-fields">
                           Date Of Birth
-                          <p>*</p>
+                         
                         </div>
                       </label>
                       <Input
@@ -175,6 +184,7 @@ const PersonalDetils = () => {
                         onChange={handleChange}
                         onBlur={handleBlur}
                         placeholder="Date Of Birth"
+                        
                       />
                     </CoulmRow>
                     <CoulmRow
@@ -187,7 +197,7 @@ const PersonalDetils = () => {
                       >
                         <div className="regiseration-valdated-fields">
                           Gender
-                          <p>*</p>
+                          {/* <p>*</p> */}
                         </div>
                       </label>
                       <select
@@ -213,6 +223,7 @@ const PersonalDetils = () => {
                         }
                         onChange={handleChange}
                         onBlur={handleBlur}
+                       
                       >
                         <option value="" label="Select Gender" />
                         <option
@@ -257,7 +268,7 @@ const PersonalDetils = () => {
                       <label htmlFor="city" className="form-label input-label">
                         <div className="regiseration-valdated-fields">
                           City
-                          <p>*</p>
+                          {/* <p>*</p> */}
                         </div>
                       </label>
                       <Input
@@ -279,7 +290,7 @@ const PersonalDetils = () => {
                       <label htmlFor="state" className="form-label input-label">
                         <div className="regiseration-valdated-fields">
                           State
-                          <p>*</p>
+                          {/* <p>*</p> */}
                         </div>
                       </label>
                       <Input
@@ -299,7 +310,7 @@ const PersonalDetils = () => {
                     <label htmlFor="country" className="form-label input-label">
                       <div className="regiseration-valdated-fields">
                         Country
-                        <p>*</p>
+                        {/* <p>*</p> */}
                       </div>
                     </label>
                     <Input
