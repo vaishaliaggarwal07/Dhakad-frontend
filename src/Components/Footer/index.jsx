@@ -19,19 +19,19 @@ function Footer() {
           appId="3210165435893714"
         />
         <div className="footer-icons">
-          <Link to={{ pathname: "https://in.linkedin.com/" }} target="_blank">
+          <Link to={{ pathname: "https://www.linkedin.com/company/dhaakad-cinema" }} target="_blank">
             <LinkedInIcon className="LinkedInIcon" />
           </Link>
-          <Link to={{ pathname: "https://youtube.com/" }} target="_blank">
+          <Link to={{ pathname: "https://www.youtube.com/@dhaakadcinema5304" }} target="_blank">
             <YouTubeIcon className="YouTubeIcon" />
           </Link>
-          <Link to={{ pathname: "https://www.facebook.com/" }} target="_blank">
+          <Link to={{ pathname: "https://www.facebook.com/100069099051794" }} target="_blank">
             <FacebookIcon className="FacebookIcon" />
           </Link>
-          <Link to={{ pathname: "https://twitter.com/" }} target="_blank">
+          <Link to={{ pathname: "https://twitter.com/DhaakadCinema" }} target="_blank">
             <TwitterIcon className="TwitterIcon" />
           </Link>
-          <Link to={{ pathname: "https://www.instagram.com/" }} target="_blank">
+          <Link to={{ pathname: "https://www.instagram.com/dhaakadcinema/?hl=en" }} target="_blank">
             <InstagramIcon className="InstagramIcon" />
           </Link>
         </div>
@@ -47,7 +47,8 @@ function Footer() {
             </div>
           </div>
           <p>Copyright 2021 © Dhaakad Cinema Pvt. Ltd. All Rights Reserved. </p>
-          <img src={makeInIndiaLogo}/>
+          <p className="startup-text">Dhaakad Cinema is an Indian Start Up recognized by Govt Of India , DIPP no 91222</p>
+          {/* <img src={makeInIndiaLogo}/> */}
         </div>
       </footer>
     </React.Fragment>
