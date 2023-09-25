@@ -9,6 +9,7 @@ import {
   EDIT_USER,
   UPDATE_USER_PROFILE,
   VERIFY_PASSWORD,
+  GET_USER_BY_EMAIL
 } from "../Actions/type";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -122,25 +123,11 @@ export const updateUser = (data, id) => async (dispatch) => {
     },
   };
 
-  var formData = new FormData();
-  formData.append("firstName", data.firstName);
-  formData.append("lastName", data.lastName);
-  formData.append("email", data.email);
-  formData.append("mobile", Number(data.mobile));
-  formData.append("gender", data.gender);
-  formData.append("dateOfBirth", data.dateOfBirth);
-  formData.append("city", data.city);
-  formData.append("zipCode", data.zipCode);
-  formData.append("state", data.state);
-  formData.append("status", data.status);
-  formData.append("address", data.address);
-  formData.append("photo", data.photo);
-  formData.append("country", data.country);
-
   try {
+
     const res = await axios.patch(
       `${API_URL}/api/v1/users/${id}`,
-      formData,
+      JSON.stringify(data),
       config
     );
     if (res) {
@@ -276,6 +263,28 @@ export const createNewPassword = (value) => async (dispatch) => {
     }
   }
 };
+
+export function getUserByEmail(email) {
+   return async (dispatch) => {
+    try {
+      const res = await axios.get(`${API_URL}/api/v1/users/getUserByEmail/${email}`); // Replace with your API endpoint
+      const userId = res.data.data.user["_id"];
+      console.log(userId);
+      const payload = { userData: res.data.data, userId: userId };
+      console.log("getUserByEmail Payload:", payload); // Log the payload
+      dispatch({
+        type: GET_USER_BY_EMAIL,
+        payload: { userData: res.data.data, userId: userId },
+      }
+      );
+      // Return the userId
+
+    } catch (error) {
+      // Handle any error, e.g., display an error message to the user
+      console.error("Failed to get user by email:", error);
+    }
+  };
+}
 // login with google
 export const loginWithGoogle =
   ({ token, email }) =>
