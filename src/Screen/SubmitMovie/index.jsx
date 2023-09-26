@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Input, InputButton } from "../../Components/Helper/Input";
+import { Input, InputButton,InputButtonOTP } from "../../Components/Helper/Input";
 import { Row } from "react-bootstrap";
 import PasswordStrengthBar from "react-password-strength-bar";
 import { connect, useDispatch } from "react-redux";
@@ -13,6 +13,8 @@ import { addmovie } from "../../Redux/Actions/userMovies";
 import * as Yup from "yup";
 
 const SubmitMovie = () => {
+  const [terms, setTerms] = useState(false);
+  const [isPrivacyPolicyChecked, setIsPrivacyPolicyChecked] = useState(false);
   const userId = localStorage.getItem("id");
   const dispatch = useDispatch();
 
@@ -31,7 +33,7 @@ const SubmitMovie = () => {
     language: Yup.string().required("Please enter your  Language"),
     trailerVideo: Yup.string().required("Please enter your  Trailer Video"),
     movieVideo: Yup.string().required("Please enter your  Movie Video"),
-
+    privacyPolicy: Yup.boolean().oneOf([true], "You must agree to Privacy Policy").required("You must agree to Privacy Policy"),
     trailerPass: Yup.string().required("Please enter your Trailer Password"),
     moviePass: Yup.string().required("Please enter your Movie Password"),
     movieDescription: Yup.string().required(
@@ -78,13 +80,17 @@ const SubmitMovie = () => {
                   enableReinitialize={true}
                   validationSchema={signUpSchema}
                   onSubmit={(values, { setSubmitting, resetForm }) => {
-                    const payload = {
-                      ...values,
-                    };
-                    dispatch(addmovie(payload, userId));
-                    setSubmitting(false);
-                    resetForm();
-                    resetForms();
+                    
+                      const payload = {
+                        ...values,
+                      };
+                      console.log(payload);
+                      dispatch(addmovie(payload, userId));
+                      setSubmitting(false);
+                      resetForm();
+                      resetForms();
+                    
+                    
                   }}
                 >
                   {({
@@ -456,9 +462,26 @@ const SubmitMovie = () => {
                       </CoulmRow>
                       <CoulmRow
                         columWidth={12}
-                        columStyle="col-md-12 text-center mt-3"
+                        columStyle="col-md-12  mt-3"
                       >
-                        <p className="submit-movie-note">
+                        <CoulmRow
+                        columWidth={12}
+                        columStyle="col-md-12  mt-4"
+                      >
+                        <InputButtonOTP
+                        customButtonClass="custom-button custom-button-2"
+                          TextTopGroup="mb-1 term-and-condition-profile"
+                          CheckBoxClass="CheckBox"
+                          accountDefaultStatus="By Clicking on this, we agree to Dhaakad Cinema Submit Your Movie"
+                          acountDefaultOption="Terms & Conditions"
+                          TextBottomGroup="d-none"
+                          onChangeTerm={() => {
+                            setTerms(!terms);
+                            setIsPrivacyPolicyChecked(!isPrivacyPolicyChecked);
+                        }}
+                        />
+                      </CoulmRow>
+                        <p className="submit-movie-note ">
                           Note:
                           <span className="note-description">
                             We prefer trailer and movie link to be uploaded on

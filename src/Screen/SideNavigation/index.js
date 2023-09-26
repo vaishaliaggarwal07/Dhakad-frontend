@@ -108,7 +108,7 @@ function SideNavigation() {
                                         Profile
                                     </NavLink>
                                 </li>
-                                <li className="nav-item">
+                                {/* <li className="nav-item">
                                     <NavLink
                                         onClick={closeMobileMenu}
                                         exact={true}
@@ -118,8 +118,8 @@ function SideNavigation() {
                                         <RiMovie2Fill className="profile-icons"/>
                                         Pre Booked
                                     </NavLink>
-                                </li>
-                                <li className="nav-item">
+                                </li> */}
+                                {/* <li className="nav-item">
                                     <NavLink
                                         onClick={closeMobileMenu}
                                         exact={true}
@@ -129,8 +129,8 @@ function SideNavigation() {
                                         <FaStream className="profile-icons"/>
                                         Streaming Library
                                     </NavLink>
-                                </li>
-                                <li className="nav-item">
+                                </li> */}
+                                {/* <li className="nav-item">
                                     <NavLink
                                         exact={true}
                                         to="/rented-movies"
@@ -139,7 +139,7 @@ function SideNavigation() {
                                         <BiPurchaseTagAlt className="profile-icons"/>
                                         Rented Movie
                                     </NavLink>
-                                </li>
+                                </li> */}
                                 <li className="nav-item">
                                     <NavLink
                                         onClick={closeMobileMenu}
@@ -210,9 +210,9 @@ function SideNavigation() {
                             </>
                         )}
                     </ul>
-                    <Login modalId={"loginModal"}/>
-                    <ForgetPassword modalId={"forgotmodal"}/>
-                    <CreateNewPassword modalId={"createnewpass"}/>
+                    <Login modalId={"loginModal"}/> 
+                     <ForgetPassword modalId={"forgotmodal"}/> 
+                     <CreateNewPassword modalId={"createnewpass"}/> 
 
                     <Modal
                         open={open}
@@ -221,10 +221,7 @@ function SideNavigation() {
                         aria-describedby="simple-modal-description">
 
                         <div style={otpModalStyle}>
-                            {/*<h2 id="simple-modal-title">Text in a modal</h2>
-              <p id="simple-modal-description">
-                Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-              </p>*/}
+                            
                             <div className="">
                                 <OTPLogin onGetStartedClick={handleOTPModalClose}></OTPLogin>
                             </div>

@@ -16,6 +16,9 @@
   color: #ffff;
   font-weight: 400;
 }
+.startup-text{
+  margin-top: 50px;
+}
 
 .footer-section-main hr.line-footer {
   margin: 30px 0;
