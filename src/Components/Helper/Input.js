@@ -94,7 +94,7 @@ const InputButtonOTP = (props) => {
         <Form.Text>
           {props.accountDefaultStatus}
           <NavLink
-            to="/term&conditions"
+            to="/terms-and-conditions"
             className="modal-form-sign-in-option"
             onClick={props.onClickTop}
           >
