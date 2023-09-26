@@ -462,15 +462,15 @@ const SubmitMovie = () => {
                       </CoulmRow>
                       <CoulmRow
                         columWidth={12}
-                        columStyle="col-md-12 text-center mt-3"
+                        columStyle="col-md-12  mt-3"
                       >
                         <CoulmRow
                         columWidth={12}
-                        columStyle="col-md-12 text-center mt-4"
+                        columStyle="col-md-12  mt-4"
                       >
-                       <InputButtonOTP
-                        customButtonClass="custom-button"
-                          TextTopGroup="text-center mb-1 term-and-condition-profile"
+                        <InputButtonOTP
+                        customButtonClass="custom-button custom-button-2"
+                          TextTopGroup="mb-1 term-and-condition-profile"
                           CheckBoxClass="CheckBox"
                           accountDefaultStatus="By Clicking on this, we agree to Dhaakad Cinema Submit Your Movie"
                           acountDefaultOption="Terms & Conditions"
@@ -481,7 +481,7 @@ const SubmitMovie = () => {
                         }}
                         />
                       </CoulmRow>
-                        <p className="submit-movie-note">
+                        <p className="submit-movie-note ">
                           Note:
                           <span className="note-description">
                             We prefer trailer and movie link to be uploaded on
