@@ -3,7 +3,12 @@ import { Modal, Form } from "react-bootstrap";
 
 const ModelStyle = (props) => {
   const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+      if(props.handleClose){
+          props.handleClose(false)
+      }
+      setShow(false);
+  }
   const handleShow = () => setShow(true);
   return (
     <React.Fragment>
