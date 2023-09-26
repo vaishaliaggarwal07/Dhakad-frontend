@@ -468,16 +468,12 @@ const SubmitMovie = () => {
                         columWidth={12}
                         columStyle="col-md-12 text-center mt-4"
                       >
-                        <InputButtonOTP
-                        //   type="submit"
-                        //   buttonTitle="SUBMIT"
+                       <InputButtonOTP
                         customButtonClass="custom-button"
                           TextTopGroup="text-center mb-1 term-and-condition-profile"
                           CheckBoxClass="CheckBox"
-                          accountDefaultStatus="I agree to"
+                          accountDefaultStatus="By Clicking on this, we agree to Dhaakad Cinema Submit Your Movie"
                           acountDefaultOption="Terms & Conditions"
-                          acountDefaultOptionText="and"
-                          acountDefaultOption1="Privacy Policy"
                           TextBottomGroup="d-none"
                           onChangeTerm={() => {
                             setTerms(!terms);
