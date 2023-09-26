@@ -112,6 +112,7 @@ export const getUser = (id) => async (dispatch) => {
 };
 
 // update User
+// update User
 export const updateUser = (data, id) => async (dispatch) => {
   dispatch({
     type: IS_LOADING,
@@ -122,25 +123,11 @@ export const updateUser = (data, id) => async (dispatch) => {
     },
   };
 
-  var formData = new FormData();
-  formData.append("firstName", data.firstName);
-  formData.append("lastName", data.lastName);
-  formData.append("email", data.email);
-  formData.append("mobile", Number(data.mobile));
-  formData.append("gender", data.gender);
-  formData.append("dateOfBirth", data.dateOfBirth);
-  formData.append("city", data.city);
-  formData.append("zipCode", data.zipCode);
-  formData.append("state", data.state);
-  formData.append("status", data.status);
-  formData.append("address", data.address);
-  formData.append("photo", data.photo);
-  formData.append("country", data.country);
-
   try {
+
     const res = await axios.patch(
       `${API_URL}/api/v1/users/${id}`,
-      formData,
+      JSON.stringify(data),
       config
     );
     if (res) {
