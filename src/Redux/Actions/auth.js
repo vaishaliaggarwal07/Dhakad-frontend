@@ -117,6 +117,7 @@ export const updateUser = (data, id) => async (dispatch) => {
   dispatch({
     type: IS_LOADING,
   });
+ 
   const config = {
     headers: {
       "Content-Type": "application/json",
@@ -124,24 +125,33 @@ export const updateUser = (data, id) => async (dispatch) => {
   };
 
   try {
-
-    const res = await axios.patch(
-      `${API_URL}/api/v1/users/${id}`,
-      JSON.stringify(data),
-      config
+    const emailAvailabilityResponse = await axios.get(
+      `${API_URL}/api/v1/users/getUserByEmail/${data.email}?checkExistence=true`
     );
-    if (res) {
-      dispatch({
-        type: EDIT_USER,
-        payload: res?.data,
-      });
-      const message = res?.data?.message
-        ? res?.data?.message
-        : res?.data?.message;
-      toast.success(message, {
-        theme: "dark",
-      });
+    console.log(emailAvailabilityResponse?.data?.exists);
+    if(emailAvailabilityResponse?.data?.exists){
+      toast.error("Email already exists, please choose a different one.")
+    }else{
+      const res = await axios.patch(
+        `${API_URL}/api/v1/users/${id}`,
+        JSON.stringify(data),
+        config
+      );
+      if (res) {
+        dispatch({
+          type: EDIT_USER,
+          payload: res?.data,
+        });
+        const message = res?.data?.message
+          ? res?.data?.message
+          : res?.data?.message;
+        toast.success(message, {
+          theme: "dark",
+        });
+      }
     }
+   
+    
   } catch (err) {
     const error = err.response ? err.response.data.message : err.message;
     toast.error(error, {
