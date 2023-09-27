@@ -271,6 +271,8 @@ const Email = () => {
                                    {errors.mobile && touched.mobile && (
   <div style={{ color: "red", fontSize: "15px", fontWeight: "500" }}>
     {errors.mobile}
+</div>
+)}
                             </label>
                           </div>
                         </CoulmRow>
