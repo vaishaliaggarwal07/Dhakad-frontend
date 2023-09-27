@@ -36,5 +36,6 @@ export const ADD_USER_MOVIE = "ADD_USER_MOVIE";
 export const ADD_TO_CART = "ADD_TO_CART";
 export const DELETE_ITEM = "DELETE_ITEM";
 export const CREATE_ORDER = "CREATE_ORDER";
+export const GET_USER_BY_EMAIL = 'GET_USER_BY_EMAIL';
 
 export const CURRENT_USER_MOVIE_TIME = 'CURRENT_USER_MOVIE_TIME'
