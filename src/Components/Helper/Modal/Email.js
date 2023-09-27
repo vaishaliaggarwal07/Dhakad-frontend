@@ -49,6 +49,9 @@ const Email = () => {
     email: Yup.string()
       .email("Invalid email")
       .required("Please enter your Email"),
+     mobile: Yup.string()
+        .matches(/^[0-9]+$/,'Mobile must contain only digits')
+        .required('Please enter your Phone Number'),
     password: Yup.string().required("Please enter your Password"),
     passwordConfirm: Yup.string()
       .required("Please enter your Password Confirm")
@@ -246,8 +249,12 @@ const Email = () => {
                         >
                           <div className="regiseration-valdated-fields">
                             <label className="regiseration-label regiseration-phn">
-                              Phone Number
-                              <p className="mb-3"></p>
+                            <div className="regiseration-valdated-fields">
+                            Phone Number
+                                <p>*</p>
+                              </div>
+                            
+                             
                               <Input
                                 type="text"
                                 name="mobile"
@@ -261,6 +268,9 @@ const Email = () => {
                                   }
                                 }}
                               />
+                                   {errors.mobile && touched.mobile && (
+  <div style={{ color: "red", fontSize: "15px", fontWeight: "500" }}>
+    {errors.mobile}
                             </label>
                           </div>
                         </CoulmRow>
