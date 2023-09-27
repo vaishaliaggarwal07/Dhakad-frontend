@@ -8,6 +8,7 @@ import {
   FORGOT_PASSWORD,
   UPDATE_USER_PROFILE,
   VERIFY_PASSWORD,
+  GET_USER_BY_EMAIL
 } from "../Actions/type";
 
 const INITIAL_STATE = {
@@ -15,6 +16,8 @@ const INITIAL_STATE = {
   user_profile: null,
   is_loading: false,
   user_verify: null,
+  user_data: null,
+  userId: null,
 };
 
 export default (state = INITIAL_STATE, action) => {
@@ -70,6 +73,13 @@ export default (state = INITIAL_STATE, action) => {
         user_profile: action.payload,
         is_loading: false,
       };
+
+      case GET_USER_BY_EMAIL:
+        return {
+          ...state,
+          user_data: action.payload.userData,
+          userId: action.payload.userId,
+        };
     default:
       return state;
   }
