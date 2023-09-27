@@ -7,7 +7,7 @@ import {
 } from "../../Components/Helper/Modal/UserDetails";
 import { Row } from "react-bootstrap";
 import { Input, InputButton } from "../../Components/Helper/Input";
-import { getUser, updateUser } from "../../Redux/Actions/auth";
+import { getUser, updateUser , getUserByEmail} from "../../Redux/Actions/auth";
 import { connect, useDispatch, useSelector } from "react-redux";
 import dateFormat from "dateformat";
 
