@@ -50,7 +50,7 @@ const Email = () => {
       .email("Invalid email")
       .required("Please enter your Email"),
      mobile: Yup.string()
-        .matches(/^[0-9]+$/,'Mobile must contain only digits')
+        .matches(/^[0-9]{10}$/,'Please enter valid Phone Number')
         .required('Please enter your Phone Number'),
     password: Yup.string().required("Please enter your Password"),
     passwordConfirm: Yup.string()
