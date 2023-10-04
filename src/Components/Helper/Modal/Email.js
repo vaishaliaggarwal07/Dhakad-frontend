@@ -255,23 +255,19 @@ const Email = () => {
                               </div>
                             
                              
-                              <Input
+                             <Input
                                 type="text"
                                 name="mobile"
                                 onChange={handleChange}
                                 onBlur={handleBlur}
                                 defaultValue={values.mobile}
                                 placeholder="Phone number"
-                                onKeyPress={(event) => {
-                                  if (!/[0-9]/.test(event.key)) {
-                                    event.preventDefault();
-                                  }
-                                }}
+                                
                               />
-                                   {errors.mobile && touched.mobile && (
+                              {errors.mobile && touched.mobile && (
   <div style={{ color: "red", fontSize: "15px", fontWeight: "500" }}>
     {errors.mobile}
-</div>
+  </div>
 )}
                             </label>
                           </div>
