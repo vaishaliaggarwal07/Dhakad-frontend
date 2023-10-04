@@ -39,7 +39,7 @@ const InputButton = (props) => {
         <Form.Text>
           {props.accountDefaultStatus}
           <NavLink
-            to="/term&conditions"
+            to="terms-and-conditions"
             className="modal-form-sign-in-option"
             onClick={props.onClickTop}
           >
@@ -132,6 +132,8 @@ const InputButtonOTP = (props) => {
     </React.Fragment>
   );
 };
+
+
 
 InputButton.defaultProps = {
   Textgroup: "text-center mb-2 d-none",
