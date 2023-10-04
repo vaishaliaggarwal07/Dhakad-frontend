@@ -3,7 +3,8 @@ import "../../Components/Footer/index.css";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import FacebookIcon from "@material-ui/icons/Facebook";
-import TwitterIcon from "@material-ui/icons/Twitter";
+// import TwitterIcon from "@material-ui/icons/X";
+import XIcon from "../../Assets/Images/x.png";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import MessengerCustomerChat from "react-messenger-customer-chat";
 import makeInIndiaLogo from '../../Assets/Images/Make-in-India-Logo-PNG-HD_2.svg'
@@ -29,7 +30,9 @@ function Footer() {
             <FacebookIcon className="FacebookIcon" />
           </Link>
           <Link to={{ pathname: "https://twitter.com/DhaakadCinema" }} target="_blank">
-            <TwitterIcon className="TwitterIcon" />
+
+            <img src={XIcon} className="Xicon"style={{ width: "26px", height: "26px",  margin: "0px 10px"
+ }}  />
           </Link>
           <Link to={{ pathname: "https://www.instagram.com/dhaakadcinema/?hl=en" }} target="_blank">
             <InstagramIcon className="InstagramIcon" />
