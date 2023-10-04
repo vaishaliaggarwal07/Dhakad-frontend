@@ -18,6 +18,7 @@ export const signup = (data) => async (dispatch) => {
     dispatch({
       type: IS_LOADING,
     });
+    data.sourceoflogin = 'E';
     if (data.referralCode !== "") {
       data.rewards = {
         title: "Signup Reward",
@@ -112,11 +113,11 @@ export const getUser = (id) => async (dispatch) => {
 };
 
 // update User
-// update User
-export const updateUser = (data, id) => async (dispatch) => {
+export const updateUser = (data, id, currentUserEmail) => async (dispatch) => {
   dispatch({
     type: IS_LOADING,
   });
+ 
   const config = {
     headers: {
       "Content-Type": "application/json",
@@ -124,24 +125,33 @@ export const updateUser = (data, id) => async (dispatch) => {
   };
 
   try {
-
-    const res = await axios.patch(
-      `${API_URL}/api/v1/users/${id}`,
-      JSON.stringify(data),
-      config
+    const emailAvailabilityResponse = await axios.get(
+      `${API_URL}/api/v1/users/getUserByEmail/${data.email}?checkExistence=true&currentUserEmail=${currentUserEmail}`
     );
-    if (res) {
-      dispatch({
-        type: EDIT_USER,
-        payload: res?.data,
-      });
-      const message = res?.data?.message
-        ? res?.data?.message
-        : res?.data?.message;
-      toast.success(message, {
-        theme: "dark",
-      });
+    if(emailAvailabilityResponse?.data?.exists){
+      toast.error("Email already exists, please choose a different one.")
+    }else{
+
+      const res = await axios.patch(
+        `${API_URL}/api/v1/users/${id}`,
+        JSON.stringify(data),
+        config
+      );
+      if (res) {
+        dispatch({
+          type: EDIT_USER,
+          payload: res?.data,
+        });
+        const message = res?.data?.message
+          ? res?.data?.message
+          : res?.data?.message;
+        toast.success(message, {
+          theme: "dark",
+        });
+      }
     }
+   
+    
   } catch (err) {
     const error = err.response ? err.response.data.message : err.message;
     toast.error(error, {
@@ -263,6 +273,41 @@ export const createNewPassword = (value) => async (dispatch) => {
     }
   }
 };
+
+export function getUserByEmail(email) {
+  return async (dispatch) => {
+    try {
+      const res = await axios.get(`${API_URL}/api/v1/users/getUserByEmail/${email}`);
+      const userId = res.data.data.user["_id"];
+      console.log("User ID:", userId);
+      return userId;
+    } catch (error) {
+      console.error("Failed to get user by email:", error);
+      return null; // Return null or handle the error appropriately
+    }
+  };
+}
+
+
+// export function getUserByEmail(email) {
+//    return async (dispatch) => {
+//     try {
+//       const res = await axios.get(`${API_URL}/api/v1/users/getUserByEmail/${email}`); 
+//       const userId = res.data.data.user["_id"];
+//       const payload = { userData: res.data.data, userId: userId };
+//       console.log("getUserByEmail Payload:", payload); // Log the payload
+//       dispatch({
+//         type: GET_USER_BY_EMAIL,
+//         payload: { userData: res.data.data, userId: userId },
+//       }
+//       );
+     
+
+//     } catch (error) {
+//       console.error("Failed to get user by email:", error);
+//     }
+//   };
+// }
 // login with google
 export const loginWithGoogle =
   ({ token, email }) =>
