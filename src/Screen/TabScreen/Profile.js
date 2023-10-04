@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import BottomNavbar from "../../Components/Helper/BottomNavbar";
-import { Formik } from "formik";
+import { Formik,Field,ErrorMessage } from "formik";
+import * as Yup from "yup";
 import {
   UserDetailForm,
   CoulmRow,
@@ -21,6 +22,17 @@ const PersonalDetils = () => {
     dispatch(getUser(userId));
   }, [dispatch, userId]);
 
+  const validationSchema = Yup.object().shape({
+    firstName: Yup.string().matches(/^[a-zA-Z\s]*$/,'Only letters and spaces are allowed for First Name').required("First Name is required"),
+    lastName: Yup.string().matches(/^[a-zA-Z\s]*$/, 'Only letters and spaces are allowed for Last Name').required("Last Name is required"),
+    email: Yup.string().email("Invalid email address").required("Email is required"),
+    mobile: Yup.string().required("Phone number is required"),
+    dateOfBirth: Yup.date(),
+    city: Yup.string(),
+    state: Yup.string(),
+    gender: Yup.string(),
+    country: Yup.string(),
+  });
   return (
     <React.Fragment>
       <div className="main-content">
@@ -42,13 +54,14 @@ const PersonalDetils = () => {
                 country: userDetails?.country,
               }}
               enableReinitialize={true}
+              validationSchema={validationSchema}
+
               onSubmit={(data) => {
-                console.log("dispatch");
-                console.log(data);
+                
                 dispatch(updateUser(data, userId));
               }}
             >
-              {({ values, handleBlur, handleChange, handleSubmit }) => (
+              {({ values, handleBlur, handleChange, handleSubmit,errors,touched }) => (
                 <UserDetailForm
                   FormTitle="Personal Details"
                   onSubmit={handleSubmit}
@@ -78,6 +91,17 @@ const PersonalDetils = () => {
                         }
                         required={true}
                       />
+                     {errors.firstName && touched.firstName && (
+                        <div
+                          style={{
+                            color: "red",
+                            fontSize: "15px",
+                            fontWeight: "500",
+                          }}
+                        >
+                          {errors.firstName}
+                        </div>
+                      )}
                     </CoulmRow>
 
                     <CoulmRow
@@ -107,6 +131,17 @@ const PersonalDetils = () => {
                         placeholder="Last Name"
                         required={true}
                       />
+                       {errors.lastName && touched.lastName && (
+                        <div
+                          style={{
+                            color: "red",
+                            fontSize: "15px",
+                            fontWeight: "500",
+                          }}
+                        >
+                          {errors.lastName}
+                        </div>
+                      )}
                     </CoulmRow>
                   </Row>
                   <Row>
@@ -129,6 +164,17 @@ const PersonalDetils = () => {
                         placeholder="Email"
                         required={true}
                       />
+                    {errors.email && touched.email && (
+                        <div
+                          style={{
+                            color: "red",
+                            fontSize: "15px",
+                            fontWeight: "500",
+                          }}
+                        >
+                          {errors.email}
+                        </div>
+                      )}  
                     </CoulmRow>
                     <CoulmRow
                       columWidth={6}
@@ -159,6 +205,7 @@ const PersonalDetils = () => {
                         placeholder="Phone no"
                         
                       />
+
                     </CoulmRow>
                   </Row>
                   <Row>
