@@ -38,13 +38,15 @@ const Email = () => {
   /* signUpSchema */
 
   const signUpSchema = Yup.object({
-    firstName: Yup.string()
+   firstName: Yup.string()
       .min(2)
       .max(25)
+      .matches(/^[a-zA-Z\s]*$/,'Only letters and spaces are allowed for First Name')
       .required("Please enter your First Name"),
     lastName: Yup.string()
       .min(2)
       .max(25)
+      .matches(/^[a-zA-Z\s]*$/, 'Only letters and spaces are allowed for Last Name')
       .required("Please enter your Last Name"),
     email: Yup.string()
       .email("Invalid email")
