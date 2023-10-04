@@ -26,7 +26,7 @@ const PersonalDetils = () => {
     firstName: Yup.string().matches(/^[a-zA-Z\s]*$/,'Only letters and spaces are allowed for First Name').required("First Name is required"),
     lastName: Yup.string().matches(/^[a-zA-Z\s]*$/, 'Only letters and spaces are allowed for Last Name').required("Last Name is required"),
     email: Yup.string().email("Invalid email address").required("Email is required"),
-    mobile: Yup.string().required("Phone number is required"),
+    mobile: Yup.string().matches(/^\+91[0-9]{10}$/, 'Invalid phone number').required("Phone number is required"),
     dateOfBirth: Yup.date().max(new Date(),"Date of Birth cannot be in future").test("year-length","Year must ne 4 digits",function (value){
       if (!value) return true;
       const year = value.getFullYear();
@@ -209,7 +209,17 @@ const PersonalDetils = () => {
                         placeholder="Phone no"
                         
                       />
-
+ {errors.mobile && touched.mobile && (
+                        <div
+                          style={{
+                            color: "red",
+                            fontSize: "15px",
+                            fontWeight: "500",
+                          }}
+                        >
+                          {errors.mobile}
+                        </div>
+                      )}
                     </CoulmRow>
                   </Row>
                   <Row>
