@@ -62,7 +62,7 @@ const PersonalDetils = () => {
 
               onSubmit={(data) => {
                 
-                dispatch(updateUser(data, userId,userDetails?.email));
+                dispatch(updateUser(data, userId));
               }}
             >
               {({ values, handleBlur, handleChange, handleSubmit,errors,touched }) => (
