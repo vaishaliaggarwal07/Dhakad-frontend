@@ -33,7 +33,7 @@ const SubmitMovie = () => {
     language: Yup.string().required("Please enter your  Language"),
     trailerVideo: Yup.string().required("Please enter your  Trailer Video"),
     movieVideo: Yup.string().required("Please enter your  Movie Video"),
-    privacyPolicy: Yup.boolean().oneOf([true], "You must agree to Privacy Policy").required("You must agree to Privacy Policy"),
+    // privacyPolicy: Yup.boolean().oneOf([true], "You must agree to Privacy Policy").required("You must agree to Privacy Policy"),
     trailerPass: Yup.string().required("Please enter your Trailer Password"),
     moviePass: Yup.string().required("Please enter your Movie Password"),
     movieDescription: Yup.string().required(
@@ -80,7 +80,7 @@ const SubmitMovie = () => {
                   enableReinitialize={true}
                   validationSchema={signUpSchema}
                   onSubmit={(values, { setSubmitting, resetForm }) => {
-                    
+                    console.log("submitting");
                       const payload = {
                         ...values,
                       };
@@ -493,6 +493,9 @@ const SubmitMovie = () => {
                         columWidth={12}
                         columStyle="col-md-12 text-center mt-1"
                       >
+                        {/* <InputButton>
+                        <button  type="submit" className="model-submit-btn mt-2" size="lg">SUBMIT</button>
+                        </InputButton> */}
                         <InputButton
                           type={"submit"}
                           buttonTitle="SUBMIT"
