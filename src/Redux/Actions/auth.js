@@ -18,7 +18,7 @@ export const signup = (data) => async (dispatch) => {
     dispatch({
       type: IS_LOADING,
     });
-    data.sourceoflogin = 'E';
+   
     if (data.referralCode !== "") {
       data.rewards = {
         title: "Signup Reward",
@@ -113,7 +113,7 @@ export const getUser = (id) => async (dispatch) => {
 };
 
 // update User
-export const updateUser = (data, id, currentUserEmail) => async (dispatch) => {
+export const updateUser = (data, id) => async (dispatch) => {
   dispatch({
     type: IS_LOADING,
   });
