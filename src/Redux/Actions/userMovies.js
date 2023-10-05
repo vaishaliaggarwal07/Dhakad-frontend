@@ -17,7 +17,9 @@ export const addmovie = (data, id) => async (dispatch) => {
       moviePass: data?.moviePass,
       movieDescription: data?.movieDescription,
       status: "Active",
+      userId: id,
     };
+    console.log(body);
     const res = await axios.post(
       `${API_URL}/api/v1/usermovies/${id}`,
       body
