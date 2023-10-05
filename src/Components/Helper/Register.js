@@ -2,16 +2,10 @@ import React from "react";
 import "../Helper/Style.css";
 import UniqueBtn from "../UniqueBtn.jsx";
 import Signup from "../../Components/Helper/Modal/Signup";
-import JoinUs from "./Modal/JoinUs";
-import { useHistory } from "react-router-dom";
+
 const Register = () => {
-  const history = useHistory();
-    const token = localStorage.getItem("token");
+  const token = localStorage.getItem("token");
   const isAuthenticated = token;
-  const handleJoinUsClick = () => {
-    // Navigate to the Join Us page when the button is clicked
-    history.push("/join-us");
-  };
   return (
     <React.Fragment>
       <div className="registration-banner" id="masthead-registration-swiper">
@@ -33,9 +27,7 @@ const Register = () => {
                     disabled={true}
                   />
                 ) : (
-                  // <Signup modalBtn={<UniqueBtn title="Join Us" icon="" />} />
-                  // <button onClick={handleJoinUsClick}>Join Us</button> 
-<UniqueBtn title="Join Us" icon="" onClick={handleJoinUsClick}/>
+                  <Signup modalBtn={<UniqueBtn title="Join Us" icon="" />} />
                 )}
               </div>
             </div>
