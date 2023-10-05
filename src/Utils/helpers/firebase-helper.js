@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
+import { sendEmailVerification, verifyPhoneNumber,PhoneAuthProvider, RecaptchaVerifier } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -25,6 +26,38 @@ const firebaseAuth = getAuth(app);
 const firebaseHelper = {
     firebaseApp:app,
     firebaseAuth,
-}
+
+    sendEmailVerification: () => {
+        const user = firebaseAuth.currentUser;
+    
+        sendEmailVerification(user)
+          .then(() => {
+            // Email verification sent
+            console.log("Email verification sent.");
+          })
+          .catch((error) => {
+            // Error occurred while sending email verification
+            console.error("Error sending email verification:", error);
+          });
+      },
+      sendPhoneVerification: (phoneNumber) => {
+        const phoneAuthProvider = new PhoneAuthProvider(firebaseAuth);
+        // const appVerifier = new RecaptchaVerifier("recaptcha-container", {
+        //   size: "invisible",
+        // });
+    
+        phoneAuthProvider
+          .verifyPhoneNumber(phoneNumber)
+          .then(() => {
+            // SMS sent successfully
+            console.log("SMS sent successfully");
+            // Save verificationId to verify the code later
+          })
+          .catch((error) => {
+            // Error sending SMS
+            console.error("Error sending SMS:", error);
+          });
+      },
+};
 
 export default firebaseHelper;
