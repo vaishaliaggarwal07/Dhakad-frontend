@@ -14,6 +14,7 @@ import { connect, useDispatch, useSelector } from "react-redux";
 import { featuredMovies } from "../../Redux/Actions/movies";
 import DhakadRating from "../DhakadRating";
 import ShareIcon from "@material-ui/icons/Share";
+import AddIcon from "@material-ui/icons/Add";
 import DoneIcon from "@material-ui/icons/Done";
 import Share from "../Helper/Modal/Share";
 import UniqueBtn from "../../Components/UniqueBtn";
@@ -64,6 +65,10 @@ const Slider = (props) => {
   };
   const history = useHistory();
 
+  const addToWishList = (movieDetails)=>{
+    console.log('Slider:addToWishList: ',movieDetails);
+  }
+
   return (
     <React.Fragment>
       {loggedIn()}
@@ -101,45 +106,6 @@ const Slider = (props) => {
                       videoSrc={item?.trailerUrl?.[0]}
                     >
                       <div className="movie-detail  col-md-12">
-                        {/*<div className="movie-icon-button responsive-btn d-flex">
-                          {isAuthenticated ? (
-                            <UniqueBtn
-                              icon=""
-                              title={"Play Now"}
-                              onClick={() => {
-                                history.push(`/payment-option/${item?._id}`);
-                              }}
-                            />
-                          ) : (
-                            <button
-                              style={{ boxShadow: "none", border: "none" }}
-                              type="button"
-                              onClick={(e) => e.preventDefault()}
-                              className="nav-link"
-                              data-bs-toggle="modal"
-                              data-bs-target="#loginModal">
-                              Play Now
-                            </button>
-                          )}
-                          <div
-                            className="share_icon"
-                            style={{ marginLeft: "10px" }}
-                            data-bs-toggle="modal"
-                            data-bs-target="#shareModal">
-                            <Share
-                              link={`/movie-detail/${item?._id}?shareT=true`}
-                              modalBtn={
-                                <UniqueBtn
-                                  iconsClass="sharebtn"
-                                  className="share-icon"
-                                  title="Share Trailer"
-                                  icon={<ShareIcon />}
-                                ></UniqueBtn>
-                              }
-                            />
-                          </div>
-                        </div>*/}
-
                         <h1>{item?.title}</h1>
                         <div className="rent-text"> <DoneIcon className="movie-slider-done-icon"/> Watch movie on a rent starting at just INR {item?.price} (No Ads)  </div>
                         <div className="movie-time">
@@ -204,6 +170,16 @@ const Slider = (props) => {
                               <UniqueBtn title="More Info" icon="" />
                             </NavLink>
                           </div>
+
+                          {isAuthenticated &&
+                              <div style={{ marginLeft: "10px" }}>
+                                <button className="add-icon-btn" onClick={()=>addToWishList(item)}>
+                                  <AddIcon className="add-icon" />
+                                </button>
+                              </div>
+                          }
+
+
                           <div
                               className="share_icon"
                               style={{ marginLeft: "10px" }}

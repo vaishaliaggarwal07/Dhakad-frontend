@@ -2303,6 +2303,20 @@ button.custom-Str-btn.out-line-btn {
   width: 20px !important;
 }
 
+.add-icon-btn{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-icon{
+  height: 25px !important;
+  width: 25px !important;
+}
+
 .movie-card-my-movie{
   height: 270px;
   box-shadow: 0px 0px 8px #000;
