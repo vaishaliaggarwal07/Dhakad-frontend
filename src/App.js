@@ -14,7 +14,7 @@ import Coupons from "./Screen/TabScreen/Coupons.js";
 import Rewards from "./Screen/TabScreen/Rewards.js";
 import Footer from "./Components/Footer/index.jsx";
 import LoginScreen from "./Screen/LoginScreen.js";
-import JoinUs from "./Components/Helper/Modal/JoinUs.js";
+
 
 import ForgetScreen from "./Screen/ForgetScreen.jsx";
 import PaymentOption from "./Screen/PaymentOption.js";
@@ -103,7 +103,7 @@ function App() {
                         <Route exact path="/rewards" component={Rewards}/>
                         <Route exact path="/purchase-history" component={PurchaseHistory}/>
                         <Route exact path="/movie-expired" component={ExpiredMovie}/>
-                        <Route exact path="/join-us" component={JoinUs}/>
+                       
 
                         <Route
                             exact
