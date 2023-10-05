@@ -124,31 +124,24 @@ export const updateUser = (data, id, currentUserEmail) => async (dispatch) => {
     },
   };
 
-  try {
-    const emailAvailabilityResponse = await axios.get(
-      `${API_URL}/api/v1/users/getUserByEmail/${data.email}?checkExistence=true&currentUserEmail=${currentUserEmail}`
-    );
-    if(emailAvailabilityResponse?.data?.exists){
-      toast.error("Email already exists, please choose a different one.")
-    }else{
+ try {
 
-      const res = await axios.patch(
-        `${API_URL}/api/v1/users/${id}`,
-        JSON.stringify(data),
-        config
-      );
-      if (res) {
-        dispatch({
-          type: EDIT_USER,
-          payload: res?.data,
-        });
-        const message = res?.data?.message
-          ? res?.data?.message
-          : res?.data?.message;
-        toast.success(message, {
-          theme: "dark",
-        });
-      }
+    const res = await axios.patch(
+      `${API_URL}/api/v1/users/${id}`,
+      JSON.stringify(data),
+      config
+    );
+    if (res) {
+      dispatch({
+        type: EDIT_USER,
+        payload: res?.data,
+      });
+      const message = res?.data?.message
+        ? res?.data?.message
+        : res?.data?.message;
+      toast.success(message, {
+        theme: "dark",
+      });
     }
    
     
