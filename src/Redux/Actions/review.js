@@ -32,7 +32,7 @@ export const reviewListByMovies =
   };
 
 export const addReview = (data) => async (dispatch) => {
-  const token = localStorage.get('token')
+  const token = localStorage.getItem('token')
   if (token === null) {
     // toast.error("No access without login !", {
     //   theme: "dark",
